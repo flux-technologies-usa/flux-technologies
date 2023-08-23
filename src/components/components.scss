@@ -1,0 +1,21 @@
+.customBorder{
+    border: 1px solid white;
+}
+.customButton{
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: color .4s linear;
+    position: relative;
+    background: none;
+}
+.customButton:hover{
+    color: black;
+}
+.customButton::before{
+    content: "";
+    position: absolute;
+    background: red;
+    width: 100%;
+}
