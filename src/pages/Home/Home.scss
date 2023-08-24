@@ -1,0 +1,22 @@
+.customVideo{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.customOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+.coustomBackgroundImg{
+    background-image: url(../../assets/images/dark_bg.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
