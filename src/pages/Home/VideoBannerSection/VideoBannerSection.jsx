@@ -1,7 +1,6 @@
 import React from "react";
 import { carVideo } from "../../../assets/Callback";
 import "./../Home.scss";
-import Button from "../../../components/Button/Button";
 import { useState } from "react";
 
 const VideoBannerSection = () => {
@@ -18,12 +17,12 @@ const VideoBannerSection = () => {
           muted></video>
       </div>
       {/* main div */}
-      <div className="absolute top-[34%] left-[36%] ">
+      <div className="absolute top-[40%] left-[36%] ">
         {/* button section */}
         <div className="text-center">
           <h1 className="text-5xl font-semibold">Flux Technologies</h1>
           <div className="flex items-center mt-10 justify-center">
-            <Button value={"Flux Village"}></Button>
+            <button className="videoCustomButton z-20">Flux Village</button>
             <div
               onMouseEnter={() => {
                 setHover(true);
@@ -31,7 +30,7 @@ const VideoBannerSection = () => {
               onMouseLeave={() => {
                 setHover(false);
               }}
-              className="cursor-pointer ml-3">
+              className="cursor-pointer ml-7 text-[18px] font-semibold ">
               <h1>Contact now</h1>
               <div
                 className={`w-full h-[1px] ${
