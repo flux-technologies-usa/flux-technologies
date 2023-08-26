@@ -1,0 +1,85 @@
+.customBorder {
+  border: 1px solid white;
+}
+.customButton {
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  transition: color 0.4s linear;
+  position: relative;
+  background: transparent;
+}
+.customButton:hover {
+  color: black;
+  transition: 0.4s;
+}
+.customButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ddc861;
+  top: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+  z-index: -10;
+}
+.customButton:hover:after {
+  color: black;
+  transform: scaleX(1);
+}
+.customFooterLink {
+  position: relative;
+}
+.customFooterLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: black;
+  border-radius: 5px;
+  left: 0;
+  bottom: -10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.customFooterLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.FormCustomButton {
+  margin-top: 35px;
+  font-size: 18px;
+  border: 1px solid white;
+  padding: 12px 30px;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+.FormCustomButton:hover {
+  color: black;
+  transition: 0.4s;
+}
+.FormCustomButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ddc861;
+  top: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.FormCustomButton:hover:after {
+  transform: scaleX(1);
+  z-index: -1;
+}
+.manageScrollBar::-webkit-scrollbar {
+  display: none;
+}
