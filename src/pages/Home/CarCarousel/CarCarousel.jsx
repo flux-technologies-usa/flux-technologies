@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { freedomCarPng, jeepCar } from '../../../assets/Callback';
+import './../Home.scss'
 
 const CarCarousel = () => {
     const settings = {
@@ -11,7 +12,7 @@ const CarCarousel = () => {
       slidesToScroll: 1,
       vertical: true,
       verticalSwiping: true,
-      autoplay: false,
+      autoplay: true,
       speed: 500,
       autoplaySpeed: 3000,
       pauseOnHover: false,
@@ -34,14 +35,16 @@ const CarCarousel = () => {
                 </h1>
               </div>
               <div>
-                <h1 className="mt-3 text-4xl font-semibold">Flux Village</h1>
+                <h1 className="mt-3 text-4xl font-semibold z-10">
+                  Flux Village
+                </h1>
               </div>
             </div>
             <div className="mt-[5%]">
               <img className="mx-auto w-[40%]" src={jeepCar} alt="" />
             </div>
             <div>
-              <button className="mx-auto btn btn-ghost text-[18px] mt-[4%] border1">
+              <button className="videoCustomButton mt-[4%] z-10">
                 Design yours
               </button>
             </div>
@@ -61,7 +64,7 @@ const CarCarousel = () => {
               <img className="mx-auto w-[45%]" src={freedomCarPng} alt="" />
             </div>
             <div>
-              <button className="mx-auto btn btn-ghost text-[18px] mt-[4%] border1">
+              <button className="videoCustomButton mt-[4%] z-10">
                 Design yours
               </button>
             </div>

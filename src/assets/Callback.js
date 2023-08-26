@@ -7,11 +7,13 @@ import fbIcon from "./icons/fb-icon.svg";
 import instaIcon from "./icons/insta_icon.svg";
 import ytIcon from "./icons/yt_icon.svg";
 import twitterIcon from "./icons/twitter_icon.svg";
-import black from './images/black.png'
-import red from './images/red.png'
-import blue from './images/Blue.png'
-import white from './images/white.jpg'
-import gray from './images/gray.jpg'
+import black from "./images/black.png";
+import red from "./images/red.png";
+import blue from "./images/Blue.png";
+import white from "./images/white.jpg";
+import gray from "./images/gray.jpg";
+import insideCar from "./images/car_inside.webp";
+import solarCar from "./images/solar.png";
 
 // video
 import carVideo from "./video/car.mp4";
@@ -31,5 +33,7 @@ export {
   red,
   blue,
   white,
-  gray
+  gray,
+  insideCar,
+  solarCar,
 };
