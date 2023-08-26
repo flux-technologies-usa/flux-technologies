@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home";
 import Main from "../../layout/Main";
 import Contact from "../Contact/Contact";
+import CarDesign from "../CarDesign/CarDesign";
+import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
+import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 
 const routes = createBrowserRouter([
   {
@@ -15,6 +18,18 @@ const routes = createBrowserRouter([
         {
           path : '/contact',
           element : <Contact></Contact>
+      },
+      {
+        path:'/cardesign',
+        element:<CarDesign/>
+      },
+      {
+        path:'/privacy',
+        element:<PrivacyPolicy/>
+      },
+      {
+        path:'/terms',
+        element:<TermsAndCondition/>
       }
     ]
   },

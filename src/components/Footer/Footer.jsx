@@ -40,7 +40,7 @@ const Footer = () => {
             <Link className="text-[19px] customFooterLink  w-[100px]">
               Contact Us
             </Link>
-            <Link className="text-[19px] mt-[35px] customFooterLink ">
+            <Link to='/privacy' className="text-[19px] mt-[35px] customFooterLink ">
               Privacy Policy
             </Link>
           </div>
