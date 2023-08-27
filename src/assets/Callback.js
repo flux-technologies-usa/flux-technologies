@@ -22,17 +22,25 @@ import blackcarwt from "./images/blackcarwt.png";
 import blackcarbt from "./images/blackcarbt.png";
 import blacktire from "./images/blacktire.png";
 import worldIcon from "./icons/fb-icon.svg";
-import logo from './logo/logo.687a8a89821507df8003.png'
-import breadCrumb from './icons/breadCrumb.png'
-import battery from './product_img/battery.png'
+import logo from "./logo/logo.687a8a89821507df8003.png";
+import breadCrumb from "./icons/breadCrumb.png";
+import battery from "./product_img/battery.png";
 
-import jeepCar from './images/flux_car_jeep.png'
-import freedomCarPng from './images/flux_freedom_car-removebg-preview.png'
-import freedom_car from './images/flux_freedom_car.png'
-
+import jeepCar from "./images/flux_car_jeep.png";
+import freedomCarPng from "./images/flux_freedom_car-removebg-preview.png";
+import freedom_car from "./images/flux_freedom_car.png";
+import tang from "./images/tang.jpeg";
+import mount from "./images/mount.jpeg";
+import chargeCar from "./images/charge_car.png";
+import fluxFreedomCar from "./images/flux_freedom_car.png";
+import bridge from "./images/bridge.webp";
+import carBack from "./images/car_back.webp";
+import carUp from "./images/flux_village_up.webp";
+import office from "./images/car_test.webp";
+import phone from "./images/mobile_car.webp";
 
 // video
-import carVideo from './images/car_inside.webp'
+import carVideo from "./images/car_inside.webp";
 
 export {
   logo,
@@ -65,5 +73,14 @@ export {
   blackcarbt,
   blacktire,
   freedom_car,
-  battery
+  battery,
+  tang,
+  mount,
+  chargeCar,
+  fluxFreedomCar,
+  bridge,
+  carBack,
+  carUp,
+  office,
+  phone,
 };
