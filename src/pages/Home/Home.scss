@@ -3,6 +3,7 @@
   height: 100vh;
   object-fit: cover;
 }
+
 .customOverlay {
   position: absolute;
   top: 0;
@@ -11,6 +12,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 .coustomBackgroundImg {
   background-image: url(../../assets/images/dark_bg.webp);
   background-repeat: no-repeat;
@@ -20,6 +22,7 @@
   background-position: center;
   background-size: cover;
 }
+
 .videoCustomButton {
   background: white;
   color: black;
@@ -28,6 +31,7 @@
   border-radius: 3px;
   position: relative;
 }
+
 .videoCustomButton::after {
   content: "";
   position: absolute;
@@ -40,10 +44,12 @@
   transform: scaleX(0);
   transition: 0.5s;
 }
+
 .videoCustomButton:hover::after {
   transform: scaleX(1);
   z-index: -1;
 }
+
 .AboutFluxBackgroundImg {
   background-image: url(./../../assets/images/car_inside.webp);
   width: 100%;
@@ -52,6 +58,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 .customAccessoiriesButton {
   background: transparent;
   color: white;
@@ -62,6 +69,7 @@
   position: relative;
   z-index: 1;
 }
+
 .customAccessoiriesButton::after {
   content: "";
   position: absolute;
@@ -73,9 +81,50 @@
   transform-origin: right;
   transform: scaleX(0);
   transition: 0.5s;
-  
+
 }
-.customAccessoiriesButton:hover:after{
+
+.customAccessoiriesButton:hover:after {
+  transform: scaleX(1);
+  z-index: -1;
+}
+
+.customStoryImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customStoryButton {
+  background: transparent;
+  color: white;
+  padding: 17px 51px;
+  font-size: 17px;
+  position: relative;
+  border: 1px solid wheat;
+  position: relative;
+  z-index: 1;
+}
+
+.customStoryButton:hover {
+  color: black;
+}
+
+.customStoryButton::after {
+  content: "";
+  position: absolute;
+  background: #ddc861;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.customStoryButton:hover:after {
   transform: scaleX(1);
   z-index: -1;
 }

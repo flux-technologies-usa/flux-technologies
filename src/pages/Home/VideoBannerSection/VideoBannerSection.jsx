@@ -9,12 +9,12 @@ const VideoBannerSection = () => {
     <div className="relative">
       <div className="customOverlay"></div>
       <div className="-z-10">
-        <video
+        {/* <video
           src={carVideo}
           className="customVideo"
           autoPlay
           loop
-          muted></video>
+          muted></video> */}
       </div>
       {/* main div */}
       <div className="absolute top-[40%] left-[36%] ">

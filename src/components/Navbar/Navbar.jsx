@@ -48,7 +48,7 @@ const Navbar = () => {
       }`}>
       <div className="flex justify-between  items-center navbar-container bg-transparent text-[17px] md:mx-[3%] relative">
         <div className="hidden md:flex md:items-center">
-          <CustomLink value={"ABOUT FLUX"}></CustomLink>
+          <CustomLink route={"/about"} value={"ABOUT FLUX"}></CustomLink>
           {/* DESIGN YOURS hover div */}
           <div
             onMouseEnter={() => {
@@ -96,7 +96,7 @@ const Navbar = () => {
                   onMouseLeave={() => {
                     setButtonHoverFreedom(false);
                   }}
-                  className={`bg-transparent p-4 mt-5 ${
+                  className={` p-4 mt-5 ${
                     buttonHoverFreedom ? "bg-[#635929]" : "bg-transparent"
                   }`}>
                   <h1>FLUX FREEDOM</h1>
