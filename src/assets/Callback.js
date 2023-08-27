@@ -7,14 +7,25 @@ import fbIcon from "./icons/fb-icon.svg";
 import instaIcon from "./icons/insta_icon.svg";
 import ytIcon from "./icons/yt_icon.svg";
 import twitterIcon from "./icons/twitter_icon.svg";
-import black from "./images/black.png";
-import red from "./images/red.png";
-import blue from "./images/Blue.png";
-import white from "./images/white.jpg";
-import gray from "./images/gray.jpg";
 import insideCar from "./images/car_inside.webp";
 import solarCar from "./images/solar.png";
-
+import gray from "./images/gray.png";
+import graycarwt from "./images/graycarwt.png";
+import graycarbt from "./images/graycarbt.png";
+import blue from "./images/blue.png";
+import bluecarwt from "./images/bluecarwt.png";
+import bluecarbt from "./images/bluecarbt.png";
+import white from "./images/white.png";
+import whitecarwt from "./images/whitecarwt.png";
+import whitecarbt from "./images/whitecarbt.png";
+import whitetire from "./images/whitetire.png";
+import red from "./images/red.png";
+import redcarwt from "./images/redcarwt.png";
+import redcarbt from "./images/redcarbt.png";
+import black from "./images/black.png";
+import blackcarwt from "./images/blackcarwt.png";
+import blackcarbt from "./images/blackcarbt.png";
+import blacktire from "./images/blacktire.png";
 // video
 import carVideo from "./video/car.mp4";
 
@@ -36,4 +47,16 @@ export {
   gray,
   insideCar,
   solarCar,
+  graycarwt,
+  graycarbt,
+  bluecarwt,
+  bluecarbt,
+  whitecarwt,
+  whitecarbt,
+  whitetire,
+  redcarwt,
+  redcarbt,
+  blackcarwt,
+  blackcarbt,
+  blacktire
 };
