@@ -15,10 +15,14 @@ const Footer = () => {
         <div>
           <h1 className="text-[25px]">Flux Technologies</h1>
           <div className="opacity-80 flex flex-col mt-[35px]">
-            <Link className="text-[19px] customFooterLink w-[120px] ">
+            <Link
+              to="/village"
+              className="text-[19px] customFooterLink w-[120px] ">
               Design Yours
             </Link>
-            <Link className="text-[19px] mt-[35px] customFooterLink w-[55px] ">
+            <Link
+              to="/store"
+              className="text-[19px] mt-[35px] customFooterLink w-[55px] ">
               Store
             </Link>
           </div>
@@ -26,10 +30,14 @@ const Footer = () => {
         <div>
           <h1 className="text-[25px]">Flux Motors</h1>
           <div className="opacity-80 flex flex-col mt-[35px]">
-            <Link className="text-[19px] customFooterLink  w-[70px]">
+            <Link
+              to="/about"
+              className="text-[19px] customFooterLink  w-[70px]">
               About
             </Link>
-            <Link className="text-[19px] mt-[35px] customFooterLink  w-[110px]">
+            <Link
+              to="/stayupdate"
+              className="text-[19px] mt-[35px] customFooterLink  w-[110px]">
               Stay Update
             </Link>
           </div>
@@ -37,10 +45,14 @@ const Footer = () => {
         <div>
           <h1 className="text-[25px]">More</h1>
           <div className="opacity-80 flex flex-col mt-[35px]">
-            <Link className="text-[19px] customFooterLink  w-[100px]">
+            <Link
+              to="/contact"
+              className="text-[19px] customFooterLink  w-[100px]">
               Contact Us
             </Link>
-            <Link to='/privacy' className="text-[19px] mt-[35px] customFooterLink ">
+            <Link
+              to="/privacy"
+              className="text-[19px] mt-[35px] customFooterLink ">
               Privacy Policy
             </Link>
           </div>

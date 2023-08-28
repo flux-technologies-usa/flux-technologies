@@ -2,13 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home";
 import Main from "../../layout/Main";
 import Contact from "../Contact/Contact";
-import CarDesign from "../CarDesign/CarDesign";
-import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
-import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 import About from "../About/About";
 import Store from "../Store/Store";
 import Subscribe from "../Subscribe/Subscribe";
 import Privacy from "../Privacy/Privacy";
+import StayUpdate from "../StayUpdate/StayUpdate";
+import CarDesign from "../CarDesign/CarDesign";
+import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
+import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 
 const routes = createBrowserRouter([
   {
@@ -40,20 +41,20 @@ const routes = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: "/privacy",
-        element: <Privacy></Privacy>,
-      },
-      {
-        path: "/cardesign",
-        element: <CarDesign />,
+        path: "/stayUpdate",
+        element: <StayUpdate></StayUpdate>,
       },
       {
         path: "/privacy",
-        element: <PrivacyPolicy />,
+        element: <PrivacyPolicy></PrivacyPolicy>,
       },
       {
         path: "/terms",
-        element: <TermsAndCondition />,
+        element: <TermsAndCondition></TermsAndCondition>,
+      },
+      {
+        path: "/village",
+        element: <CarDesign></CarDesign>,
       },
     ],
   },

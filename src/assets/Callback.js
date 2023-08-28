@@ -7,7 +7,7 @@ import solarCar from "./images/solar.png";
 import gray from "./images/gray.png";
 import graycarwt from "./images/graycarwt.png";
 import graycarbt from "./images/graycarbt.png";
-import blue from "./images/blue.png";
+import blue from "./images/Blue.png";
 import bluecarwt from "./images/bluecarwt.png";
 import bluecarbt from "./images/bluecarbt.png";
 import white from "./images/white.png";
@@ -40,7 +40,7 @@ import office from "./images/car_test.webp";
 import phone from "./images/mobile_car.webp";
 
 // video
-import carVideo from "./images/car_inside.webp";
+import carVideo from "./video/car.mp4";
 
 export {
   logo,

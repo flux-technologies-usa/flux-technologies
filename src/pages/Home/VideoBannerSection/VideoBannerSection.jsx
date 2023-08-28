@@ -2,6 +2,7 @@ import React from "react";
 import { carVideo } from "../../../assets/Callback";
 import "./../Home.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const VideoBannerSection = () => {
   const [hover, setHover] = useState(false);
@@ -9,12 +10,12 @@ const VideoBannerSection = () => {
     <div className="relative">
       <div className="customOverlay"></div>
       <div className="-z-10">
-        {/* <video
+        <video
           src={carVideo}
           className="customVideo"
           autoPlay
           loop
-          muted></video> */}
+          muted></video>
       </div>
       {/* main div */}
       <div className="absolute top-[40%] left-[36%] ">
@@ -22,7 +23,9 @@ const VideoBannerSection = () => {
         <div className="text-center">
           <h1 className="text-5xl font-semibold">Flux Technologies</h1>
           <div className="flex items-center mt-10 justify-center">
-            <button className="videoCustomButton z-20">Flux Village</button>
+            <Link to="/village">
+              <button className="videoCustomButton z-20">Flux Village</button>
+            </Link>
             <div
               onMouseEnter={() => {
                 setHover(true);
