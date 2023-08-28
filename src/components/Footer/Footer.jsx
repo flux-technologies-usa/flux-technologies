@@ -53,10 +53,10 @@ const Footer = () => {
           <h1>United States – English</h1>
         </div>
         <div className="flex gap-[30px]">
-          <img className="w-[20px]" src={instaIcon} alt="" />
-          <img className="w-[20px]" src={twitterIcon} alt="" />
-          <img className="w-[20px]" src={ytIcon} alt="" />
-          <img className="w-[20px]" src={fbIcon} alt="" />
+          <img className="w-[20px] cursor-pointer" src={instaIcon} alt="" />
+          <img className="w-[20px] cursor-pointer" src={twitterIcon} alt="" />
+          <img className="w-[20px] cursor-pointer" src={ytIcon} alt="" />
+          <img className="w-[20px] cursor-pointer" src={fbIcon} alt="" />
         </div>
         <div>
           <h1>Legal</h1>

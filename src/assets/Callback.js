@@ -7,8 +7,17 @@ import fbIcon from "./icons/fb-icon.svg";
 import instaIcon from "./icons/insta_icon.svg";
 import ytIcon from "./icons/yt_icon.svg";
 import twitterIcon from "./icons/twitter_icon.svg";
-import insideCar from './images/car_inside.webp'
-import solarCar from './images/solar.png'
+import insideCar from "./images/car_inside.webp";
+import solarCar from "./images/solar.png";
+import fluxFreedomCar from "./images/flux_freedom_car.png";
+import chargeCar from "./images/charge_car.png";
+import carBack from "./images/car_back.webp";
+import carUp from "./images/flux_village_up.webp";
+import bridge from "./images/bridge.webp";
+import office from "./images/car_test.webp";
+import phone from "./images/mobile_car.webp";
+import mount from './images/mount.jpeg'
+import tang from './images/tang.jpeg'
 
 // video
 import carVideo from "./video/car.mp4";
@@ -26,4 +35,13 @@ export {
   twitterIcon,
   insideCar,
   solarCar,
+  fluxFreedomCar,
+  chargeCar,
+  carBack,
+  carUp,
+  bridge,
+  office,
+  phone,
+  mount,
+  tang
 };
