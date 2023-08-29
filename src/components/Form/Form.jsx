@@ -16,7 +16,7 @@ const Form = () => {
   }, [email.length]);
 
   return (
-    <div className="w-[500px]">
+    <div className="w-full">
       <form className="text-white">
         <div>
           <h1 className="text-[17px]">EMAIL</h1>

@@ -21,7 +21,7 @@ import black from "./images/black.png";
 import blackcarwt from "./images/blackcarwt.png";
 import blackcarbt from "./images/blackcarbt.png";
 import blacktire from "./images/blacktire.png";
-import worldIcon from "./icons/fb-icon.svg";
+import worldIcon from "./icons/world_icon.svg";
 import logo from "./logo/logo.687a8a89821507df8003.png";
 import breadCrumb from "./icons/breadCrumb.png";
 import battery from "./product_img/battery.png";

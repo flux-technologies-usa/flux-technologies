@@ -38,8 +38,12 @@ const CarCarousel = () => {
               <h1 className="text-3xl font-semibold z-10 mt-3">Flux Village</h1>
             </div>
           </div>
-          <div className="mt-[22%] md:mt-[5%]">
-            <img className="mx-auto w-[100%]" src={jeepCar} alt="" />
+          <div className="mt-[40%] md:mt-[5%]">
+            <img
+              className="mx-auto w-[100%]  -mt-10 md:w-[45%] "
+              src={jeepCar}
+              alt=""
+            />
           </div>
           <Link to="/village">
             <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
@@ -47,6 +51,7 @@ const CarCarousel = () => {
             </button>
           </Link>
         </div>
+
         <div className="text-center  coustomBackgroundImg ">
           <div>
             <div className="bg-[#656363]  mx-auto  brightness-200 w-[65%]  md:w-[18%] md:mt-[60px]">
@@ -58,8 +63,12 @@ const CarCarousel = () => {
               <h1 className="text-3xl font-semibold z-10 mt-3">Flux Freedom</h1>
             </div>
           </div>
-          <div className="mt-[22%] md:mt-[5%]">
-            <img className="mx-auto w-[100%]" src={freedomCarPng} alt="" />
+          <div className="mt-[38%] md:mt-[2%]">
+            <img
+              className="mx-auto w-[100%]  -mt-10 md:w-[50%] "
+              src={freedomCarPng}
+              alt=""
+            />
           </div>
           <Link to="/village">
             <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">

@@ -21,7 +21,7 @@ const VideoBannerSection = () => {
       <div className="absolute top-[40%] left-[15%] md:left-[36%] ">
         {/* button section */}
         <div className="text-center">
-          <h1 className="text-3xl font-semibold md:text-5xl">
+          <h1 className="text-[34px] font-semibold ml-3 md:text-5xl md:ml-0">
             Flux Technologies
           </h1>
           <div className="flex items-center mt-10 justify-center flex-col md:flex-row">

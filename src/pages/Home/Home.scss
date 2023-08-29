@@ -96,6 +96,7 @@
   background-repeat: no-repeat;
 }
 
+
 .customStoryButton {
   background: transparent;
   color: white;
@@ -139,5 +140,13 @@
     position: relative;
   }
 
-}
+  .customStoryButton {
+    padding: 7px 20px;
+  }
 
+  .customScroll {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+  }
+}
