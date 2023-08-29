@@ -8,15 +8,15 @@ const AboutAndContact = () => {
         <img
           src={fluxFreedomCar}
           alt=""
-          className="w-full h-[200px] md:h-[400px] image"
+          className="w-full h-[200px] md:h-[500px] image"
         />
         <div className="absolute bottom-10 left-10 z-10 flex flex-col">
           <span className="text-white">Flux</span>
           <span className="text-white text-xl border-b">About Us</span>
         </div>
       </div>
-      <div className="w-1/2 relative overflow-hidden">
-        <img src={chargeCar} alt="" className="w-full image" />
+      <div className="md:w-1/2 mt-2 md:mt-0 relative overflow-hidden">
+        <img src={chargeCar} alt="" className="w-full h-[200px] md:h-[500px] image" />
         <div className="absolute bottom-10 left-10 z-10 flex flex-col">
           <span className="text-white">Flux</span>
           <span className="text-white text-xl border-b">About Us</span>

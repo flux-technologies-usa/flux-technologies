@@ -204,6 +204,7 @@ const Navbar = () => {
 
                           {/* Flux freedom drower*/}
                           <Link
+                          to='/freedom'
                             onMouseEnter={() => {
                               setButtonHoverFreedomDrop(true);
                             }}

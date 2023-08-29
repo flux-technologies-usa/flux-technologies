@@ -70,7 +70,7 @@ const CarCarousel = () => {
               alt=""
             />
           </div>
-          <Link to="/village">
+          <Link to="/freedom">
             <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
               Design yours
             </button>
