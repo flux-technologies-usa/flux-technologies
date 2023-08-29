@@ -9,6 +9,7 @@ import About from "../About/About";
 import Store from "../Store/Store";
 import Subscribe from "../Subscribe/Subscribe";
 import Privacy from "../Privacy/Privacy";
+import FluxFreedom from "../FluxFreedom/FluxFreedom";
 
 const routes = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const routes = createBrowserRouter([
         path: "/terms",
         element: <TermsAndCondition />,
       },
+      {
+        path:'/freedom',
+        element:<FluxFreedom/>
+      }
     ],
   },
 ]);

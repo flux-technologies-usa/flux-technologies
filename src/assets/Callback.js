@@ -38,6 +38,10 @@ import carBack from "./images/car_back.webp";
 import carUp from "./images/flux_village_up.webp";
 import office from "./images/car_test.webp";
 import phone from "./images/mobile_car.webp";
+import darkBg from './images/dark_bg.webp'
+import blackCarVW from './images/blackV.png'
+import blackCarVB from './images/blackVB.png'
+import blueCarV from './images/blueV.png'
 
 // video
 import carVideo from "./images/car_inside.webp";
@@ -83,4 +87,8 @@ export {
   carUp,
   office,
   phone,
+  darkBg,
+  blackCarVW,
+blackCarVB,
+blueCarV
 };
