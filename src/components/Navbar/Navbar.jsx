@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [nav]);
   return (
     <div
-      className={`fixed top-0 w-full z-50 ${
+      className={`p-5  fixed top-0 w-full z-50 md:p-0 ${
         top
           ? "bg-transparent duration-[.3s] ease-in"
           : "bg-black duration-[.3s] ease-in"
@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="flex justify-between  items-center navbar-container bg-transparent text-[17px] md:mx-[3%] relative">
         <div className="hidden md:flex md:items-center">
           <CustomLink route={"/about"} value={"ABOUT FLUX"}></CustomLink>
-          {/* DESIGN YOURS hover div */}
+
           <div
             onMouseEnter={() => {
               setHover(true);
@@ -58,6 +58,7 @@ const Navbar = () => {
               setHover(false);
             }}
             className=" ml-[40px] py-[40px] relative font-semibold">
+            {/* DESIGN YOURS hover div */}
             <div
               className={`w-full bg-[#ddc861] h-[1px] absolute top-2  ${
                 hover
@@ -70,10 +71,12 @@ const Navbar = () => {
               } duration-500 ease-in`}>
               DESIGN YOURS
             </Link>
+            {/* hover flux */}
             <div
               className={`${
                 hover ? "h-[92px]" : "h-0 opacity-0"
               } absolute top-[70%] w-[110px] overflow-scroll manageScrollBar bg-[#161816] p-1 rounded duration-300`}>
+              {/* flux village */}
               <Link to="/village">
                 <div
                   onMouseEnter={() => {
@@ -88,6 +91,7 @@ const Navbar = () => {
                   <h1>FLUX VILLAGE</h1>
                 </div>
               </Link>
+              {/* flux freedom */}
               <Link>
                 <div
                   onMouseEnter={() => {
@@ -106,11 +110,17 @@ const Navbar = () => {
           </div>
           <CustomLink route={"/contact"} value={"CONTACT"}></CustomLink>
         </div>
+
+        {/* logo */}
         <Link to="/">
-          <img className="w-[55%] cursor-pointer" src={logo} alt="" />
+          <img className="w-[40%] cursor-pointer md:w-[55%]" src={logo} alt="" />
         </Link>
+
         <div className="flex items-center">
-          <FaShoppingCart className="text-[18px] text-white cursor-pointer " />
+          {/* Shoping cart */}
+          <FaShoppingCart className="text-[18px] text-white cursor-pointer hidden" />
+
+          {/* Store and Stay update */}
           <div className="hidden md:block">
             <CustomLink route={"/store"} value={"STORE"}></CustomLink>
           </div>
@@ -140,11 +150,13 @@ const Navbar = () => {
                 <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-[340px] min-h-full bg-black text-base-content">
                   <div className="mt-[10%] mx-[2%] ">
+                    {/* colse button */}
                     <label
                       htmlFor="my-drawer-4"
                       className="text-[18px] p-2 absolute right-[10%] hover:opacity-80 cursor-pointer ">
                       X
                     </label>
+                    {/* all buttons */}
                     <div className="mt-[17%] flex">
                       <Link>
                         <div className="text-[18px] font-semibold text-[#ddc861] hover:opacity-70 select-none">
@@ -173,6 +185,7 @@ const Navbar = () => {
                       </div>
                       <div className={dropDown ? "block" : "hidden"}>
                         <div className={`px-5 py-7`}>
+                          {/* Flux village drower*/}
                           <Link
                             to="/village"
                             onMouseEnter={() => {
@@ -188,6 +201,8 @@ const Navbar = () => {
                               Flux Village
                             </div>
                           </Link>
+
+                          {/* Flux freedom drower*/}
                           <Link
                             onMouseEnter={() => {
                               setButtonHoverFreedomDrop(true);

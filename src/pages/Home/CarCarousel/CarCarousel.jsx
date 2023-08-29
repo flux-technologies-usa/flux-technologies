@@ -27,42 +27,42 @@ const CarCarousel = () => {
   return (
     <div className=" ">
       <Slider {...settings}>
-        <div className="text-center h-[100vh] coustomBackgroundImg">
+        <div className="text-center  coustomBackgroundImg ">
           <div>
-            <div className="bg-[#656363] w-[18%] mx-auto mt-[60px] brightness-200">
-              <h1 className="text-black text-[16px] tracking-[5px] p-1 ">
+            <div className="bg-[#656363]  mx-auto  brightness-200 w-[65%]  md:w-[18%] md:mt-[60px]">
+              <h1 className="text-black text-[16px] p-1 tracking-[5px]">
                 NOW DELIVERING
               </h1>
             </div>
             <div>
-              <h1 className="mt-3 text-4xl font-semibold z-10">Flux Village</h1>
+              <h1 className="text-3xl font-semibold z-10 mt-3">Flux Village</h1>
             </div>
           </div>
-          <div className="mt-[5%]">
-            <img className="mx-auto w-[40%]" src={jeepCar} alt="" />
+          <div className="mt-[22%] md:mt-[5%]">
+            <img className="mx-auto w-[100%]" src={jeepCar} alt="" />
           </div>
           <Link to="/village">
-            <button className="videoCustomButton mt-[4%] z-10">
+            <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
               Design yours
             </button>
           </Link>
         </div>
-        <div className="text-center h-[100vh] coustomBackgroundImg">
+        <div className="text-center  coustomBackgroundImg ">
           <div>
-            <div className="bg-[#656363] w-[18%] mx-auto mt-[60px] brightness-200">
-              <h1 className="text-black text-[16px] tracking-[5px] p-1 ">
+            <div className="bg-[#656363]  mx-auto  brightness-200 w-[65%]  md:w-[18%] md:mt-[60px]">
+              <h1 className="text-black text-[16px] p-1 tracking-[5px]">
                 NOW DELIVERING
               </h1>
             </div>
             <div>
-              <h1 className="mt-3 text-4xl font-semibold">Flux Freedom</h1>
+              <h1 className="text-3xl font-semibold z-10 mt-3">Flux Freedom</h1>
             </div>
           </div>
-          <div className="">
-            <img className="mx-auto w-[45%]" src={freedomCarPng} alt="" />
+          <div className="mt-[22%] md:mt-[5%]">
+            <img className="mx-auto w-[100%]" src={freedomCarPng} alt="" />
           </div>
-          <Link>
-            <button className="videoCustomButton mt-[4%] z-10">
+          <Link to="/village">
+            <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
               Design yours
             </button>
           </Link>

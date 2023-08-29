@@ -1,6 +1,7 @@
 .customBorder {
   border: 1px solid white;
 }
+
 .customButton {
   color: white;
   cursor: pointer;
@@ -10,10 +11,12 @@
   position: relative;
   background: transparent;
 }
+
 .customButton:hover {
   color: black;
   transition: 0.4s;
 }
+
 .customButton::after {
   content: "";
   position: absolute;
@@ -27,13 +30,16 @@
   transition: 0.5s;
   z-index: -10;
 }
+
 .customButton:hover:after {
   color: black;
   transform: scaleX(1);
 }
+
 .customFooterLink {
   position: relative;
 }
+
 .customFooterLink::after {
   content: "";
   position: absolute;
@@ -47,10 +53,12 @@
   transform: scaleX(0);
   transition: 0.5s;
 }
+
 .customFooterLink:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 .FormCustomButton {
   margin-top: 35px;
   font-size: 18px;
@@ -60,10 +68,12 @@
   background: transparent;
   z-index: 1;
 }
+
 .FormCustomButton:hover {
   color: black;
   transition: 0.4s;
 }
+
 .FormCustomButton::after {
   content: "";
   position: absolute;
@@ -76,10 +86,19 @@
   transform: scaleX(0);
   transition: 0.5s;
 }
+
 .FormCustomButton:hover:after {
   transform: scaleX(1);
   z-index: -1;
 }
+
 .manageScrollBar::-webkit-scrollbar {
   display: none;
+}
+
+@media only screen and (max-width: 384px) {
+  .customButton {
+    padding: 5px 12px;
+    margin-right: -25px;
+  }
 }
