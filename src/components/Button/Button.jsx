@@ -1,14 +1,15 @@
 import React from "react";
 import "./../components.scss";
+import { Link } from "react-router-dom";
 
-const Button = ({ value, left, width, bg, text, wight, color }) => {
+const Button = ({ value, left, width, bg, text, wight, color, to }) => {
   return (
-    <div className="relative">
+    <Link to={to} className="relative">
       <div
         className={`customBorder ${left} ${width} ${bg} ${text} ${wight} ${color} customButton`}>
         <span className="z-50">{ value }</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

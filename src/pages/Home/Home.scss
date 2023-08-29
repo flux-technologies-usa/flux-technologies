@@ -96,6 +96,7 @@
   background-repeat: no-repeat;
 }
 
+
 .customStoryButton {
   background: transparent;
   color: white;
@@ -127,4 +128,25 @@
 .customStoryButton:hover:after {
   transform: scaleX(1);
   z-index: -1;
+}
+
+@media only screen and (max-width: 384px) {
+  .videoCustomButton {
+    background: white;
+    color: black;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .customStoryButton {
+    padding: 7px 20px;
+  }
+
+  .customScroll {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+  }
 }
