@@ -8,7 +8,7 @@ const SingleProduct = ({ single }) => {
       <div className="div">
         <div className="single-product-img h-[200px]">
           <img
-            className="w-[200px] h-auto mx-auto pt-[40px]"
+            className="w-[200px] h-auto mx-auto pt-[50px]"
             src={img}
             alt={name}
           />
@@ -18,7 +18,7 @@ const SingleProduct = ({ single }) => {
           <div className="product-name ">{name}</div>
         </div>
       </div>
-      <button className="btn absolute top-[40%] right-[30%]">Add to cart</button>
+      <button className="btn absolute border-none top-[40%] right-[30%] rounded-none button">Add to cart</button>
     </div>
   );
 };

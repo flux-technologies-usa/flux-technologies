@@ -1,0 +1,45 @@
+.storeheader{
+    img{
+        position: absolute;
+    }
+    .headertag{
+        font-family: Schnyder S;
+        position: relative;
+        padding: 180px 0px 0px 230px;
+    }
+    
+}
+.product-header h1{
+    color: #fff;
+    display: block;
+    font-family: Schnyder S;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.single-product{
+    transition: all 1s ease;
+}
+.button{
+    display: none;
+}
+.button:hover{
+    display: block;
+}
+.button {
+    color: white;
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to right, black 50%, #DDC861 50%) left;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+.button:hover {
+    background-position: right;
+}
+.div:hover + .button{
+display: block;
+}

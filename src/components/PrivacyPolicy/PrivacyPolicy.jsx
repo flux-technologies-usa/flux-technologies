@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
       <div className="py-32">
         <span className=" text-3xl pl-16 text-[#ddc861]">Privacy Policy</span>
       </div>
-      <div className="flex flex-col text-black px-28 py-10 bg-white gap-5 text-xl">
+      <div className="flex flex-col text-black px-10 lg:px-28 py-10 bg-white gap-5 text-xl">
         <div className=" flex flex-col items-start gap-5">
           <span className=" text-2xl font-semibold text-[#ddc861]">
             Privacy Policy

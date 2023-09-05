@@ -11,9 +11,9 @@ const Product = () => {
   },[])
   console.log(product)
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-10 py-10">
       <span className="text-6xl text-white font-semibold">Merchandise</span>
-      <div className="grid lg:grid-cols-4 gap-5">
+      <div className="grid lg:grid-cols-4 gap-8">
         {
           product.map(single=><SingleProduct single={single} key={single.id}/>)
         }
