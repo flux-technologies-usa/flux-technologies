@@ -21,6 +21,14 @@
     text-align: center;
     width: 100%;
 }
+.single-product{
+    position: relative;
+}
+
+.single-product:hover .btn{
+    display: block;
+    text-align: center;
+}
 
 .cartbtn  .btn{
     position: absolute;

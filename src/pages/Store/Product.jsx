@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Store.scss";
 import { useEffect, useState } from "react";
 import SingleProduct from "./SingleProduct";

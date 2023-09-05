@@ -3,7 +3,7 @@ import Home from "../Home/Home";
 import Main from "../../layout/Main";
 import Contact from "../Contact/Contact";
 import About from "../About/About";
-import Store from "../Store/Store";
+
 import Subscribe from "../Subscribe/Subscribe";
 import Privacy from "../Privacy/Privacy";
 import StayUpdate from "../StayUpdate/StayUpdate";
@@ -12,6 +12,7 @@ import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
 import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 import FluxFreedom from "../FluxFreedom/FluxFreedom";
 import CarDesign2 from "../CarDesign/CarDesign2";
+import Store from "../Store/Store";
 
 const routes = createBrowserRouter([
   {
