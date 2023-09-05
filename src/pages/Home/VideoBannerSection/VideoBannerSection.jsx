@@ -18,7 +18,7 @@ const VideoBannerSection = () => {
           muted></video>
       </div>
       {/* main div */}
-      <div className="absolute top-[40%] left-[15%] md:left-[36%] ">
+      <div className="absolute w-full top-[40%] text-center">
         {/* button section */}
         <div className="text-center">
           <h1 className="text-[34px] font-semibold ml-3 md:text-5xl md:ml-0">
@@ -36,7 +36,7 @@ const VideoBannerSection = () => {
                 setHover(false);
               }}
               className="cursor-pointer  text-[18px] font-semibold mt-[20px] md:ml-7 md:mt-0">
-              <h1>Contact now</h1>
+              <Link to="/contact">Contact now</Link>
               <div
                 className={`w-full h-[1px] ${
                   hover ? "bg-[#ddc861]" : "bg-white"

@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutInfo = () => {
     return (
-      <div className="w-[100vw] h-[70vh] bg-[#f7f497] text-[#1b1b1b] md:h-[100vh]">
-        <h1 className="px-[10%] text-[18px] pt-[8%] md:text-[42px]">
+      <div className="w-[100vw] h-[380px] bg-[#F7F497] text-[#1b1b1b] md:h-[100vh] opacity-80">
+        <h1 className="px-[10%] text-[18px] pt-[10%] md:text-[42px]">
           The spirit of California moves us to think beyond mobility, and design
           for a world where life is the most important journey we’ll ever take;
           to look beyond tomorrow and shape a future where we no longer have to

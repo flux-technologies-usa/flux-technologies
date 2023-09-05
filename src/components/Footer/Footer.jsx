@@ -159,12 +159,12 @@ const Footer = () => {
         </div>
         {/* footer info */}
         <div>
-          <div className="flex gap-5 mx-7"> 
-            <div className="flex items-center">
+          <div className=" mx-7">
+            <div className="flex items-center  mt-5">
               <img className="w-5" src={worldIcon} alt="" />
               <h1>United States – English</h1>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center mt-5  gap-8 ">
               <img className="w-[20px] cursor-pointer" src={instaIcon} alt="" />
               <img
                 className="w-[20px] cursor-pointer"
@@ -174,13 +174,13 @@ const Footer = () => {
               <img className="w-[20px] cursor-pointer" src={ytIcon} alt="" />
               <img className="w-[20px] cursor-pointer" src={fbIcon} alt="" />
             </div>
-          </div>
-          <div className="flex gap-8 my-5 justify-center">
-            <div>
-              <h1>Legal</h1>
-            </div>
-            <div>
-              <h1>©2022 Flux. All rights reserved</h1>
+            <div className="flex gap-8 my-5 ">
+              <div>
+                <h1>Legal</h1>
+              </div>
+              <div>
+                <h1>©2022 Flux. All rights reserved</h1>
+              </div>
             </div>
           </div>
         </div>

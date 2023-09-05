@@ -6,7 +6,11 @@ const Leadership = () => {
   return (
     <div className=" flex flex-col md:w-[100vw] md:h-[100vh] md:flex-row">
       <div className="md:w-1/2">
-        <img className="w-full h-[100vh] bg-cover " src={tang} alt="" />
+        <img
+          className="w-full h-[520px]  bg-cover md:h-[100vh]"
+          src={tang}
+          alt=""
+        />
       </div>
       {/* for big device */}
       <div className="w-[44%] bg-[#1b1b1b] mr-[6%] h-[92%] mb-[8%] hidden md:block">

@@ -28,7 +28,7 @@ const AboutFlux = () => {
       </div>
       {/* for small device */}
       <div className="text-start text-2xl  text-white  font-semibold mx-5 block md:hidden">
-        <h1 className="mt-5">
+        <h1 className="mt-5 pb-16">
           Africa's First Electric Car Debuts in Nigeria. Revolving technology
           moves us to think beyond mobility, and design for a world where life
           is the most important journey we’ll ever take; to look beyond tomorrow
