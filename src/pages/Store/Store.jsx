@@ -1,16 +1,14 @@
-import Product from './Product'
-import './Store.scss'
-import Storeheader from './Storeheader'
+import Product from "./Product";
+import "./Store.scss";
+import Storeheader from "./Storeheader";
 
 const Store = () => {
   return (
-    <>
-      <div className="store ">
-        <Storeheader/>
-        <Product/>
-      </div>
-    </>
-  )
-}
+    <div style={{fontFamily:"Schnyder S"}}>
+      <Storeheader />
+      <Product />
+    </div>
+  );
+};
 
-export default Store
+export default Store;

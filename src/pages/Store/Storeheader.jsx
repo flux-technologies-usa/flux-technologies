@@ -3,24 +3,12 @@ import { freedom_car } from "../../assets/Callback";
 
 const Storeheader = () => {
   return (
-    <div className="storeheader">
-      <div className="headerimg">
-        <img
-          src={freedom_car}
-          alt="headerimg"
-          className="md:w-full md:h-[500px]
-       md:object-cover h-[280px] object-cover
-       "
-        />
-      </div>
-      <div className="headertag md:text-[#ddc861] md:block hidden">
-        <h1 className="md:text-[60px] md:font-semibold">Flux Living</h1>
-        <p className="md:pt-[18px]">
-          Browse a collection of fashion and Lifestyle accessories
-          <br />
-          as luxurious as our vehicles.
-        </p>
-      </div>
+    <div
+      className="h-[50vh] bg-center bg-cover bg-no-repeat w-full text-[#DDC861] flex flex-col justify-center pl-52 gap-5"
+      style={{ backgroundImage: `url(${freedom_car})`}}
+    >
+      <span className="text-6xl font-semibold lg:block hidden">Flux Living</span>
+      <span className="text-xs lg:block hidden">Browse a collection of fashion and Lifestyle accessories <br /> as luxurious as our vehicles.</span>
     </div>
   );
 };

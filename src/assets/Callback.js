@@ -7,7 +7,7 @@ import solarCar from "./images/solar.png";
 import gray from "./images/gray.png";
 import graycarwt from "./images/graycarwt.png";
 import graycarbt from "./images/graycarbt.png";
-import blue from "./images/Blue.png";
+import blue from "./images/blue.png";
 import bluecarwt from "./images/bluecarwt.png";
 import bluecarbt from "./images/bluecarbt.png";
 import white from "./images/white.png";
