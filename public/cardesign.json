@@ -1,0 +1,28 @@
+[
+    {
+        "id":1,
+        "paint":"https://i.postimg.cc/Hnw5cMnZ/gray.png",
+        "name":"Gray Multi-Coatt",
+        "price":2000,
+        "car_white_wheel":"https://i.postimg.cc/wBY1JMKn/graycarwt.png",
+        "car_black_wheel":"https://i.postimg.cc/rs7VkZM7/graycarbt.png",
+        "wheels":[
+            {
+                "name":"19’’ Sport Wheels",
+                "price":1000,
+                "img":"https://i.postimg.cc/sX4BcrPK/whitetire.png"
+            },
+            {
+                "name":"18’’ Aero Wheels",
+                "price":"include",
+                "img":"https://i.postimg.cc/J7g82FTQ/blacktire.png"
+            }
+        ],
+        "interior":[
+            {
+                "name":"Black White Int",
+                "price":1000
+            }
+        ]
+    }
+]

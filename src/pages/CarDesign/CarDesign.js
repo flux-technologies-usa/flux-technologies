@@ -19,7 +19,8 @@ import {
   blacktire,
   darkBg,
 } from "../../assets/Callback";
-import './CarDesign.scss'
+import "./CarDesign.scss";
+import { loadStripe } from "@stripe/stripe-js";
 const CarDesign = () => {
   const [active, setActive] = useState(1);
   const [paintedCar, setPaintedCar] = useState(graycarwt);
@@ -159,7 +160,7 @@ const CarDesign = () => {
     setFluxVillageActive(event);
     setFluxMath("110000");
   };
-  const [checked, setChecked] = useState([]);
+  const [checked, setChecked] = useState();
   function handleChange(e) {
     if (e.target.checked) {
       const checked = parseInt(e.target.value);
@@ -168,7 +169,7 @@ const CarDesign = () => {
       setChecked("");
     }
   }
-  const [checked1, setChecked1] = useState([]);
+  const [checked1, setChecked1] = useState();
   function handleCharge(e) {
     if (e.target.checked) {
       const checked1 = parseInt(e.target.value);
@@ -177,15 +178,19 @@ const CarDesign = () => {
       setChecked1("");
     }
   }
+  console.log(checked1, checked);
 
   const [total, setTotal] = useState();
   useEffect(() => {
     const flux = parseInt(fluxMath);
     const car = parseInt(selectedCarCost);
     const tire = parseInt(selectedTireCost);
-    const totalCost = flux + car + tire + checked + checked1;
+    const totalCost = flux + car + tire;
     setTotal(totalCost);
-  }, [total, fluxMath, selectedCarCost, selectedTireCost, checked, checked1]);
+  }, [total, fluxMath, selectedCarCost, selectedTireCost]);
+
+  
+  
 
   return (
     <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
@@ -298,7 +303,8 @@ const CarDesign = () => {
             />
           </div>
           <span className="text-sm flex gap-1">
-            <span className="text-white">{carName}</span>{amount}
+            <span className="text-white">{carName}</span>
+            {amount}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -372,7 +378,12 @@ const CarDesign = () => {
           <span className="text-white font-semibold">
             Est. Delivery: Dec 2022 - Apr 2023
           </span>
-          <button className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">Continue to Payment</button>
+          <button
+            type="button"
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
+          >
+            Continue to Payment
+          </button>
         </div>
       </div>
     </div>
