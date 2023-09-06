@@ -5,7 +5,7 @@ import Contact from "../Contact/Contact";
 import About from "../About/About";
 
 import Subscribe from "../Subscribe/Subscribe";
-import Privacy from "../Privacy/Privacy";
+// import Privacy from "../Privacy/Privacy";
 import StayUpdate from "../StayUpdate/StayUpdate";
 import CarDesign from "../CarDesign/CarDesign";
 import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
@@ -13,6 +13,8 @@ import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondit
 import FluxFreedom from "../FluxFreedom/FluxFreedom";
 import CarDesign2 from "../CarDesign/CarDesign2";
 import Store from "../Store/Store";
+// import Cart from "../Cart/Cart/Cart";
+import CartMain from "../Cart/CartMain";
 import CarShop from "../CarDesign/CarShop/CarShop";
 
 const routes = createBrowserRouter([
@@ -61,9 +63,13 @@ const routes = createBrowserRouter([
         element: <CarDesign></CarDesign>,
       },
       {
-        path:'/freedom',
-        element:<FluxFreedom/>
-      },      
+        path: "/freedom",
+        element: <FluxFreedom />,
+      },
+      {
+        path: "/test",
+        element: <CarDesign2 />,
+      },
       {
         path:'/carshop',
         element:<CarShop/>
