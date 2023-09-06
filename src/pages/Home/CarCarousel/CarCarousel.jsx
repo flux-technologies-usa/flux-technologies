@@ -1,82 +1,56 @@
 import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { freedomCarPng, jeepCar } from "../../../assets/Callback";
+import { freedomCarPng, jeepCar, darkBg } from "../../../assets/Callback";
 import "./../Home.scss";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "./CarCarousel.scss";
+import { Pagination,Autoplay } from "swiper/modules";
 const CarCarousel = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 3000,
-    pauseOnHover: false,
-    beforeChange: function (currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
-    },
-    afterChange: function (currentSlide) {
-      console.log("after change", currentSlide);
-    },
-  };
   return (
-    <div className=" ">
-      <Slider {...settings}>
-        <div className="text-center  coustomBackgroundImg ">
-          <div>
-            <div className="bg-[#656363]  mx-auto  brightness-200 w-[65%]  md:w-[18%] md:mt-[60px]">
-              <h1 className="text-black text-[16px] p-1 tracking-[5px]">
-                NOW DELIVERING
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-3xl font-semibold z-10 mt-3">Flux Village</h1>
-            </div>
-          </div>
-          <div className="mt-[40%] md:mt-[5%]">
-            <img
-              className="mx-auto w-[100%]  -mt-10 md:w-[45%] "
-              src={jeepCar}
-              alt=""
-            />
-          </div>
-          <Link to="/village">
-            <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
-              Design yours
-            </button>
+    <div
+      className="md:h-[95vh] h-[60vh] bg-center bg-cover flex flex-col justify-center bg-no-repeat w-full"
+      style={{ backgroundImage: `url(${darkBg})` }}
+    >
+      <Swiper
+        direction={"vertical"}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[Pagination,Autoplay]}
+        className="mySwiper w-full"
+      >
+        <SwiperSlide>
+          <span className="bg-[#BDBABA] px-5 text-sm tracking-widest text-black">
+            NOW DELIVERING
+          </span>
+          <span className="text-white text-4xl">Flux Village</span>
+          <img src={jeepCar} alt="" className="md:max-w-[700px] md:max-h-[300px]" />
+          <Link to='/village' className="btn rounded-none carbtn border-none">
+            Design Yours
           </Link>
-        </div>
+        </SwiperSlide>
 
-        <div className="text-center  coustomBackgroundImg ">
-          <div>
-            <div className="bg-[#656363]  mx-auto  brightness-200 w-[65%]  md:w-[18%] md:mt-[60px]">
-              <h1 className="text-black text-[16px] p-1 tracking-[5px]">
-                NOW DELIVERING
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-3xl font-semibold z-10 mt-3">Flux Freedom</h1>
-            </div>
-          </div>
-          <div className="mt-[38%] md:mt-[2%]">
-            <img
-              className="mx-auto w-[100%]  -mt-10 md:w-[50%] "
-              src={freedomCarPng}
-              alt=""
-            />
-          </div>
-          <Link to="/freedom">
-            <button className="videoCustomButton  mt-[20%] z-10 md:mt-[4%]">
-              Design yours
-            </button>
+        
+        <SwiperSlide>
+          <span className="bg-[#BDBABA] px-5 text-sm tracking-widest text-black">
+            NOW DELIVERING
+          </span>
+          <span className="text-white text-4xl">Flux Freedom</span>
+          <img src={freedomCarPng} alt="" className="md:max-w-[700px] md:max-h-[300px]" />
+          <Link to='/freedom' className="btn rounded carbtn border-none">
+            Design Yours
           </Link>
-        </div>
-      </Slider>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };

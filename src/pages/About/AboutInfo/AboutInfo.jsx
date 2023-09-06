@@ -4,12 +4,7 @@ const AboutInfo = () => {
     return (
       <div className="w-[100vw] h-[380px] bg-[#F7F497] text-[#1b1b1b] md:h-[100vh] opacity-80">
         <h1 className="px-[10%] text-[18px] pt-[10%] md:text-[42px]">
-          The spirit of California moves us to think beyond mobility, and design
-          for a world where life is the most important journey we’ll ever take;
-          to look beyond tomorrow and shape a future where we no longer have to
-          choose between doing great things and doing the right thing; and to
-          explore beyond ourselves, and create experiences that remind us what
-          it’s like to feel truly alive.
+        After a thorough analysis, we deliberated extensively on the choice of establishing a U.S. base headquarter. With careful consideration, we meticulously evaluated over 60 potential locations across 13 states, closely examining the Flux Technologies U.S. Motors factory, until finally deciding to plant our roots in the sprawling landscape of Casa Grande, Arizona. Settled on an impressive 500-acre property, this selected site occupies a perfect position between the vibrant cities of Phoenix and Tucson, conveniently accessible from our Silicon Valley-based U.S. headquarter. Casa Grande truly stood apart due to its exceptional advantages, boasting close proximity to crucial utilities, a well-established transportation system, and unwavering support from both state and local governments.
         </h1>
       </div>
     );

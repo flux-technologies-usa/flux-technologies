@@ -31,17 +31,18 @@ import freedomCarPng from "./images/flux_freedom_car-removebg-preview.png";
 import freedom_car from "./images/flux_freedom_car.png";
 import tang from "./images/tang.jpeg";
 import mount from "./images/mount.jpeg";
-import chargeCar from "./images/charge_car.png";
+import chargeCar from "./images/charge_car.jpg";
 import fluxFreedomCar from "./images/flux_freedom_car.png";
 import bridge from "./images/bridge.webp";
 import carBack from "./images/car_back.webp";
 import carUp from "./images/flux_village_up.webp";
 import office from "./images/car_test.webp";
 import phone from "./images/mobile_car.webp";
-import darkBg from './images/dark_bg.webp'
-import blackCarVW from './images/blackV.png'
-import blackCarVB from './images/blackVB.png'
-import blueCarV from './images/blueV.png'
+import darkBg from "./images/dark_bg.webp";
+import blackCarVW from "./images/blackV.png";
+import blackCarVB from "./images/blackVB.png";
+import blueCarV from "./images/blueV.png";
+import freedomCarNew from "./images/flux_freedom.jpg";
 
 // video
 import carVideo from "./video/car.mp4";
@@ -89,6 +90,7 @@ export {
   phone,
   darkBg,
   blackCarVW,
-blackCarVB,
-blueCarV
+  blackCarVB,
+  blueCarV,
+  freedomCarNew,
 };

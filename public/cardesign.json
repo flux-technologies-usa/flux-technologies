@@ -1,28 +1,136 @@
 [
-    {
-        "id":1,
-        "paint":"https://i.postimg.cc/Hnw5cMnZ/gray.png",
-        "name":"Gray Multi-Coatt",
-        "price":2000,
-        "car_white_wheel":"https://i.postimg.cc/wBY1JMKn/graycarwt.png",
-        "car_black_wheel":"https://i.postimg.cc/rs7VkZM7/graycarbt.png",
-        "wheels":[
-            {
-                "name":"19’’ Sport Wheels",
-                "price":1000,
-                "img":"https://i.postimg.cc/sX4BcrPK/whitetire.png"
-            },
-            {
-                "name":"18’’ Aero Wheels",
-                "price":"include",
-                "img":"https://i.postimg.cc/J7g82FTQ/blacktire.png"
-            }
-        ],
-        "interior":[
-            {
-                "name":"Black White Int",
-                "price":1000
-            }
-        ]
-    }
+  {
+    "id": 1,
+    "paint": "https://i.postimg.cc/Hnw5cMnZ/gray.png",
+    "name": "Gray Multi-Coatt",
+    "price": "2000",
+
+    "wheels": [
+      {
+        "name": "19’’ Sport Wheels",
+        "price": "1000",
+        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+        "img_wheel": "https://i.postimg.cc/wBY1JMKn/graycarwt.png"
+      },
+      {
+        "name": "18’’ Aero Wheels",
+        "price": "include",
+        "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+        "img_wheel": "https://i.postimg.cc/rs7VkZM7/graycarbt.png"
+      }
+    ],
+    "interior": [
+      {
+        "name": "Black White Int",
+        "price": "1000"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "paint": "https://i.postimg.cc/NjwmPs13/blue.png",
+    "name": "Deep Blue Metallict",
+    "price": "1000",
+    "wheels": [
+      {
+        "name": "18’’ Sport Wheel",
+        "price": "2000",
+        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+        "img_wheel": "https://i.postimg.cc/PxFdLrtP/bluecarwt.png"
+      },
+      {
+        "name": "18’’ Black Wheel",
+        "price": "3000",
+        "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+        "img_wheel": "https://i.postimg.cc/wvSTfTnn/bluecarbt.png"
+      }
+    ],
+    "interior": [
+      {
+        "name": "Black White Int",
+        "price": "1000"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "paint": "https://i.postimg.cc/C5Tj8ksQ/white.png",
+    "name": "Pearl White Multi-Coatt",
+    "price": "1400",
+
+    "wheels": [
+      {
+        "name": "19’’ Sport Wheels",
+        "price": "1300",
+        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+        "img_wheel": "https://i.postimg.cc/Qt5rMgnn/whitecarwt.png"
+      },
+      {
+        "name": "18’’ Aero Wheels",
+        "price": "1300",
+        "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+        "img_wheel": "https://i.postimg.cc/QM2Rv9xg/whitecarbt.png"
+      }
+    ],
+    "interior": [
+      {
+        "name": "Black White Int",
+        "price": "1000"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "paint": "https://i.postimg.cc/5ysLRTMZ/red.png",
+    "name": "Midnight Silver Metallict",
+    "price": "3000",
+
+    "wheels": [
+      {
+        "name": "Sport Wheel",
+        "price": "1500",
+        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+        "img_wheel": "https://i.postimg.cc/htx8pf6R/redcarwt.png"
+      },
+      {
+        "name": "19’’ Aero Wheels",
+        "price": "1700",
+        "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+        "img_wheel": "https://i.postimg.cc/BQP2njqP/redcarbt.png"
+      }
+    ],
+    "interior": [
+      {
+        "name": "Black White Int",
+        "price": "1000"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "paint": "https://i.postimg.cc/3wyh4vRp/black.png",
+    "name": "Solid Blackt",
+    "price": "4000",
+
+    "wheels": [
+      {
+        "name": "19’’ Sport Wheels",
+        "price": "2000",
+        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+        "img_wheel": "https://i.postimg.cc/bJMd7RSC/blackcarwt.png"
+      },
+      {
+        "name": "18’’ Aero Wheels",
+        "price": "2000",
+        "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+        "img_wheel": "https://i.postimg.cc/htbMb2Xq/blackcarbt.png"
+      }
+    ],
+    "interior": [
+      {
+        "name": "Black White Int",
+        "price": "1000"
+      }
+    ]
+  }
 ]

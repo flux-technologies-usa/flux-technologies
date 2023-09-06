@@ -13,6 +13,7 @@ import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondit
 import FluxFreedom from "../FluxFreedom/FluxFreedom";
 import CarDesign2 from "../CarDesign/CarDesign2";
 import Store from "../Store/Store";
+import CarShop from "../CarDesign/CarShop/CarShop";
 
 const routes = createBrowserRouter([
   {
@@ -62,10 +63,10 @@ const routes = createBrowserRouter([
       {
         path:'/freedom',
         element:<FluxFreedom/>
-      },
+      },      
       {
-        path:'/test',
-        element:<CarDesign2/>
+        path:'/carshop',
+        element:<CarShop/>
       }
     ],
   },

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CarDesign2 = () => {
+const Stripe = () => {
   const makePayment = async () => {
     // const stripe = await loadStripe(
     //   "pk_test_51NmhimDBfEUXxFmszR5Ul1n3zANWL4vjEF6RkWwQ2ENvg385lIQuYLkzn72AH55vy4CCJ5A0IQsnACn1oD38sZXu00QpPGV4G7"
@@ -38,4 +38,4 @@ const CarDesign2 = () => {
   );
 };
 
-export default CarDesign2;
+export default Stripe;

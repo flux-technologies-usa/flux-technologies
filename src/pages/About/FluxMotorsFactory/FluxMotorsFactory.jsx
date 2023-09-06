@@ -15,13 +15,7 @@ const FluxMotorsFactory = () => {
           support from state and local governments.
         </h1>
         <p className=" mt-[5%] text-[rgb(22,22,22)] leading-8 pb-[15%] md:pb-[0px] md:leading-normal md:text-[22px]">
-          This facility is the first greenfield — or purpose-built — EV factory
-          in North America. Designed to our exact specifications, it is being
-          built with such efficiency and speed that we will complete
-          construction of its first phase a mere 12 months after breaking
-          ground. Outfitted with the world’s most advanced production line
-          equipment, the factory will have the initial capacity to produce
-          10,000 cars a year — and over 300,000 annually with planned expansion.
+        Introducing the inaugural greenfield venture in North America, our EV factory proudly stands as a purpose-built marvel. Meticulously tailored to our precise requirements, this facility is swiftly rising from the ground with unrivaled efficiency and speed, aiming to complete its initial phase in a mere 12 months. Equipped with cutting-edge production line technology, it will possess the capability to manufacture 10,000 cars annually, with aspirations to exceed 300,000 through future expansions.
         </p>
       </div>
     );
