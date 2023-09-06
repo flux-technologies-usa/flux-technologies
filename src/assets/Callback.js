@@ -7,7 +7,7 @@ import solarCar from "./images/solar.png";
 import gray from "./images/gray.png";
 import graycarwt from "./images/graycarwt.png";
 import graycarbt from "./images/graycarbt.png";
-import blue from "./images/blue.png";
+import blue from "./images/Blue.png";
 import bluecarwt from "./images/bluecarwt.png";
 import bluecarbt from "./images/bluecarbt.png";
 import white from "./images/white.png";
@@ -38,10 +38,10 @@ import carBack from "./images/car_back.webp";
 import carUp from "./images/flux_village_up.webp";
 import office from "./images/car_test.webp";
 import phone from "./images/mobile_car.webp";
-import darkBg from './images/dark_bg.webp'
-import blackCarVW from './images/blackV.png'
-import blackCarVB from './images/blackVB.png'
-import blueCarV from './images/blueV.png'
+import darkBg from "./images/dark_bg.webp";
+import blackCarVW from "./images/blackV.png";
+import blackCarVB from "./images/blackVB.png";
+import blueCarV from "./images/blueV.png";
 
 // video
 import carVideo from "./video/car.mp4";
@@ -89,6 +89,6 @@ export {
   phone,
   darkBg,
   blackCarVW,
-blackCarVB,
-blueCarV
+  blackCarVB,
+  blueCarV,
 };

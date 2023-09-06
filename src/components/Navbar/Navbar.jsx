@@ -6,8 +6,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import CustomLink from "../CustomLink/CustomLink";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import "../components.scss";
+import { useContext } from "react";
+import { CartContext } from "../../context api/AddToCartContext";
 
 const Navbar = () => {
+  // context api
+  const { cartLength } = useContext(CartContext);
   // all states
   const [top, setTop] = useState(true);
   const [nav, setNav] = useState(0);
@@ -21,6 +25,7 @@ const Navbar = () => {
   // functions
   const scroll = () => {
     if (window.scrollY < 50) {
+      
       setTop(true);
     } else {
       setTop(false);
@@ -39,6 +44,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", scroll);
     };
   }, [nav]);
+
   return (
     <div
       className={`p-5  fixed top-0 w-full z-50 md:p-0 ${
@@ -88,11 +94,11 @@ const Navbar = () => {
                   className={` px-4 py-3 text-white ${
                     buttonHoverVillage ? "bg-[#635929]" : "bg-transparent"
                   }`}>
-                  <Link to='/village'>FLUX VILLAGE</Link>
+                  <Link to="/village">FLUX VILLAGE</Link>
                 </div>
               </Link>
               {/* flux freedom */}
-              <Link>
+              <Link to="/freedom">
                 <div
                   onMouseEnter={() => {
                     setButtonHoverFreedom(true);
@@ -103,7 +109,7 @@ const Navbar = () => {
                   className={`p-4 mt-5 ${
                     buttonHoverFreedom ? "bg-[#635929]" : "bg-transparent"
                   }`}>
-                  <Link to='/freedom'>FLUX FREEDOM</Link>
+                  <Link to="/freedom">FLUX FREEDOM</Link>
                 </div>
               </Link>
             </div>
@@ -113,12 +119,30 @@ const Navbar = () => {
 
         {/* logo */}
         <Link to="/">
-          <img className="w-[40%] cursor-pointer md:w-[55%]" src={logo} alt="" />
+          <img
+            className="w-[40%] cursor-pointer md:w-[55%]"
+            src={logo}
+            alt=""
+          />
         </Link>
 
         <div className="flex items-center">
           {/* Shoping cart */}
-          <FaShoppingCart className="text-[18px] text-white cursor-pointer hidden" />
+
+          <div className="dropdown dropdown-end">
+            <Link to="/cart">
+              <label tabIndex={0} className="btn btn-ghost btn-circle">
+                <div className="indicator">
+                  <Link to="/cart">
+                    <FaShoppingCart className="text-[18px] text-white cursor-pointer " />
+                  </Link>
+                  <span className="badge badge-sm indicator-item">
+                    {cartLength}
+                  </span>
+                </div>
+              </label>
+            </Link>
+          </div>
 
           {/* Store and Stay update */}
           <div className="hidden md:block">
@@ -204,7 +228,7 @@ const Navbar = () => {
 
                           {/* Flux freedom drower*/}
                           <Link
-                          to='/freedom'
+                            to="/freedom"
                             onMouseEnter={() => {
                               setButtonHoverFreedomDrop(true);
                             }}

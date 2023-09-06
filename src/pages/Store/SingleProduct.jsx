@@ -1,8 +1,22 @@
 import React from "react";
 import "./Store.scss";
+import pushToLocalStroge from "../../components/LocalStorage/LocalStorage";
+import { useContext } from "react";
+import { CartContext } from "../../context api/AddToCartContext";
 const SingleProduct = ({ single }) => {
+  // context api
+  const { setCartLength, cartLength } = useContext(CartContext);
   const { img, name, price } = single;
-  console.log(img);
+
+  const handleAddToCart = () => {
+    let id = Math.floor(Math.random() * 0xfffff * 1000000000000).toString(16);
+    const productData = {
+      id,
+      product: single,
+    };
+    pushToLocalStroge(productData);
+    setCartLength(cartLength + 1);
+  };
   return (
     <div className="single-product w-[320px] h-[300px] bg-white single-product hover:bg-[#707070] relative">
       <div className="div">
@@ -18,7 +32,11 @@ const SingleProduct = ({ single }) => {
           <div className="product-name ">{name}</div>
         </div>
       </div>
-      <button className="btn absolute border-none top-[40%] right-[30%] rounded-none button">Add to cart</button>
+      <button
+        onClick={handleAddToCart}
+        className="btn absolute border-none top-[40%] right-[30%] rounded-none button">
+        Add to cart
+      </button>
     </div>
   );
 };
