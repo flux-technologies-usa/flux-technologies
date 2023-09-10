@@ -11,7 +11,6 @@ import CarDesign from "../CarDesign/CarDesign";
 import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
 import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 import FluxFreedom from "../FluxFreedom/FluxFreedom";
-import CarDesign2 from "../CarDesign/CarDesign2";
 import Store from "../Store/Store";
 // import Cart from "../Cart/Cart/Cart";
 import CartMain from "../Cart/CartMain";
@@ -67,13 +66,13 @@ const routes = createBrowserRouter([
         element: <FluxFreedom />,
       },
       {
-        path: "/test",
-        element: <CarDesign2 />,
+        path: "/carshop",
+        element: <CarShop />,
       },
       {
-        path:'/carshop',
-        element:<CarShop/>
-      }
+        path: "/cart",
+        element: <CartMain></CartMain>,
+      },
     ],
   },
 ]);
