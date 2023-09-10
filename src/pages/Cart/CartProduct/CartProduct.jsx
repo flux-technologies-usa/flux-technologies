@@ -1,17 +1,18 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../../context api/AddToCartContext";
+import CartProductSingle from "./CartProductSingle";
 
 const CartProduct = () => {
   // context api
   const { products } = useContext(CartContext);
-  console.log(products)
 
+  console.log(products);
   return (
-    <div className="border1">
-      <div>
-        <img src={products[0].product.img} alt="" />
-      </div>
+    <div className="">
+      {products.map((product) => (
+        <CartProductSingle product={product}></CartProductSingle>
+      ))}
     </div>
   );
 };
