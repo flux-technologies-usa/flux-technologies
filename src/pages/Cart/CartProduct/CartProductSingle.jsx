@@ -4,13 +4,15 @@ const CartProductSingle = ({ product }) => {
   console.log(product);
   const { img, name } = product.product;
   return (
-    <div>
-      <div className="w-[100px]">
-        <img src={img} alt="" />
-      </div>
-      <div>
-        <h1>{name}</h1>
-        <div>Remove</div>
+    <div className=" flex justify-around">
+      <div className=" flex">
+        <div className="w-[100px]">
+          <img src={img} alt="" />
+        </div>
+        <div>
+          <h1>{name}</h1>
+          <div>Remove</div>
+        </div>
       </div>
       <div>
         <h1>Quantity :</h1>

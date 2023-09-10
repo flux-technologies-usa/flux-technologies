@@ -10,9 +10,14 @@ const AddToCartContext = ({ children }) => {
   const [cartLength, setCartLength] = useState(0);
 
   useState(() => {
-    const productData = JSON.parse(localStorage.getItem("cart"));
-    setProducts(productData);
-    setCartLength(productData.length);
+    if (localStorage.getItem("cart")) {
+      const productData = JSON.parse(localStorage.getItem("cart"));
+      setProducts(productData);
+      setCartLength(productData.length);
+    } else {
+      setProducts([]);
+      setCartLength(0);
+    }
   }, [cartLength, products]);
 
   const contextValue = { products, setProducts, cartLength, setCartLength };
