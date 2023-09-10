@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Rear-Wheel Drive",
+    "power_name": "Flux Village",
+    "price": "85000"
+  },
+  {
+    "id": 2,
+    "name": "Dual Motor All-Wheel Drive",
+    "power_name": "Flux Village Power",
+    "price": "110000"
+  }
+]

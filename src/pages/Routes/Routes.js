@@ -7,7 +7,6 @@ import About from "../About/About";
 import Subscribe from "../Subscribe/Subscribe";
 // import Privacy from "../Privacy/Privacy";
 import StayUpdate from "../StayUpdate/StayUpdate";
-import CarDesign from "../CarDesign/CarDesign";
 import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy";
 import TermsAndCondition from "../../components/TermsAndCondition/TermsAndCondition";
 import FluxFreedom from "../FluxFreedom/FluxFreedom";
@@ -59,15 +58,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/village",
-        element: <CarDesign></CarDesign>,
+        element: <CarShop />,
       },
       {
         path: "/freedom",
         element: <FluxFreedom />,
-      },
-      {
-        path: "/carshop",
-        element: <CarShop />,
       },
       {
         path: "/cart",
