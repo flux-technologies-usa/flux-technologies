@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AddToCartContext from "./context api/AddToCartContext";
+import NavbarContex from "./context api/NavbarContex";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AddToCartContext>
-      <App />
-    </AddToCartContext>
+    <NavbarContex>
+      <AddToCartContext>
+        <App />
+      </AddToCartContext>
+    </NavbarContex>
   </React.StrictMode>
 );
 

@@ -1,24 +1,34 @@
-
 .carbtn {
-    color: white;
-    /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to right, white 50%, #DDC861 50%) left;
-    background-size: 200%;
-    transition: .5s ease-out;
-    color: black;
+  color: white;
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to right, white 50%, #DDC861 50%) left;
+  background-size: 200%;
+  transition: .5s ease-out;
+  color: black;
 }
+
 .carbtn:hover {
-    background-position: right;
+  background-position: right;
 }
+
 .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 400px) {
+  .swiper-slide img {
+    width:90%;
+    height: 40%;
+    
   }
-  .swiper-slide img{
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+}

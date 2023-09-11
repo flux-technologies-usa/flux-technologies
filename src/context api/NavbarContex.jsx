@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
-const routeContext = createContext();
+export const routeContext = createContext();
 
 const NavbarContex = ({ children }) => {
   // all state
-  const [route, setRoute] = useState("Home");
+  const [routePath, setRoutePath] = useState("home");
 
-//   context value
-  const value = { route, setRoute };
+  //   context value
+  const value = { routePath, setRoutePath };
   return (
     <routeContext.Provider value={value}>{children}</routeContext.Provider>
   );

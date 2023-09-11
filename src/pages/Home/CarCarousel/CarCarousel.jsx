@@ -12,9 +12,8 @@ import { Pagination,Autoplay } from "swiper/modules";
 const CarCarousel = () => {
   return (
     <div
-      className="md:h-[95vh] h-[60vh] bg-center bg-cover flex flex-col justify-center bg-no-repeat w-full"
-      style={{ backgroundImage: `url(${darkBg})` }}
-    >
+      className=" h-[60vh] bg-center bg-cover flex flex-col justify-center bg-no-repeat w-full md:h-[95vh]"
+      style={{ backgroundImage: `url(${darkBg})` }}>
       <Swiper
         direction={"vertical"}
         pagination={{
@@ -25,28 +24,34 @@ const CarCarousel = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        modules={[Pagination,Autoplay]}
-        className="mySwiper w-full"
-      >
+        modules={[Pagination, Autoplay]}
+        className="mySwiper w-full">
         <SwiperSlide>
           <span className="bg-[#BDBABA] px-5 text-sm tracking-widest text-black">
             NOW DELIVERING
           </span>
           <span className="text-white text-4xl">Flux Village</span>
-          <img src={jeepCar} alt="" className="md:max-w-[700px] md:max-h-[300px]" />
-          <Link to='/village' className="btn rounded-none carbtn border-none">
+          <img
+            src={jeepCar}
+            alt=""
+            className=" md:max-w-[700px] md:max-h-[300px]"
+          />
+          <Link to="/village" className="btn rounded-none carbtn border-none">
             Design Yours
           </Link>
         </SwiperSlide>
 
-        
         <SwiperSlide>
           <span className="bg-[#BDBABA] px-5 text-sm tracking-widest text-black">
             NOW DELIVERING
           </span>
           <span className="text-white text-4xl">Flux Freedom</span>
-          <img src={freedomCarPng} alt="" className="md:max-w-[700px] md:max-h-[300px]" />
-          <Link to='/freedom' className="btn rounded carbtn border-none">
+          <img
+            src={freedomCarPng}
+            alt=""
+            className="md:max-w-[700px] md:max-h-[300px]"
+          />
+          <Link to="/freedom" className="btn rounded carbtn border-none">
             Design Yours
           </Link>
         </SwiperSlide>
