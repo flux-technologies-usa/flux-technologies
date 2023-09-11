@@ -3,7 +3,7 @@ import '../Cart.scss'
 
 const Cart = () => {
   return (
-    <div className=" mx-20 h-full">
+    <div className=" md:mx-20 mx-6 md:mt-0 mt-20 h-full">
       <h1 className="text-2xl ">Summary</h1>
       <div>
         <div className="flex justify-between font-bold text-[17px] pt-3">
