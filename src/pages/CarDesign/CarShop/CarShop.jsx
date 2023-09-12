@@ -1,108 +1,66 @@
 import React from "react";
-import {
-  red,
-  white,
-  blue,
-  gray,
-  black,
-  graycarwt,
-  graycarbt,
-  bluecarwt,
-  bluecarbt,
-  whitecarwt,
-  whitecarbt,
-  whitetire,
-  redcarwt,
-  redcarbt,
-  blackcarwt,
-  blackcarbt,
-  blacktire,
-  darkBg,
-} from "../../../assets/Callback";
+import { black, darkBg } from "../../../assets/Callback";
 import { useState } from "react";
-import { useEffect } from "react";
 import CarDetails from "./CarDetails";
 import CarWheel from "./CarWheel";
+import data from "./cardesign";
+import dataVillage from "./fluxvillage";
+import FluxDetails from "./FluxDetails";
+import '../CarDesign.scss'
 
 const CarShop = () => {
-    const [active, setActive] = useState(1);
-    const [paintedCar, setPaintedCar] = useState(graycarwt);
-    const [carName, setCarName] = useState("Gray Multi-Coatt");
-    const [amount, setAmount] = useState("$2,000.00");
-    const [whiteWheelName, setWhiteWheelName] = useState("19’’ Sport Wheels");
-    const [whiteWheelCost, setwhiteWheelCost] = useState("$1,000.00");
-    const [blackWheelName, setBlackWheelName] = useState("18’’ Aero Wheels");
-    const [blackWheelCost, setBlackWheelCost] = useState("Include");
-    const [wheelName, setWheelName] = useState(whiteWheelName);
-    const [wheelCost, setWheelCost] = useState(whiteWheelCost);
-    const [carWhiteTire, setCarWhiteTire] = useState(graycarwt);
-    const [carBlackTire, setCarBlackTire] = useState(graycarbt);
-    const [tireActive, setTireActive] = useState("ww");
-    const [fluxMath, setFluxMath] = useState("85000");
-    const [selectedCarCost, setSelectedCarCost] = useState("2000");
-    const [selectedTireCost, setSelectedTireCost] = useState("1000");
-    const [wCost, setWCost] = useState("1500");
-    const [bCost, setBCost] = useState("0");
+  const [carDetails, setCarDetails] = useState(data);
+  const [villageDetails, setVillageDetails] = useState(dataVillage);
 
-    const [carDetails, setCarDetails] = useState([])
-    useEffect(()=>{
-        fetch('cardesign.json')
-        .then(res=>res.json())
-        .then((data)=>setCarDetails(data))
-    },[])
+  const [paintDetails, setPaintDetails] = useState(carDetails[0]);
+  const [carWheel, setCarWheel] = useState(carDetails[0].wheels);
+  const [wheelDetails, setWheelDetails] = useState(carWheel[0]);
 
-    const [paintDetails, setPaintDetails] = useState([])
-    const [carWheel, setCarWheel] = useState([])
-    const [wheelDetails, setWheelDetails] = useState([])
+  const [fluxMath, setFluxMath] = useState(villageDetails[0].price);
+  const [selectedCarCost, setSelectedCarCost] = useState(paintDetails.price);
 
-    console.log(paintDetails)
-    
-    const [fluxVillageActive, setFluxVillageActive] = useState(11);
-    const rearWheelActive = (event) => {
-      setFluxVillageActive(event);
-      setFluxMath("85000");
-    };
-    const dualWheelActive = (event) => {
-      setFluxVillageActive(event);
-      setFluxMath("110000");
-    };
-    const [checked, setChecked] = useState();
-    function handleChange(e) {
-      if (e.target.checked) {
-        const checked = parseInt(e.target.value);
-        setChecked(checked);
-      } else {
-        setChecked("");
-      }
-    }
-    const [checked1, setChecked1] = useState();
-    function handleCharge(e) {
-      if (e.target.checked) {
-        const checked1 = parseInt(e.target.value);
-        setChecked1(checked1);
-      } else {
-        setChecked1("");
-      }
-    }
-    console.log(checked1, checked);
+  const [selectedTireCost, setSelectedTireCost] = useState(wheelDetails.price);
+
+  const [checkboxSum, setCheckboxSum] = useState("0");
+
   
-    const [total, setTotal] = useState();
-    useEffect(() => {
-      const flux = parseInt(fluxMath);
-      const car = parseInt(selectedCarCost);
-      const tire = parseInt(selectedTireCost);
-      const totalCost = flux + car + tire;
-      setTotal(totalCost);
-    }, [total, fluxMath, selectedCarCost, selectedTireCost]);
+  const checkboxes = document.querySelectorAll("input[type=checkbox]");
   
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
+      const runningTotal = Array.from(checkboxes)
+      .filter((i) => i.checked) // remove unchecked checkboxes.
+      .map((i) => (i.dataset.amount ??= 0)) //extract the amount, or 0
+      .reduce((total, item) => {
+        return total + parseFloat(item);
+      }, 0);
+      
+      setCheckboxSum(runningTotal);
+    });
+  });
 
+  console.log(checkboxSum);
+  
+  const total =
+  parseFloat(fluxMath) +
+  parseFloat(selectedCarCost) +
+  parseFloat(selectedTireCost) +
+  parseFloat(checkboxSum) +
+  1000;
+  
+  const [active,setActive] = useState(paintDetails.id)
+  const [activeWheel, setActiveWheel] = useState(carWheel[0].id)
   return (
     <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] lg:h-screen mb-16 w-full lg:w-[78%]"
         style={{ backgroundImage: `url("${darkBg}")` }}
-      >
-        <img src={wheelDetails.img_wheel} alt="" className="w-[180px] lg:w-[600px]" />
+        >
+        <img
+          src={wheelDetails.img_wheel}
+          alt=""
+          className="w-[180px] lg:w-[600px]"
+          />
       </div>
       <div className="flex flex-col gap-3 lg:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[22%]">
         <span className="text-4xl text-white text-center lg:mt-10">
@@ -137,38 +95,26 @@ const CarShop = () => {
           </div>
         </div>
         <div className="flex flex-col text-white gap-2 pt-5">
-          <div className="flex flex-col w-full gap-1">
-            <span>Rear-Wheel Drive</span>
-            <button
-              onClick={() => rearWheelActive(11)}
-              className={`flex flex-row justify-between py-2 border rounded px-3 ${
-                fluxVillageActive === 11 ? "border-[#ddc861]" : ""
-              }`}
-            >
-              <span>Flux Village</span>
-              <span>$85,000.00</span>
-            </button>
-          </div>
-          <div className="flex flex-col w-full gap-1">
-            <span>Dual Motor All-Wheel Drive</span>
-            <button
-              onClick={() => dualWheelActive(12)}
-              className={`flex flex-row justify-between py-2 border rounded px-3 ${
-                fluxVillageActive === 12 ? "border-[#ddc861]" : ""
-              }`}
-            >
-              <span>Flux Village Power</span>
-              <span>$110,000.00</span>
-            </button>
-          </div>
+          {villageDetails.map((data) => (
+            <FluxDetails data={data} setFluxMath={setFluxMath} key={data.id} />
+          ))}
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
           <span className="text-2xl text-white">Paint</span>
           <div className="flex flex-row items-center gap-3">
-            {
-                carDetails.map(data=><CarDetails key={data.id} setPaintDetails={setPaintDetails} setCarWheel={setCarWheel} data={data}/>)
-            }
-            
+            {carDetails.map((data) => (
+              <CarDetails
+                key={data.id}
+                setSelectedCarCost={setSelectedCarCost}
+                setWheelDetails={setWheelDetails}
+                setPaintDetails={setPaintDetails}
+                setCarWheel={setCarWheel}
+                setActiveWheel={setActiveWheel}
+                setActive={setActive}
+                active={active}
+                data={data}
+              />
+            ))}
           </div>
           <span className="text-sm flex gap-1">
             <span className="text-white">{paintDetails.name}</span>
@@ -178,10 +124,16 @@ const CarShop = () => {
         <div className="flex flex-col items-center gap-3 pt-16">
           <span className="text-2xl text-white">Wheels</span>
           <div className="flex flex-row items-center gap-3">
-            
-            {
-                carWheel.map((data, i)=><CarWheel key={i} setWheelDetails={setWheelDetails} data={data}/>)
-            }
+            {carWheel.map((data) => (
+              <CarWheel
+                key={data.id}
+                setWheelDetails={setWheelDetails}
+                setSelectedTireCost={setSelectedTireCost}
+                activeWheel={activeWheel}
+                setActiveWheel={setActiveWheel}
+                data={data}
+              />
+            ))}
           </div>
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
@@ -205,9 +157,8 @@ const CarShop = () => {
             <label className="label cursor-pointer gap-2">
               <input
                 type="checkbox"
-                value="5000"
+                data-amount="5000"
                 className="checkbox border-[#ddc861] rounded"
-                onChange={handleChange}
               />
               <span className="label-text">Wall Charger</span>
             </label>
@@ -217,9 +168,8 @@ const CarShop = () => {
             <label className="label cursor-pointer gap-2">
               <input
                 type="checkbox"
-                value="5000"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
-                onChange={handleCharge}
+                data-amount="5000"
               />
               <span className="label-text">Remote Chrager</span>
             </label>
