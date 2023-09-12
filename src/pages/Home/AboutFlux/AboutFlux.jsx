@@ -7,7 +7,7 @@ const AboutFlux = () => {
         ABOUT FLUX
       </h1>
       {/* for big device */}
-      <div className="text-center text-[32px] text-white mt-[60px] font-semibold hidden md:block">
+      <div className="text-center text-[32px] text-white mt-[60px] font-semibold hidden md:block md:pb-20">
         <h1>Africa's First Electric Car Debuts in Nigeria. Revolving </h1>
         <h1 className="mt-[27px]">
           technology moves us to think beyond mobility, and design

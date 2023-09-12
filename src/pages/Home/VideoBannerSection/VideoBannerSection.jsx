@@ -3,9 +3,12 @@ import { carVideo } from "../../../assets/Callback";
 import "./../Home.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { routeContext } from "../../../context api/NavbarContex";
 
 const VideoBannerSection = () => {
   const [hover, setHover] = useState(false);
+  const { routePath } = useContext(routeContext);
   return (
     <div className="relative">
       <div className="customOverlay"></div>
@@ -21,7 +24,11 @@ const VideoBannerSection = () => {
       <div className="absolute w-full top-[40%] text-center">
         {/* button section */}
         <div className="text-center">
-          <h1 className="text-[34px] font-semibold ml-3 md:text-5xl md:ml-0">
+          <h1
+            onClick={() => {
+              console.log(routePath);
+            }}
+            className="text-[34px] font-semibold ml-3 md:text-5xl md:ml-0">
             Flux Technologies
           </h1>
           <div className="flex items-center mt-10 justify-center flex-col md:flex-row">

@@ -8,10 +8,13 @@ import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import "../components.scss";
 import { useContext } from "react";
 import { CartContext } from "../../context api/AddToCartContext";
+import { routeContext } from "../../context api/NavbarContex";
 
 const Navbar = () => {
   // context api
   const { cartLength } = useContext(CartContext);
+  const { routePath, setRoutePath } = useContext(routeContext);
+  
   // all states
   const [top, setTop] = useState(true);
   const [nav, setNav] = useState(0);
@@ -23,13 +26,16 @@ const Navbar = () => {
   const [buttonHoverFreedomDrop, setButtonHoverFreedomDrop] = useState(false);
 
   // functions
+  const dropDownControl = () => {
+    setDropDown(!dropDown);
+  };
   const scroll = () => {
-    if (window.scrollY < 50) {
-      
+    if (window.scrollY < 50 && routePath !== "cart") {
       setTop(true);
     } else {
       setTop(false);
     }
+
     setNav(window.scrollY);
   };
 
@@ -54,7 +60,10 @@ const Navbar = () => {
       }`}>
       <div className="flex justify-between  items-center navbar-container bg-transparent text-[17px] md:mx-[3%] relative">
         <div className="hidden md:flex md:items-center">
-          <CustomLink route={"/about"} value={"ABOUT FLUX"}></CustomLink>
+          <CustomLink
+            route={"/about"}
+            value={"ABOUT FLUX"}
+            routeName={"about"}></CustomLink>
 
           <div
             onMouseEnter={() => {
@@ -83,7 +92,11 @@ const Navbar = () => {
                 hover ? "h-[92px]" : "h-0 opacity-0"
               } absolute top-[70%] w-[110px] overflow-scroll manageScrollBar bg-[#161816] p-1 rounded duration-300`}>
               {/* flux village */}
-              <Link to="/village">
+              <Link
+                onClick={() => {
+                  setRoutePath("village");
+                }}
+                to="/village">
                 <div
                   onMouseEnter={() => {
                     setButtonHoverVillage(true);
@@ -98,7 +111,11 @@ const Navbar = () => {
                 </div>
               </Link>
               {/* flux freedom */}
-              <Link to="/freedom">
+              <Link
+                onClick={() => {
+                  setRoutePath("freedom");
+                }}
+                to="/freedom">
                 <div
                   onMouseEnter={() => {
                     setButtonHoverFreedom(true);
@@ -114,22 +131,36 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <CustomLink route={"/contact"} value={"CONTACT"}></CustomLink>
+          <CustomLink
+            route={"/contact"}
+            value={"CONTACT"}
+            routeName={"contact"}></CustomLink>
         </div>
 
         {/* logo */}
-        <Link to="/">
-          <img
-            className="w-[40%] cursor-pointer md:w-[55%]"
-            src={logo}
-            alt=""
-          />
-        </Link>
+        <div
+          onClick={() => {
+            setRoutePath("home");
+          }}>
+          <Link to="/">
+            <img
+              className="w-[40%] cursor-pointer md:w-[55%]"
+              src={logo}
+              alt=""
+            />
+          </Link>
+        </div>
 
         <div className="flex items-center">
           {/* Shoping cart */}
 
-          <div className="dropdown dropdown-end">
+          <div
+            onClick={() => {
+              setRoutePath("cart");
+            }}
+            className={`dropdown dropdown-end ${
+              routePath === "store" ? "" : "hidden"
+            }`}>
             <Link to="/cart">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <div className="indicator">
@@ -146,9 +177,21 @@ const Navbar = () => {
 
           {/* Store and Stay update */}
           <div className="hidden md:block">
-            <CustomLink route={"/store"} value={"STORE"}></CustomLink>
+            <CustomLink
+              route={"/store"}
+              value={"STORE"}
+              routeName={"store"}></CustomLink>
           </div>
-          <Button to={"/stayUpdate"} value={"STAY UPDATE"} left={"ml-[40px]"} />
+          <div
+            onClick={() => {
+              setRoutePath("stay");
+            }}>
+            <Button
+              to={"/stayUpdate"}
+              value={"STAY UPDATE"}
+              left={"ml-[40px]"}
+            />
+          </div>
 
           {/* drawer */}
           <div className="cursor-pointer">
@@ -181,7 +224,11 @@ const Navbar = () => {
                       X
                     </label>
                     {/* all buttons */}
-                    <div className="mt-[17%] flex">
+                    <div
+                      onClick={() => {
+                        setRoutePath("home/stay");
+                      }}
+                      className="mt-[17%] flex">
                       <Link>
                         <div className="text-[18px] font-semibold text-[#ddc861] hover:opacity-70 select-none">
                           Home
@@ -193,14 +240,19 @@ const Navbar = () => {
                         </div>
                       </Link>
                     </div>
-                    <Link to="/about" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("about");
+                      }}
+                      to="/about"
+                      className="">
                       <div className="text-[16px] mt-[18%] font-semibold text-white hover:opacity-70 select-none">
                         About Flux
                       </div>
                     </Link>
                     <div
                       onClick={() => {
-                        setDropDown(!dropDown);
+                        dropDownControl();
                       }}
                       className="text-[16px] mt-[8%] font-semibold text-white cursor-pointer hover:opacity-70">
                       <div className="flex justify-between select-none">
@@ -211,6 +263,9 @@ const Navbar = () => {
                         <div className={`px-5 py-7`}>
                           {/* Flux village drower*/}
                           <Link
+                            onClick={() => {
+                              setRoutePath("village");
+                            }}
                             to="/village"
                             onMouseEnter={() => {
                               setButtonHoverVillageDrop(true);
@@ -228,6 +283,9 @@ const Navbar = () => {
 
                           {/* Flux freedom drower*/}
                           <Link
+                            onClick={() => {
+                              setRoutePath("freedom");
+                            }}
                             to="/freedom"
                             onMouseEnter={() => {
                               setButtonHoverFreedomDrop(true);
@@ -246,27 +304,52 @@ const Navbar = () => {
                       </div>
                     </div>
 
-                    <Link to="/store" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("store");
+                      }}
+                      to="/store"
+                      className="">
                       <div className="select-none text-[16px] mt-[8%] font-semibold text-white hover:opacity-70">
                         Store
                       </div>
                     </Link>
-                    <Link to="/about" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("more");
+                      }}
+                      to="/about"
+                      className="">
                       <div className="select-none text-[16px] my-[20%] font-semibold text-white hover:opacity-70">
                         More About Flux
                       </div>
                     </Link>
-                    <Link to="/contact" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("contact");
+                      }}
+                      to="/contact"
+                      className="">
                       <div className="text-[16px]  font-semibold text-white hover:opacity-70 select-none">
                         Contact Us
                       </div>
                     </Link>
-                    <Link to="/privacy" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("contact");
+                      }}
+                      to="/privacy"
+                      className="">
                       <div className="text-[16px] mt-[5%]  font-semibold text-white hover:opacity-70 select-none">
                         Privacy policy
                       </div>
                     </Link>
-                    <Link to="/terms" className="">
+                    <Link
+                      onClick={() => {
+                        setRoutePath("contact");
+                      }}
+                      to="/terms"
+                      className="">
                       <div className="text-[16px] mt-[5%] font-semibold text-white hover:opacity-70 select-none">
                         Terms of Use
                       </div>
