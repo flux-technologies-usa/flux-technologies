@@ -1,8 +1,9 @@
 import React from "react";
 import "./Store.scss";
-import pushToLocalStroge from "../../components/LocalStorage/LocalStorage";
+
 import { useContext } from "react";
 import { CartContext } from "../../context api/AddToCartContext";
+import { pushToLocalStroge } from "../../components/LocalStorage/LocalStorage";
 const SingleProduct = ({ single }) => {
   // context api
   const { setCartLength, cartLength } = useContext(CartContext);
@@ -10,8 +11,10 @@ const SingleProduct = ({ single }) => {
 
   const handleAddToCart = () => {
     let id = Math.floor(Math.random() * 0xfffff * 1000000000000).toString(16);
+    let quentity = 1;
     const productData = {
       id,
+      quentity,
       product: single,
     };
     pushToLocalStroge(productData);

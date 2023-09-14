@@ -9,9 +9,10 @@ const CartProduct = () => {
 
   console.log(products);
   return (
-    <div className="flex flex-col items-center gap-14 w-full">
+    <div className="flex flex-col items-center gap-14 w-full px-5">
       {products.map((product) => (
-        <CartProductSingle product={product}></CartProductSingle>
+        <CartProductSingle
+          product={product}></CartProductSingle>
       ))}
     </div>
   );
