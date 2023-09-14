@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
@@ -9,16 +10,15 @@ const AddToCartContext = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cartLength, setCartLength] = useState(0);
 
-  useState(() => {
+  useEffect(() => {
     if (localStorage.getItem("cart")) {
       const productData = JSON.parse(localStorage.getItem("cart"));
       setProducts(productData);
-      setCartLength(productData.length);
     } else {
       setProducts([]);
       setCartLength(0);
     }
-  }, [cartLength, products]);
+  }, [cartLength]);
 
   const contextValue = { products, setProducts, cartLength, setCartLength };
   return (

@@ -12,9 +12,9 @@ import { routeContext } from "../../context api/NavbarContex";
 
 const Navbar = () => {
   // context api
-  const { cartLength } = useContext(CartContext);
+  const { products } = useContext(CartContext);
   const { routePath, setRoutePath } = useContext(routeContext);
-  
+
   // all states
   const [top, setTop] = useState(true);
   const [nav, setNav] = useState(0);
@@ -168,7 +168,7 @@ const Navbar = () => {
                     <FaShoppingCart className="text-[18px] text-white cursor-pointer " />
                   </Link>
                   <span className="badge badge-sm indicator-item">
-                    {cartLength}
+                    {products.length}
                   </span>
                 </div>
               </label>
