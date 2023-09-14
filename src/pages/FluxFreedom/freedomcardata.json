@@ -1,0 +1,41 @@
+[
+    {
+      "id": 557639,
+      "paint": "https://i.postimg.cc/3wyh4vRp/black.png",
+      "name": "Pearl White Multi-Coatt",
+      "price": "00",
+      "wheels": [
+        {
+          "id":734128,
+          "name": "18’’ Aero Wheels",
+          "price": "00",
+          "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
+          "img_wheel": "https://i.postimg.cc/FzgV8qNB/blackV.png"
+        },
+        {
+          "id":158173,
+          "name": "19’’ Black Wheels",
+          "price": "300",
+          "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+          "img_wheel": "https://i.postimg.cc/15V90QRB/blackVB.png"
+        }
+      ]
+    },
+    {
+      "id": 369260,
+      "paint": "https://i.postimg.cc/NjwmPs13/blue.png",
+      "name": "Pearl Blue Multi-Coatt",
+      "price": "800",
+  
+      "wheels": [
+        {
+          "id":370743,
+          "name": "18’’ Aero Wheels",
+          "price": "600",
+          "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
+          "img_wheel": "https://i.postimg.cc/yx4zvJ8T/blueV.png"
+        }
+      ]
+    }
+  ]
+  

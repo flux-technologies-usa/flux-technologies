@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { black, darkBg } from "../../../assets/Callback";
 import { useState } from "react";
 import CarDetails from "./CarDetails";
@@ -199,7 +199,7 @@ const CarShop = () => {
           </div>
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
-            ${wheelDetails.price}.00
+            {wheelDetails.price === '00' ? <span className="text-gray-400">include</span>:<span className="text-gray-400">${wheelDetails.price}.00</span>}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
