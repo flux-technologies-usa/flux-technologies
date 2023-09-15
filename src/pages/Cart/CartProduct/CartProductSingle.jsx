@@ -9,7 +9,6 @@ import { useContext } from "react";
 import { CartContext } from "../../../context api/AddToCartContext";
 const CartProductSingle = ({ product }) => {
   const { img, name, price } = product.product;
-
   // context api
   const { products, setCartLength, cartLength } = useContext(CartContext);
   // functions

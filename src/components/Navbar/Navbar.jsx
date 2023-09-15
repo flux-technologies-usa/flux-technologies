@@ -192,6 +192,10 @@ const Navbar = () => {
               left={"ml-[40px]"}
             />
           </div>
+          <CustomLink
+              route={"/signup"}
+              value={"SIGN UP"}
+              routeName={"signup"}></CustomLink>
 
           {/* drawer */}
           <div className="cursor-pointer">
