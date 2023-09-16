@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="py-56 bg-black">
-      <div className="flex flex-col items-center justify-center border md:max-w-[500px] mx-auto rounded bg-black py-10 px-12 gap-5 l-wrapper">
+      <form className="flex flex-col items-center justify-center border md:max-w-[500px] mx-auto rounded bg-black py-10 px-12 gap-5 l-wrapper">
         <span className="text-black text-2xl font-semibold">Login Now</span>        
         <div className="flex flex-col w-full gap-1">
           <span className="text-black text-sm">Email</span>
@@ -39,7 +39,7 @@ const Login = () => {
           <FcGoogle size={25} />
           <span>Login with google</span>
         </button>
-      </div>
+      </form>
     </div>
   );
 };

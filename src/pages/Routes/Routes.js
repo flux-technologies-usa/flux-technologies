@@ -17,6 +17,7 @@ import CarShop from "../CarDesign/CarShop/CarShop";
 import Stripe from "../CarDesign/Stripe";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
+import Profile from "../Profile/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const routes = createBrowserRouter([
       {
         path:'/login',
         element:<Login/>
+      },
+      {
+        path:'/profile',
+        element:<Profile/>
       }
     ],
   },
