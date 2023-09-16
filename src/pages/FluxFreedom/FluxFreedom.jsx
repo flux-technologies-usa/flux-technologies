@@ -50,7 +50,6 @@ const FluxFreedom = () => {
 
 
     const [checkWallId, setCheckWallId] = useState(12345);
-    console.log(Math.floor(checkWallId))
     
     const checkHandleWall = e =>{
       const checked = e.target.checked;
@@ -63,7 +62,6 @@ const FluxFreedom = () => {
     }
     
     const [checkRemoteId, setCheckRemoteId] = useState(123445);
-    console.log(checkRemoteId)
 
     const checkHandleRemote = e =>{
       if(e.target.checked === true){
