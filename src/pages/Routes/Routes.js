@@ -18,6 +18,8 @@ import Stripe from "../CarDesign/Stripe";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import Profile from "../Profile/Profile";
+import Success from "../../components/Success/Success";
+import Cancel from "../../components/Cancel/Cancel";
 
 const routes = createBrowserRouter([
   {
@@ -73,22 +75,30 @@ const routes = createBrowserRouter([
         element: <CartMain></CartMain>,
       },
       {
-        path:'/stripe',
-        element:<Stripe/>
+        path: "/stripe",
+        element: <Stripe />,
       },
       {
-        path:'/signup',
-        element:<SignUp/>
+        path: "/signup",
+        element: <SignUp />,
       },
       {
-        path:'/login',
-        element:<Login/>
+        path: "/login",
+        element: <Login />,
       },
       {
-        path:'/profile',
-        element:<Profile/>
-      }
+        path: "/profile",
+        element: <Profile />,
+      },
     ],
+  },
+  {
+    path: "/success",
+    element: <Success />,
+  },
+  {
+    path: "/cancel",
+    element: <Cancel />,
   },
 ]);
 

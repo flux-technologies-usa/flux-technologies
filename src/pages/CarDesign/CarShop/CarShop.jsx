@@ -75,7 +75,7 @@ const CarShop = () => {
   const makePayment = async () => {
 
     console.log("checkout");
-    fetch("http://localhost:8080/api/v1/create-checkout-session", {
+    fetch("https://flux-car-server-biplob17h.vercel.app/api/v1/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
