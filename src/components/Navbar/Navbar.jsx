@@ -9,11 +9,13 @@ import "../components.scss";
 import { useContext } from "react";
 import { CartContext } from "../../context api/AddToCartContext";
 import { routeContext } from "../../context api/NavbarContex";
+import { AuthContext } from "../../context api/UserContext";
 
 const Navbar = () => {
   // context api
   const { products } = useContext(CartContext);
   const { routePath, setRoutePath } = useContext(routeContext);
+  const { user, logOut } = useContext(AuthContext);
 
   // all states
   const [top, setTop] = useState(true);
@@ -29,6 +31,7 @@ const Navbar = () => {
   const dropDownControl = () => {
     setDropDown(!dropDown);
   };
+
   const scroll = () => {
     if (window.scrollY < 50 && routePath !== "cart") {
       setTop(true);
@@ -192,10 +195,46 @@ const Navbar = () => {
               left={"ml-[40px]"}
             />
           </div>
-          <CustomLink
-              route={"/signup"}
-              value={"SIGN UP"}
-              routeName={"signup"}></CustomLink>
+
+          {/* user sign up and profile */}
+          <div>
+            {user?.uid ? (
+              <div>
+                <div className="dropdown dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    </div>
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    <li>
+                      <a className="justify-between">Profile</a>
+                    </li>
+                    <li>
+                      <a>Settings</a>
+                    </li>
+                    <li
+                      onClick={() => {
+                        logOut();
+                      }}>
+                      <Link>Logout</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <CustomLink
+                  route={"/signup"}
+                  value={"SIGN UP"}
+                  routeName={"signup"}></CustomLink>
+              </div>
+            )}
+          </div>
 
           {/* drawer */}
           <div className="cursor-pointer">

@@ -65,11 +65,6 @@ const Login = () => {
             Register Here
           </Link>
         </span>
-        <div className="divider">OR</div>
-        <button className="border py-2 w-full text-black hover:text-white bg-white hover:bg-black rounded custom-btn flex flex-row justify-center gap-3 font-semibold">
-          <FcGoogle size={25} />
-          <span>Login with google</span>
-        </button>
       </form>
     </div>
   );
