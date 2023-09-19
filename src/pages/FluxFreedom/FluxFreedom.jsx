@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  black,
-  darkBg,
-} from "../../assets/Callback";
+import { black, darkBg } from "../../assets/Callback";
 import { useState } from "react";
 import freedomPaintData from "./freedomcardata";
 import freedomdata from "./datafreedom";
@@ -13,7 +10,7 @@ import FreedomWheel from "./FreedomWheel";
 const FluxFreedom = () => {
   const [carDetails, setCarDetails] = useState(freedomPaintData);
   const [villageDetails, setVillageDetails] = useState(freedomdata);
-  const [villageActive, setVillageActive] = useState(villageDetails[0].id)
+  const [villageActive, setVillageActive] = useState(villageDetails[0].id);
 
   const [paintDetails, setPaintDetails] = useState(carDetails[0]);
   const [carWheel, setCarWheel] = useState(carDetails[0].wheels);
@@ -48,32 +45,29 @@ const FluxFreedom = () => {
     parseFloat(checkboxSum) +
     400;
 
+  const [checkWallId, setCheckWallId] = useState(12345);
 
-    const [checkWallId, setCheckWallId] = useState(12345);
-    
-    const checkHandleWall = e =>{
-      const checked = e.target.checked;
-      if(checked === true){
-        setCheckWallId(e.target.value)
-      }
-      else{
-        setCheckWallId(12344);
-      }
+  const checkHandleWall = (e) => {
+    const checked = e.target.checked;
+    if (checked === true) {
+      setCheckWallId(e.target.value);
+    } else {
+      setCheckWallId(12344);
     }
-    
-    const [checkRemoteId, setCheckRemoteId] = useState(123445);
+  };
 
-    const checkHandleRemote = e =>{
-      if(e.target.checked === true){
-        setCheckRemoteId(e.target.value);
-      }else{
-        setCheckRemoteId(123445);
-      }
+  const [checkRemoteId, setCheckRemoteId] = useState(123445);
+
+  const checkHandleRemote = (e) => {
+    if (e.target.checked === true) {
+      setCheckRemoteId(e.target.value);
+    } else {
+      setCheckRemoteId(123445);
     }
+  };
 
   // stripe payment
   const makePayment = async () => {
-
     console.log("checkout");
     fetch("http://localhost:8080/api/v1/create-checkout-session", {
       method: "POST",
@@ -110,8 +104,7 @@ const FluxFreedom = () => {
     <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] lg:h-screen mb-16 w-full lg:w-[78%]"
-        style={{ backgroundImage: `url("${darkBg}")` }}
-      >
+        style={{ backgroundImage: `url("${darkBg}")` }}>
         <img
           src={wheelDetails.img_wheel}
           alt=""
@@ -120,10 +113,10 @@ const FluxFreedom = () => {
       </div>
       <div className="flex flex-col gap-3 lg:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[22%]">
         <span className="text-4xl text-white text-center lg:mt-10">
-        Flux Freedom
+          Flux Freedom
         </span>
         <span className=" text-sm text-white text-center">
-        Est. Delivery: Oct - Dec 2022
+          Est. Delivery: Oct - Dec 2022
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
           <button className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
@@ -133,13 +126,13 @@ const FluxFreedom = () => {
         <div className="flex flex-row items-center justify-between gap-8 pt-5">
           <div className="flex flex-col items-center">
             <span className="text-xl text-white">
-            430<span className="text-base">mi</span>
+              430<span className="text-base">mi</span>
             </span>
             <span className="text-xs">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-xl text-white">
-            800<span className="text-base">mph</span>
+              800<span className="text-base">mph</span>
             </span>
             <span className="text-xs">Range(est.)</span>
           </div>
@@ -155,7 +148,7 @@ const FluxFreedom = () => {
             <FreedomDetails
               data={data}
               setFluxMath={setFluxMath}
-              villageActive={villageActive} 
+              villageActive={villageActive}
               setVillageActive={setVillageActive}
               key={data.id}
             />
@@ -179,8 +172,13 @@ const FluxFreedom = () => {
             ))}
           </div>
           <span className="text-sm flex gap-1">
-            <span className="text-white flex gap-1">{paintDetails.name}
-            {paintDetails.price === '00' ? <span className="text-gray-400">include</span>:<span className="text-gray-400">${paintDetails.price}.00</span>}
+            <span className="text-white flex gap-1">
+              {paintDetails.name}
+              {paintDetails.price === "00" ? (
+                <span className="text-gray-400">include</span>
+              ) : (
+                <span className="text-gray-400">${paintDetails.price}.00</span>
+              )}
             </span>
           </span>
         </div>
@@ -200,7 +198,11 @@ const FluxFreedom = () => {
           </div>
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
-            {wheelDetails.price === '00' ? <span className="text-gray-400">include</span>:<span className="text-gray-400">${wheelDetails.price}.00</span>}
+            {wheelDetails.price === "00" ? (
+              <span className="text-gray-400">include</span>
+            ) : (
+              <span className="text-gray-400">${wheelDetails.price}.00</span>
+            )}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -219,9 +221,9 @@ const FluxFreedom = () => {
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
               <input
-               onChange={checkHandleWall}
+                onChange={checkHandleWall}
                 type="checkbox"
-                value='9778285'
+                value="9778285"
                 data-amount="700"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
@@ -232,9 +234,9 @@ const FluxFreedom = () => {
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
               <input
-              onChange={checkHandleRemote}
+                onChange={checkHandleRemote}
                 type="checkbox"
-                value="4403379"                
+                value="4403379"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="1100"
               />
@@ -254,8 +256,7 @@ const FluxFreedom = () => {
           <button
             type="button"
             onClick={makePayment}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
-          >
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
             Continue to Payment
           </button>
         </div>

@@ -7,12 +7,11 @@ import { calculateTotal } from "../../../components/CalculateTotal/CalculateTota
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
-console.log(products)
+  console.log(products);
 
   // calculate total
   const totalPrice = calculateTotal(products);
   const makePayment = async () => {
-
     console.log("checkout");
     fetch("http://localhost:8080/api/v1/create-checkout-session", {
       method: "POST",
@@ -20,9 +19,7 @@ console.log(products)
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        items: [
-          {id:1, quantity:1}
-        ]
+        items: [{ id: 1, quantity: 1 }],
       }),
     })
       .then((res) => {
@@ -53,7 +50,9 @@ console.log(products)
         </div>
         <div className="w-full h-[1px] bg-black mt-1" />
       </div>
-      <div className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in" onClick={makePayment}>
+      <div
+        className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in"
+        onClick={makePayment}>
         Checkout
       </div>
     </div>

@@ -11,7 +11,7 @@ import "../CarDesign.scss";
 const CarShop = () => {
   const [carDetails, setCarDetails] = useState(data);
   const [villageDetails, setVillageDetails] = useState(dataVillage);
-  const [villageActive, setVillageActive] = useState(villageDetails[0].id)
+  const [villageActive, setVillageActive] = useState(villageDetails[0].id);
 
   const [paintDetails, setPaintDetails] = useState(carDetails[0]);
   const [carWheel, setCarWheel] = useState(carDetails[0].wheels);
@@ -46,34 +46,31 @@ const CarShop = () => {
     parseFloat(checkboxSum) +
     1000;
 
+  const [checkWallId, setCheckWallId] = useState(12345);
+  console.log(Math.floor(checkWallId));
 
-    const [checkWallId, setCheckWallId] = useState(12345);
-    console.log(Math.floor(checkWallId))
-    
-    const checkHandleWall = e =>{
-      const checked = e.target.checked;
-      if(checked === true){
-        setCheckWallId(e.target.value)
-      }
-      else{
-        setCheckWallId(12344);
-      }
+  const checkHandleWall = (e) => {
+    const checked = e.target.checked;
+    if (checked === true) {
+      setCheckWallId(e.target.value);
+    } else {
+      setCheckWallId(12344);
     }
-    
-    const [checkRemoteId, setCheckRemoteId] = useState(12344);
-    console.log(checkRemoteId)
+  };
 
-    const checkHandleRemote = e =>{
-      if(e.target.checked === true){
-        setCheckRemoteId(e.target.value);
-      }else{
-        setCheckRemoteId(12344);
-      }
+  const [checkRemoteId, setCheckRemoteId] = useState(12344);
+  console.log(checkRemoteId);
+
+  const checkHandleRemote = (e) => {
+    if (e.target.checked === true) {
+      setCheckRemoteId(e.target.value);
+    } else {
+      setCheckRemoteId(12344);
     }
+  };
 
   // stripe payment
   const makePayment = async () => {
-
     console.log("checkout");
     fetch("http://localhost:8080/api/v1/create-checkout-session", {
       method: "POST",
@@ -110,8 +107,7 @@ const CarShop = () => {
     <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] lg:h-screen mb-16 w-full lg:w-[78%]"
-        style={{ backgroundImage: `url("${darkBg}")` }}
-      >
+        style={{ backgroundImage: `url("${darkBg}")` }}>
         <img
           src={wheelDetails.img_wheel}
           alt=""
@@ -155,7 +151,7 @@ const CarShop = () => {
             <FluxDetails
               data={data}
               setFluxMath={setFluxMath}
-              villageActive={villageActive} 
+              villageActive={villageActive}
               setVillageActive={setVillageActive}
               key={data.id}
             />
@@ -179,8 +175,8 @@ const CarShop = () => {
             ))}
           </div>
           <span className="text-sm flex gap-1">
-            <span className="text-white">{paintDetails.name}</span>
-            ${paintDetails.price}.00
+            <span className="text-white">{paintDetails.name}</span>$
+            {paintDetails.price}.00
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -199,7 +195,11 @@ const CarShop = () => {
           </div>
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
-            {wheelDetails.price === '00' ? <span className="text-gray-400">include</span>:<span className="text-gray-400">${wheelDetails.price}.00</span>}
+            {wheelDetails.price === "00" ? (
+              <span className="text-gray-400">include</span>
+            ) : (
+              <span className="text-gray-400">${wheelDetails.price}.00</span>
+            )}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -218,9 +218,9 @@ const CarShop = () => {
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
               <input
-               onChange={checkHandleWall}
+                onChange={checkHandleWall}
                 type="checkbox"
-                value='1122'
+                value="1122"
                 data-amount="5000"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
@@ -231,9 +231,9 @@ const CarShop = () => {
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
               <input
-              onChange={checkHandleRemote}
+                onChange={checkHandleRemote}
                 type="checkbox"
-                value="1212"                
+                value="1212"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="5000"
               />
@@ -253,8 +253,7 @@ const CarShop = () => {
           <button
             type="button"
             onClick={makePayment}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
-          >
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
             Continue to Payment
           </button>
         </div>
