@@ -20,6 +20,7 @@ import SignUp from "../SignUp/SignUp";
 import Profile from "../Profile/Profile";
 import Success from "../../components/Success/Success";
 import Cancel from "../../components/Cancel/Cancel";
+import Orders from "../Orders/Orders";
 
 const routes = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const routes = createBrowserRouter([
         path: "/profile",
         element: <Profile />,
       },
+      {
+        path:'/orders',
+        element:<Orders/>
+      }
     ],
   },
   {
