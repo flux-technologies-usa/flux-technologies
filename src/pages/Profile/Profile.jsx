@@ -1,101 +1,60 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Profile.scss";
+import { AuthContext } from "../../context api/UserContext";
 const Profile = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
+
   return (
     <div className=" bg-black">
-      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden">
+      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
-        <div className="w-48 rounded-full border bg-white">
-          <img
-            src="https://i.postimg.cc/cHPgkvyQ/default-profile-img.png"
-            alt="default profile"
-          />
+        <div className="w-48 rounded-full bg-white overflow-hidden">
+          <img src={user.photoURL} alt="default profile" className="w-full" />
         </div>
         {/* profile image */}
 
-        <span className="text-lg font-semibold text-black">My Profile</span>
+        <span className="text-lg font-semibold">My Profile</span>
 
         <form className="flex flex-col w-full items-center gap-5">
-
-
-          <div className="flex flex-col w-[30%]">
-            <span className="text-black">First Name</span>
+          <div className="flex flex-col w-full">
+            <span className="text-black">Name</span>
             <input
               type="text"
               name=""
               id=""
-              placeholder="Leon"
+              defaultValue={user.displayName}
               className="bg-white px-5 py-2 rounded"
             />
           </div>
 
-          <div className="flex flex-col w-[30%]">
-            <span className="text-black">Last Name</span>
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Ali"
-              className="bg-white px-5 py-2 rounded"
-            />
-          </div>
+          {/* eamil */}
 
-          <div className="flex flex-col w-[30%]">
-            <span className="text-black">Phone</span>
-            <input
-              type="number"
-              name=""
-              id=""
-              placeholder="01833952228"
-              className="bg-white px-5 py-2 rounded"
-            />
-          </div>
-
-          <div className="flex w-[30%] justify-end">
-            <button className="btn btn-warning">Save</button>
-          </div>
-
-
-        </form>
-
-        {/* eamil */}
-        <span className="text-lg font-semibold text-black">Email</span>
-        <form className="flex flex-col w-full items-center gap-5">
-
-
-          <div className="flex flex-col w-[30%]">
+          <div className="flex flex-col w-full">
             <input
               type="text"
               name=""
               id=""
               placeholder="email"
+              disabled
               className="bg-white px-5 py-2 rounded"
             />
           </div>
 
-          <div className="flex w-[30%] justify-end">
-            <button className="btn btn-warning">Save</button>
-          </div>
+          {/* email */}
 
+          {/* password */}
 
-        </form>
-        {/* email */}
-
-        {/* password */}
-        <span className="text-lg font-semibold text-black">Password</span>
-        <form className="flex flex-col w-full items-center gap-5">
-
-
-          <div className="flex flex-col w-[30%]">
+          <div className="flex flex-col w-full">
             <input
-              type="text"
+              type="password"
               name=""
               id=""
               placeholder="current password"
               className="bg-white px-5 py-2 rounded"
             />
           </div>
-          <div className="flex flex-col w-[30%]">
+          <div className="flex flex-col w-full">
             <input
               type="text"
               name=""
@@ -104,12 +63,9 @@ const Profile = () => {
               className="bg-white px-5 py-2 rounded"
             />
           </div>
-
-          <div className="flex w-[30%] justify-end">
-            <button className="btn btn-warning">Save</button>
+          <div className="flex justify-end w-full">
+            <button className="btn">update profile</button>
           </div>
-
-
         </form>
         {/* password */}
       </div>

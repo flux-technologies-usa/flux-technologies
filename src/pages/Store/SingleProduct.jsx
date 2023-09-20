@@ -1,32 +1,46 @@
 import React from "react";
 import "./Store.scss";
-
 import { useContext } from "react";
-import { CartContext } from "../../context api/AddToCartContext";
-import { pushToLocalStroge } from "../../components/LocalStorage/LocalStorage";
+import { AuthContext } from "../../context api/UserContext";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const SingleProduct = ({ single }) => {
-  // context api
-  const { setCartLength, cartLength } = useContext(CartContext);
-  const { img, name, price } = single;
+  // all declare
+  const navgate = useNavigate();
+  // all context
+  const { user } = useContext(AuthContext);
+  const { name, price, _id } = single;
 
-  const handleAddToCart = () => {
-    let id = Math.floor(Math.random() * 0xfffff * 1000000000000).toString(16);
-    let quentity = 1;
-    const productData = {
-      id,
-      quentity,
-      product: single,
-    };
-    pushToLocalStroge(productData);
-    setCartLength(cartLength + 1);
+  // all function
+  const top = () => {
+    window.scroll(0, 0);
   };
+  const handleAddToCart = () => {
+    if (user?.uid) {
+      console.log("add");
+    } else {
+      toast((t) => (
+        <span>
+          <span className="text-[#ddc861] text-[19px] mr-3 font-semibold">
+            Please login first
+          </span>
+          <button className="btn glass" onClick={() => toast.dismiss(t.id)}>
+            Dismiss
+          </button>
+        </span>
+      ));
+      navgate("/login");
+      top();
+    }
+  };
+
   return (
     <div className="single-product w-[320px] h-[300px] bg-white single-product hover:bg-[#707070] relative">
       <div className="div">
         <div className="single-product-img h-[200px]">
           <img
             className="w-[200px] h-auto mx-auto pt-[50px]"
-            src={img}
+            src={`http://localhost:8080/api/v1/product/product-photo/${_id}`}
             alt={name}
           />
         </div>

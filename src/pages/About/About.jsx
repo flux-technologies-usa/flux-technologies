@@ -14,7 +14,6 @@ const About = () => {
         <Sustainability></Sustainability>
         <Leadership></Leadership>
         <FluxMotorsFactory></FluxMotorsFactory>
-        <AboutForm></AboutForm>
       </div>
     );
 };

@@ -4,7 +4,7 @@ import Storeheader from "./Storeheader";
 
 const Store = () => {
   return (
-    <div style={{fontFamily:"Schnyder S"}}>
+    <div className="font-sans">
       <Storeheader />
       <Product />
     </div>

@@ -9,16 +9,15 @@ import { AuthContext } from "../../../context api/UserContext";
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
-  console.log(products);
 
   const {user} = useContext(AuthContext)
   // calculate total
   const totalPrice = calculateTotal(products);
 
   const paymentBtn = () =>{
-    axios.post("http://localhost:8000/create-checkout-session",{
+    axios.post("http://localhost:8080/api/v1/create-checkout-session",{
       products,
-      userId:user._id
+      userId:user.uid
     }).then((res)=>{
       if(res.data.url){
         window.location.href = res.data.url

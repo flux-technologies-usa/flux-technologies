@@ -11,14 +11,14 @@
         "name": "19’’ Sport Wheels",
         "price": "1000",
         "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/wBY1JMKn/graycarwt.png"
+        "img_wheel": "https://i.postimg.cc/bwWLjx4W/graycarwt.png"
       },
       {
         "id":1188,
         "name": "18’’ Aero Wheels",
         "price": "00",
         "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
-        "img_wheel": "https://i.postimg.cc/rs7VkZM7/graycarbt.png"
+        "img_wheel": "https://i.postimg.cc/Y91dRvnV/graycarbt.png"
       }
     ]
   },
@@ -33,14 +33,14 @@
         "name": "18’’ Sport Wheel",
         "price": "2000",
         "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/PxFdLrtP/bluecarwt.png"
+        "img_wheel": "https://i.postimg.cc/gkKfdTK5/bluecarwt.png"
       },
       {
         "id":1206,
         "name": "18’’ Black Wheel",
         "price": "3000",
         "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
-        "img_wheel": "https://i.postimg.cc/wvSTfTnn/bluecarbt.png"
+        "img_wheel": "https://i.postimg.cc/Dwr3WzFC/bluecarbt.png"
       }
     ]
   },
@@ -56,14 +56,14 @@
         "name": "19’’ Sport Wheels",
         "price": "1300",
         "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/Qt5rMgnn/whitecarwt.png"
+        "img_wheel": "https://i.postimg.cc/XvTVFzmL/whitecarwt.png"
       },
       {
         "id":1576,
         "name": "18’’ Aero Wheels",
         "price": "1300",
         "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
-        "img_wheel": "https://i.postimg.cc/QM2Rv9xg/whitecarbt.png"
+        "img_wheel": "https://i.postimg.cc/1X05yrWH/whitecarbt.png"
       }
     ]
   },
@@ -79,14 +79,14 @@
         "name": "Sport Wheel",
         "price": "1500",
         "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/htx8pf6R/redcarwt.png"
+        "img_wheel": "https://i.postimg.cc/8kY74Zv2/redcarwt.png"
       },
       {
         "id":1372,
         "name": "19’’ Aero Wheels",
         "price": "1700",
         "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
-        "img_wheel": "https://i.postimg.cc/BQP2njqP/redcarbt.png"
+        "img_wheel": "https://i.postimg.cc/FHdgGf1Z/redcarbt.png"
       }
     ]
   },
@@ -102,14 +102,14 @@
         "name": "19’’ Sport Wheels",
         "price": "2000",
         "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/bJMd7RSC/blackcarwt.png"
+        "img_wheel": "https://i.postimg.cc/hv2fR0Zd/blackcarwt.png"
       },
       {
         "id":1472,
         "name": "18’’ Aero Wheels",
         "price": "2000",
         "img": "https://i.postimg.cc/J7g82FTQ/blacktire.png",
-        "img_wheel": "https://i.postimg.cc/htbMb2Xq/blackcarbt.png"
+        "img_wheel": "https://i.postimg.cc/26xs093n/blackcarbt.png"
       }
     ]
   }

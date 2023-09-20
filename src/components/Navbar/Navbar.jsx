@@ -199,13 +199,16 @@ const Navbar = () => {
           {/* user sign up and profile */}
           <div>
             {user?.uid ? (
-              <div>
+              <div className="pl-8 mr-[-20px]">
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt=""/>
+                      <img
+                        src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+                        alt=""
+                      />
                     </div>
                   </label>
                   <ul

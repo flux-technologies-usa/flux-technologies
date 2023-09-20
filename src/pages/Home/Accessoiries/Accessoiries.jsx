@@ -13,22 +13,13 @@ const Accessoiries = () => {
       <div className="pt-[90px] w-[65%] mx-auto md:w-[20%]">
         <img src={solarCar} alt="" />
       </div>
-      <Link to='/store'><div className="text-center">
+      <Link to='/store'><div className="text-center pb-16">
         <button className="customAccessoiriesButton   mx-auto mt-[70px] md:mt-[90px]">
           SHOP NOW
         </button>
       </div>
       </Link>
-      <div className="pt-[150px] pb-[125px] md:flex ">
-        <div className="pb-10  flex items-center justify-center md:justify-end md:w-1/2 md:pb-0">
-          <h1 className="text-right text-[20px]  text-white md:text-3xl">
-            Stay up to speed on the latest at Flux.
-          </h1>
-        </div>
-        <div className="w-[384px] px-16 md:w-[500px] md:px-0  md:pl-[50px]">
-          <Form></Form>
-        </div>
-      </div>
+      
     </div>
   );
 };
