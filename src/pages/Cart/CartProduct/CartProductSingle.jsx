@@ -8,28 +8,69 @@ import {
 import { useContext } from "react";
 import { CartContext } from "../../../context api/AddToCartContext";
 const CartProductSingle = ({ product }) => {
-  const { img, name, price } = product.product;
+  const { name, price, _id } = product.product;
   // context api
   const { products, setCartLength, cartLength } = useContext(CartContext);
   // functions
   const handleRemoveButton = () => {
-    handleRemove(products, product);
+    fetch(`http://localhost:8080/api/v1/cart/${product._id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
     setCartLength(cartLength - 1);
   };
 
   const handleQuantityIncreaseButton = () => {
-    handleQuantityIncrease(products, product);
+    const quentity = product.quentity + 1;
+    const updateQuentity = {
+      quentity: quentity,
+    };
+    fetch(`http://localhost:8080/api/v1/cart/quentity/${product._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateQuentity),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
     setCartLength(cartLength + 1);
   };
   const handleQuantityDecreaseButton = () => {
-    handleQuantityDecrease(products, product);
-    setCartLength(cartLength - 1);
+    const quentity = product.quentity - 1;
+    if (quentity === 0) {
+      fetch(`http://localhost:8080/api/v1/cart/${product._id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+      setCartLength(cartLength - 1);
+    } else {
+      const updateQuentity = {
+        quentity: quentity,
+      };
+      fetch(`http://localhost:8080/api/v1/cart/quentity/${product._id}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateQuentity),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+      setCartLength(cartLength - 1);
+    }
   };
   return (
     <div className="flex md:flex-row flex-col md:justify-between md:items-center md:gap-0 gap-4 md:w-full md:border-none border-b border-[#dbc861] md:p-0 pb-5">
       <div className="flex md:flex-row md:gap-28 gap-10">
         <div className="flex flex-row items-start gap-8">
-          <img src={img} alt="" className="md:max-w-[110px] max-w-[70px]" />
+          <img
+            src={`http://localhost:8080/api/v1/product/product-photo/${_id}`}
+            alt=""
+            className="md:max-w-[110px] max-w-[70px]"
+          />
           <div className="flex flex-col gap-2">
             <span className="md:text-base text-sm">{name}</span>
             <div

@@ -1,19 +1,19 @@
 import React from "react";
-import {  tang } from "../../../assets/Callback";
+import {  businessDeal} from "../../../assets/Callback";
 import "../About.scss";
 
 const Leadership = () => {
   return (
-    <div className=" flex flex-col md:w-[100vw] md:h-[100vh] md:flex-row">
+    <div className=" flex flex-col md:w-[100vw] md:h-[80vh] md:flex-row">
       <div className="md:w-1/2">
         <img
-          className="w-full h-[520px]  bg-cover md:h-[100vh]"
-          src={tang}
+          className="w-full h-[520px]  bg-cover md:h-[80vh]"
+          src={businessDeal}
           alt=""
         />
       </div>
       {/* for big device */}
-      <div className="w-[44%] bg-[#1b1b1b] mr-[6%] h-[92%] mb-[8%] hidden md:block">
+      <div className="md:w-1/2 bg-[#1b1b1b]    hidden md:block">
         <div className="text-[#dbd4c5] px-[15%]">
           <h1 className="mt-[25%] text-[26px] font-semibold text-[#ddc85f]">
             Leadership

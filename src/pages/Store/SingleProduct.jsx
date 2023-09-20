@@ -4,11 +4,13 @@ import { useContext } from "react";
 import { AuthContext } from "../../context api/UserContext";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { CartContext } from "../../context api/AddToCartContext";
 const SingleProduct = ({ single }) => {
   // all declare
   const navgate = useNavigate();
   // all context
   const { user } = useContext(AuthContext);
+  const { setCartLength, cartLength } = useContext(CartContext);
   const { name, price, _id } = single;
 
   // all function
@@ -16,8 +18,25 @@ const SingleProduct = ({ single }) => {
     window.scroll(0, 0);
   };
   const handleAddToCart = () => {
+    const email = user.email;
     if (user?.uid) {
-      console.log("add");
+      const product = {
+        email: email,
+        quentity: 1,
+        product: single,
+      };
+
+      fetch(`http://localhost:8080/api/v1/cart?email=${email}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(product),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setCartLength(cartLength + 1);
+        });
     } else {
       toast((t) => (
         <span>

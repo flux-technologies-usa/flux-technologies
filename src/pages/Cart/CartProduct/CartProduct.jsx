@@ -7,7 +7,6 @@ const CartProduct = () => {
   // context api
   const { products } = useContext(CartContext);
 
-  console.log(products);
   return (
     <div className="flex flex-col items-center gap-14 w-full px-5">
       {products.map((product) => (

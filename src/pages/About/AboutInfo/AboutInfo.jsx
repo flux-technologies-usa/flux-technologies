@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutInfo = () => {
   return (
-    <div className="w-[100vw] h-full mb-5 bg-[#F7F497] text-[#1b1b1b]  opacity-80 ">
-      <h1 className="px-[10%] text-[18px] pt-[5%] md:text-[42px]">
+    <div className="w-[100vw] h-full  bg-[#F7F497] text-[#1b1b1b]  opacity-80 ">
+      <h1 className="px-[10%] text-[18px] py-[5%] md:text-[42px]">
         After a thorough analysis, we deliberated extensively on the choice of
         establishing a U.S. base headquarter. With careful consideration, we
         meticulously evaluated over 60 potential locations across 13 states,

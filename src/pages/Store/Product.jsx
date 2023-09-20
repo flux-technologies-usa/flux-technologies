@@ -9,7 +9,7 @@ const Product = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
   }, []);
-  console.log(product);
+  
   return (
     <div className="flex flex-col items-center gap-10 py-10 font-sans">
       <span className="text-6xl text-white font-semibold">Merchandise</span>

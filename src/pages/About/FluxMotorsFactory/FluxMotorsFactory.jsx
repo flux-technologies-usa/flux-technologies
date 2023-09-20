@@ -2,7 +2,7 @@ import React from 'react';
 
 const FluxMotorsFactory = () => {
     return (
-      <div className="mt-[9.6%] px-[5%] md:w-[100vw] md:h-[135vh] md:px-[10%] ">
+      <div className="py-[9.6%] px-[5%] md:w-[100vw] md:h-[full] md:px-[10%] ">
         <h1 className="text-[#f3d97a]  md:text-[1.375rem]">
           Flux Motors Factory
         </h1>
