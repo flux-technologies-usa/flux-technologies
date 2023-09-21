@@ -32,7 +32,7 @@ const CarCarousel = () => {
           </span>
           <span className="text-white text-4xl">Flux Village</span>
           <img
-            src={jeepCar}
+            src="https://i.postimg.cc/bwWLjx4W/graycarwt.png"
             alt=""
             className=" md:max-w-[700px] md:max-h-[300px]"
           />
@@ -47,7 +47,7 @@ const CarCarousel = () => {
           </span>
           <span className="text-white text-4xl">Flux Freedom</span>
           <img
-            src={freedomCarPng}
+            src="https://i.postimg.cc/28cNhtBW/blackV.png"
             alt=""
             className="md:max-w-[700px] md:max-h-[300px]"
           />
