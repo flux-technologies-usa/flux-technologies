@@ -1,24 +1,24 @@
 import React from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
+import { AuthContext } from "./UserContext";
 
 export const CartContext = createContext();
 
 const AddToCartContext = ({ children }) => {
+  // context
+  const { user } = useContext(AuthContext);
   // all state
   const [products, setProducts] = useState([]);
   const [cartLength, setCartLength] = useState(0);
 
   useEffect(() => {
-    if (localStorage.getItem("cart")) {
-      const productData = JSON.parse(localStorage.getItem("cart"));
-      setProducts(productData);
-    } else {
-      setProducts([]);
-      setCartLength(0);
-    }
-  }, [cartLength]);
+    fetch(`http://localhost:8080/api/v1/cart?email=${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setProducts(data.cartData));
+  }, [cartLength, user]);
 
   const contextValue = { products, setProducts, cartLength, setCartLength };
   return (
