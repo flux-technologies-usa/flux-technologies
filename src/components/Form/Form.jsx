@@ -8,12 +8,12 @@ const Form = () => {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    if (email.length > 0) {
+    if (email?.length > 0) {
       setShow(true);
     } else {
       setShow(false);
     }
-  }, [email.length]);
+  }, [email?.length]);
 
   return (
     <div className="w-full">

@@ -22,7 +22,7 @@ const SignUp = () => {
     const first = form.firstname.value;
     const last = form.lastname.value;
     const name = first + " " + last;
-    const email = form.email.value;
+    const email = form?.email.value;
     const postal = form.postal.value;
     const password = form.password.value;
 

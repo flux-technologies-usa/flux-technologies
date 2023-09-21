@@ -18,7 +18,7 @@ const SingleProduct = ({ single }) => {
     window.scroll(0, 0);
   };
   const handleAddToCart = () => {
-    const email = user.email;
+    const email = user?.email;
     if (user?.uid) {
       const product = {
         email: email,

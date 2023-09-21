@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDWHMSH38wBHg66L-7139Eh2rHIb6OU6jc",
-  authDomain: "flux-car-41e99.firebaseapp.com",
-  projectId: "flux-car-41e99",
-  storageBucket: "flux-car-41e99.appspot.com",
-  messagingSenderId: "179825895145",
-  appId: "1:179825895145:web:fcdd67c1ff474397e33278",
+  apiKey: "AIzaSyCNW_fu6eBwTeCUZaZR26XQz-bAv9d6MwM",
+  authDomain: "flux-car-f947c.firebaseapp.com",
+  projectId: "flux-car-f947c",
+  storageBucket: "flux-car-f947c.appspot.com",
+  messagingSenderId: "890511345282",
+  appId: "1:890511345282:web:143ad201efb6cc5be3169b",
 };
 
 // Initialize Firebase
