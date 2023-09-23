@@ -14,7 +14,6 @@ import Store from "../Store/Store";
 // import Cart from "../Cart/Cart/Cart";
 import CartMain from "../Cart/CartMain";
 import CarShop from "../CarDesign/CarShop/CarShop";
-import Stripe from "../CarDesign/Stripe";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import Profile from "../Profile/Profile";
@@ -74,10 +73,6 @@ const routes = createBrowserRouter([
       {
         path: "/cart",
         element: <CartMain></CartMain>,
-      },
-      {
-        path: "/stripe",
-        element: <Stripe />,
       },
       {
         path: "/signup",

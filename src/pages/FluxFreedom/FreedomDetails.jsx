@@ -1,9 +1,9 @@
 import React from "react";
 
-const FreedomDetails = ({data,setFluxMath,villageActive,setVillageActive}) => {
+const FreedomDetails = ({data,setFluxMath,freedomActive,setfreedomActive}) => {
     const handlePrice =event=>{
         setFluxMath(event)
-        setVillageActive(event.id)
+        setfreedomActive(event.id)
     }
   return (
     <div className="flex flex-col w-full gap-1">
@@ -11,7 +11,7 @@ const FreedomDetails = ({data,setFluxMath,villageActive,setVillageActive}) => {
       <button
       onClick={()=>handlePrice(data)}
         className={`flex flex-row justify-between py-2 border rounded px-3 ${
-          villageActive === data.id ? "border border-[#ddc861]" : ""
+          freedomActive === data.id ? "border border-[#ddc861]" : ""
         }`}
       >
         <span>{data.power_name}</span>

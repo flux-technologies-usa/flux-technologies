@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { black, darkBg } from "../../assets/Callback";
 import { useState } from "react";
 import freedomPaintData from "./freedomcardata";
@@ -6,17 +6,19 @@ import freedomdata from "./datafreedom";
 import FreedomDetails from "./FreedomDetails";
 import FreedomPaint from "./FreedomPaint";
 import FreedomWheel from "./FreedomWheel";
+import axios from "axios";
+import { AuthContext } from "../../context api/UserContext";
 
 const FluxFreedom = () => {
   const [carDetails, setCarDetails] = useState(freedomPaintData);
-  const [villageDetails, setVillageDetails] = useState(freedomdata);
-  const [villageActive, setVillageActive] = useState(villageDetails[0].id);
+  const [freedomDetails, setfreedomDetails] = useState(freedomdata);
+  const [freedomActive, setfreedomActive] = useState(freedomDetails[0].id);
 
   const [paintDetails, setPaintDetails] = useState(carDetails[0]);
   const [carWheel, setCarWheel] = useState(carDetails[0].wheels);
   const [wheelDetails, setWheelDetails] = useState(carWheel[0]);
 
-  const [fluxMath, setFluxMath] = useState(villageDetails[0]);
+  const [fluxMath, setFluxMath] = useState(freedomDetails[0]);
   const [selectedCarCost, setSelectedCarCost] = useState(paintDetails.price);
 
   const [selectedTireCost, setSelectedTireCost] = useState(wheelDetails.price);
@@ -45,57 +47,74 @@ const FluxFreedom = () => {
     parseFloat(checkboxSum) +
     400;
 
-  const [checkWallId, setCheckWallId] = useState(12345);
+    const [checkWallId, setCheckWallId] = useState([
+      { name: "Wall Charger(not selected)", price: 0 },
+    ]);
+    const checkHandleWall = (e) => {
+      const checked = e.target.checked;
+      if (checked === true) {
+        setCheckWallId([{ name: "Wall Charger(selected)", price: 600 }]);
+      } else {
+        setCheckWallId([{ name: "Wall Charger(not selected)", price: 0 }]);
+      }
+    };
+  
+    const [checkRemoteId, setCheckRemoteId] = useState([
+      { name: "Mobile Charger(not selected)", price: 0 },
+    ]);
+  
+    const checkHandleRemote = (e) => {
+      if (e.target.checked === true) {
+        setCheckRemoteId([{ name: "Mobile Charger(selected)", price: 450 }]);
+      } else {
+        setCheckRemoteId([{ name: "Mobile Charger(not selected)", price: 0 }]);
+      }
+    };
 
-  const checkHandleWall = (e) => {
-    const checked = e.target.checked;
-    if (checked === true) {
-      setCheckWallId(e.target.value);
-    } else {
-      setCheckWallId(12344);
-    }
-  };
-
-  const [checkRemoteId, setCheckRemoteId] = useState(123445);
-
-  const checkHandleRemote = (e) => {
-    if (e.target.checked === true) {
-      setCheckRemoteId(e.target.value);
-    } else {
-      setCheckRemoteId(123445);
-    }
-  };
-
+  const fluxFreedom = [
+    { name: fluxMath.name, price: fluxMath.price },
+    {
+      name: paintDetails.name,
+      price: paintDetails.price,
+      img: wheelDetails.img_wheel,
+    },
+    {
+      name: wheelDetails.name,
+      price: wheelDetails.price,
+      img: wheelDetails.img,
+    },
+    {
+      name: "Black White Int",
+      price: 400,
+    },
+    {
+      name: checkWallId[0].name,
+      price: checkWallId[0].price,
+    },
+    {
+      name: checkRemoteId[0].name,
+      price: checkRemoteId[0].price,
+    },
+  ];
+  console.log(fluxFreedom)
+  const { user } = useContext(AuthContext);
   // stripe payment
-  // const makePayment = async () => {
-  //   console.log("checkout");
-  //   fetch("http://localhost:8080/api/v1/create-checkout-session", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       items: [
-  //         { id: fluxMath.id, quantity: 1 },
-  //         { id: paintDetails.id, quantity: 1 },
-  //         { id: wheelDetails.id, quantity: 1 },
-  //         { id: 1234567, quantity: 1 },
-  //         { id: Math.floor(checkWallId), quantity: 1 },
-  //         { id: Math.floor(checkRemoteId), quantity: 1 },
-  //       ],
-  //     }),
-  //   })
-  //     .then((res) => {
-  //       if (res.ok) return res.json();
-  //       return res.json().then((json) => Promise.reject(json));
-  //     })
-  //     .then(({ url }) => {
-  //       window.location = url;
-  //     })
-  //     .catch((e) => {
-  //       console.error(e.error);
-  //     });
-  // };
+  const paymentBtn = () => {
+    axios
+      .post(
+        "http://localhost:8080/api/v1/freedom/create-checkout-session",
+        {
+          fluxFreedom,
+          userEmail: user.email
+        }
+      )
+      .then((res) => {
+        if (res.data.url) {
+          window.location.href = res.data.url;
+        }
+      })
+      .catch((err) => console.log(err.message));
+  };
   // stripe payment
 
   const [active, setActive] = useState(paintDetails.id);
@@ -116,12 +135,12 @@ const FluxFreedom = () => {
           Flux Freedom
         </span>
         <span className=" text-sm text-white text-center">
-          Est. Delivery: Oct - Dec 2022
+          Est. Delivery: TBA
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
-          <button className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
+          <span className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
             Purchase Price
-          </button>
+          </span>
         </div>
         <div className="flex flex-row items-center justify-between gap-8 pt-5">
           <div className="flex flex-col items-center">
@@ -144,12 +163,12 @@ const FluxFreedom = () => {
           </div>
         </div>
         <div className="flex flex-col text-white gap-2 pt-5">
-          {villageDetails.map((data) => (
+          {freedomDetails.map((data) => (
             <FreedomDetails
               data={data}
               setFluxMath={setFluxMath}
-              villageActive={villageActive}
-              setVillageActive={setVillageActive}
+              freedomActive={freedomActive}
+              setfreedomActive={setfreedomActive}
               key={data.id}
             />
           ))}
@@ -223,39 +242,37 @@ const FluxFreedom = () => {
               <input
                 onChange={checkHandleWall}
                 type="checkbox"
-                value="9778285"
-                data-amount="700"
+                data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
               <span className="label-text">Wall Charger</span>
             </label>
-            <span>$700.00</span>
+            <span>$600.00</span>
           </div>
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
               <input
                 onChange={checkHandleRemote}
                 type="checkbox"
-                value="4403379"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
-                data-amount="1100"
+                data-amount="450"
               />
               <span className="label-text">Mobile Charger</span>
             </label>
-            <span>$1,100.00</span>
+            <span>$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="text-2xl text-white">Order Your Flux Village</span>
+          <span className="text-2xl text-white">Order Your Flux freedom</span>
           <span className="text-white font-semibold">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
           <span className="text-white font-semibold">
-            Est. Delivery: Dec 2022 - Apr 2023
+            Est. Delivery: TBA
           </span>
           <button
             type="button"
-            // onClick={makePayment}
+            onClick={()=>paymentBtn()}
             className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
             Continue to Payment
           </button>

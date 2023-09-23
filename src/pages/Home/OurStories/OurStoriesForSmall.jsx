@@ -69,7 +69,7 @@ const OurStoriesForSmall = () => {
         </div>
         <div className=" absolute top-[58%] mx-10">
           <h1 className="text-[20px]">
-            CompanyFlux Air Grand Touring has arrived.
+            Company Flux Freedom Touring has arrived.
           </h1>
           <h1 className="text-[17px] font-semibold mt-5">
             APRIL 12, 2022 / COMPANY

@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Profile.scss";
 import { AuthContext } from "../../context api/UserContext";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   console.log(user);
 
+
+
   return (
     <div className=" bg-black">
-      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
+      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 h-[100vh] overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
         <div className="w-48 rounded-full bg-white overflow-hidden">
           <img src={user.photoURL} alt="default profile" className="w-full" />
@@ -24,7 +26,7 @@ const Profile = () => {
               name=""
               id=""
               defaultValue={user.displayName}
-              className="bg-white px-5 py-2 rounded"
+              className={`bg-white px-5 py-2 rounded`}
             />
           </div>
 
@@ -36,7 +38,6 @@ const Profile = () => {
               name=""
               id=""
               placeholder="email"
-              disabled
               className="bg-white px-5 py-2 rounded"
             />
           </div>
@@ -64,7 +65,7 @@ const Profile = () => {
             />
           </div>
           <div className="flex justify-end w-full">
-            <button className="btn">update profile</button>
+            <button className="btn" type="submit">update profile</button>
           </div>
         </form>
         {/* password */}
