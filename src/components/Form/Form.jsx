@@ -22,7 +22,7 @@ const Form = () => {
           <h1 className="text-[17px]">EMAIL</h1>
           <input
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e?.target?.value);
             }}
             className="w-full p-5 bg-white text-[#40423f]  placeholder:text-[18px] placeholder:text-[#40423f] placeholder:opacity-80 rounded-none"
             type="email"

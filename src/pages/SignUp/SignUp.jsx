@@ -10,7 +10,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   // context api
-  const { signUp, googleLogIn } = useContext(AuthContext);
+  const { signUp, googleLogIn, updateUser } = useContext(AuthContext);
 
   // all state
   const [error, setError] = useState("");
@@ -23,19 +23,13 @@ const SignUp = () => {
     const last = form.lastname.value;
     const name = first + " " + last;
     const email = form?.email.value;
-    const postal = form.postal.value;
     const password = form.password.value;
-
-    const user = {
-      name,
-      email,
-      postal,
-    };
 
     signUp(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        handleUpdateUser(name);
         navigate("/");
         toast.success("User sign up successfully");
       })
@@ -58,6 +52,21 @@ const SignUp = () => {
         setError(errorMessage);
       });
   };
+
+  const handleUpdateUser = (name) => {
+    const profile = {
+      displayName: name,
+    };
+
+    updateUser(profile)
+      .then(() => {
+        console.log("usre upadte successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="py-56 bg-black">
       <form
@@ -89,12 +98,12 @@ const SignUp = () => {
           <input
             type="email"
             name="email"
-            placeholder="example@gmail.com"
+            placeholder="JhonWick@gmail.com"
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
             required
           />
         </div>
-        <div className="flex flex-col w-full gap-1">
+        {/* <div className="flex flex-col w-full gap-1">
           <span className="text-black text-sm">Postal Code</span>
           <input
             type="number"
@@ -103,7 +112,7 @@ const SignUp = () => {
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
             required
           />
-        </div>
+        </div> */}
         <div className="flex flex-col w-full gap-1">
           <span className="text-black text-sm">Password</span>
           <input

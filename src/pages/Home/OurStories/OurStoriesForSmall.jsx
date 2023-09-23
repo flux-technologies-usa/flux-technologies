@@ -20,7 +20,7 @@ const OurStoriesForSmall = () => {
         </div>
         <div className=" absolute top-[58%] ml-[5%] mr-10 ">
           <h1 className="text-[20px]">
-            Introducing Sapphire. The pinnacle of electric performance.
+            The pinnacle of electric performance.
           </h1>
           <h1 className="text-[17px] font-semibold mt-5">
             AUGUST 19, 2022 / ENGINEERING

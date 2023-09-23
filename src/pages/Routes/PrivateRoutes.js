@@ -15,7 +15,7 @@ const PrivateRoutes = ({ children }) => {
       </button>
     );
   }
-  if (user?.email) {
+  if (user?.uid) {
     return children;
   } else {
     toast.error("you need  sign in to order");

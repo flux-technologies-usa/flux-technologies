@@ -69,7 +69,7 @@ const VideoBannerSection = () => {
                 starting from <sup>2</sup>{" "}
               </span>
             </h1>
-            <h1 className="text-2xl md:text-[40px] font-semibold">$65,500</h1>
+            <h1 className="text-2xl md:text-[40px] font-semibold">$85,500</h1>
           </div>
           <div className="text-center select-none">
             <h1>
