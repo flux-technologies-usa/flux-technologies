@@ -103,7 +103,7 @@ const CarShop = () => {
   // stripe payment
   const paymentBtn = () => {
     axios
-      .post("http://localhost:8080/api/v1/flux/create-checkout-session", {
+      .post("https://flux-car-server.vercel.app/api/v1/flux/create-checkout-session", {
         fluxVillage,
         userId: user.uid,
       })

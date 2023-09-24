@@ -11,46 +11,39 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-body  bg-[#141414]">
-
           <div className="normaldiv  flex flex-col gap-[30px]  md:gap-[350px] mx-auto md:max-w-6xl md:flex-row ">
-            
-          <div className="contact-admin-address mt-[100px] mx-3 md:mx-0">
-            <div className="office-address md:pb-[25px]">
-              <h1>Office Address :</h1>
-              <p>Address Here</p>
-            </div>
-            <div className="service-address py-[25px]">
-              <h1>Service Department Address :</h1>
-              <p>Address Here</p>
-            </div>
-            <div className="call py-[25px]">
-              <h1>Call Now</h1>
-              <h5>+1-800-306-0540</h5>
-            </div>
-            <div className="email py-[25px]">
-              <h1>E-mail :</h1>
-              <h5>info@fluxtechnologiesafrica.com</h5>
-            </div>
-            <div className="hours py-[25px]">
-              <h1>Operating Hours :</h1>
-              <div className="hours-details-one pb-[30px]">
-                <h4>Sales Department</h4>
-                <h3>Monday - Saturday</h3>
-                <h3>8:00 am – 5:00 pm</h3>
+            <div className="contact-admin-address mt-[100px] mx-3 md:mx-0">
+              <div className="office-address md:pb-[25px]">
+                <h1>Address : </h1>
+                <p>380 SW 12th Ave <br /> Pompano Beach, FL 33069</p>
               </div>
-              <div className="hours-details-two">
-                <h4>Service Department</h4>
-                <h3>Monday - Friday</h3>
-                <h3>8:00 am – 5:00 pm</h3>
+              <div className="call py-[25px]">
+                <h1>Call Now</h1>
+                <h5>+1-800-306-0540</h5>
+              </div>
+              <div className="email py-[25px]">
+                <h1>E-mail :</h1>
+                <h5>info@fluxtechnologiesafrica.com</h5>
+              </div>
+              <div className="hours py-[25px]">
+                <h1>Operating Hours :</h1>
+                <div className="hours-details-one pb-[30px]">
+                  <h4>Sales Department</h4>
+                  <h3>Monday - Saturday</h3>
+                  <h3>8:00 am – 5:00 pm</h3>
+                </div>
+                <div className="hours-details-two">
+                  <h4>Service Department</h4>
+                  <h3>Monday - Friday</h3>
+                  <h3>8:00 am – 5:00 pm</h3>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="user-form mt-[20px]  md:mt-[100px] ">
-            <Contactform/>
+            <div className="user-form mt-[20px]  md:mt-[100px] ">
+              <Contactform />
+            </div>
           </div>
-          </div>
-
         </div>
       </div>
     </>

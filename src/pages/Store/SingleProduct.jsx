@@ -19,7 +19,7 @@ const SingleProduct = ({ single }) => {
   };
   const handleAddToCart = () => {
     const email = user?.email;
-    if (user?.email) {
+    if (user?.uid) {
       const product = {
         email: email,
         quentity: 1,

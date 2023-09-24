@@ -13,7 +13,7 @@ const Form = () => {
     } else {
       setShow(false);
     }
-  }, [email.length]);
+  }, [email?.length]);
 
   return (
     <div className="w-full">

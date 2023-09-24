@@ -3,27 +3,27 @@ import "../Cart.scss";
 import { useContext } from "react";
 import { CartContext } from "../../../context api/AddToCartContext";
 import { calculateTotal } from "../../../components/CalculateTotal/CalculateTotal";
-import axios from "axios";
-import { AuthContext } from "../../../context api/UserContext";
+// import axios from "axios";
+// import { AuthContext } from "../../../context api/UserContext";
 
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
 
-  const {user} = useContext(AuthContext)
+  // const {user} = useContext(AuthContext)
   // calculate total
   const totalPrice = calculateTotal(products);
 
-  const paymentBtn = () =>{
-    axios.post("http://localhost:8080/api/v1/create-checkout-session",{
-      products,
-      userId:user.uid
-    }).then((res)=>{
-      if(res.data.url){
-        window.location.href = res.data.url
-      }
-    }).catch((err)=>console.log(err.message))
-  }
+  // const paymentBtn = () =>{
+  //   axios.post("http://localhost:8080/api/v1/create-checkout-session",{
+  //     products,
+  //     userId:user.uid
+  //   }).then((res)=>{
+  //     if(res.data.url){
+  //       window.location.href = res.data.url
+  //     }
+  //   }).catch((err)=>console.log(err.message))
+  // }
  
   return (
     <div className=" md:mx-20 mx-6 md:mt-0 mt-20 h-full">
@@ -43,7 +43,8 @@ const Cart = () => {
         <div className="w-full h-[1px] bg-black mt-1" />
       </div>
       <div
-        className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in" onClick={()=>paymentBtn()}        
+        className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in" 
+        // onClick={()=>paymentBtn()}        
       >
         Checkout
       </div>

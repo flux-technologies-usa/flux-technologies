@@ -67,35 +67,35 @@ const FluxFreedom = () => {
   };
 
   // stripe payment
-  const makePayment = async () => {
-    console.log("checkout");
-    fetch("http://localhost:8080/api/v1/create-checkout-session", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        items: [
-          { id: fluxMath.id, quantity: 1 },
-          { id: paintDetails.id, quantity: 1 },
-          { id: wheelDetails.id, quantity: 1 },
-          { id: 1234567, quantity: 1 },
-          { id: Math.floor(checkWallId), quantity: 1 },
-          { id: Math.floor(checkRemoteId), quantity: 1 },
-        ],
-      }),
-    })
-      .then((res) => {
-        if (res.ok) return res.json();
-        return res.json().then((json) => Promise.reject(json));
-      })
-      .then(({ url }) => {
-        window.location = url;
-      })
-      .catch((e) => {
-        console.error(e.error);
-      });
-  };
+  // const makePayment = async () => {
+  //   console.log("checkout");
+  //   fetch("http://localhost:8080/api/v1/create-checkout-session", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       items: [
+  //         { id: fluxMath.id, quantity: 1 },
+  //         { id: paintDetails.id, quantity: 1 },
+  //         { id: wheelDetails.id, quantity: 1 },
+  //         { id: 1234567, quantity: 1 },
+  //         { id: Math.floor(checkWallId), quantity: 1 },
+  //         { id: Math.floor(checkRemoteId), quantity: 1 },
+  //       ],
+  //     }),
+  //   })
+  //     .then((res) => {
+  //       if (res.ok) return res.json();
+  //       return res.json().then((json) => Promise.reject(json));
+  //     })
+  //     .then(({ url }) => {
+  //       window.location = url;
+  //     })
+  //     .catch((e) => {
+  //       console.error(e.error);
+  //     });
+  // };
   // stripe payment
 
   const [active, setActive] = useState(paintDetails.id);
@@ -255,7 +255,7 @@ const FluxFreedom = () => {
           </span>
           <button
             type="button"
-            onClick={makePayment}
+            // onClick={makePayment}
             className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
             Continue to Payment
           </button>
