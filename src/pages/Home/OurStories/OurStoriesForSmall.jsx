@@ -9,7 +9,7 @@ import {
 
 const OurStoriesForSmall = () => {
   return (
-    <div className="flex md:hidden">
+    <div className="flex md:hidden customScrollBar select-none">
       {/* start */}
       <div className="h-[405px] w-[380px] relative ">
         <div className="flex justify-between">
@@ -19,9 +19,7 @@ const OurStoriesForSmall = () => {
           <div className="h-[320px] w-[1px] bg-[#302f2f] ml-[40px] mr-3 md:mr-0" />
         </div>
         <div className=" absolute top-[58%] ml-[5%] mr-10 ">
-          <h1 className="text-[20px]">
-            The pinnacle of electric performance.
-          </h1>
+          <h1 className="text-[20px]">The pinnacle of electric performance.</h1>
           <h1 className="text-[17px] font-semibold mt-5">
             AUGUST 19, 2022 / ENGINEERING
           </h1>
