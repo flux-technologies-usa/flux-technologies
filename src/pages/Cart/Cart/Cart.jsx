@@ -15,9 +15,9 @@ const Cart = () => {
   const totalPrice = calculateTotal(products);
 
   const paymentBtn = () =>{
-    axios.post("http://localhost:8080/api/v1/create-checkout-session",{
+    axios.post("http://localhost:8080/api/v1/store/create-checkout-session",{
       products,
-      userId:user.uid
+      userEmail:user.userEmail
     }).then((res)=>{
       if(res.data.url){
         window.location.href = res.data.url

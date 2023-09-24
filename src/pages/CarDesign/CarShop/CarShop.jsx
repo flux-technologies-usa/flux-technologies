@@ -54,7 +54,7 @@ const CarShop = () => {
   const checkHandleWall = (e) => {
     const checked = e.target.checked;
     if (checked === true) {
-      setCheckWallId([{ name: "Wall Charger(selected)", price: 5000 }]);
+      setCheckWallId([{ name: "Wall Charger(selected)", price: 600 }]);
     } else {
       setCheckWallId([{ name: "Wall Charger(not selected)", price: 0 }]);
     }
@@ -66,7 +66,7 @@ const CarShop = () => {
 
   const checkHandleRemote = (e) => {
     if (e.target.checked === true) {
-      setCheckRemoteId([{ name: "Remote Charger(selected)", price: 5000 }]);
+      setCheckRemoteId([{ name: "Remote Charger(selected)", price: 450 }]);
     } else {
       setCheckRemoteId([{ name: "Remote Charger(not selected)", price: 0 }]);
     }
@@ -103,10 +103,13 @@ const CarShop = () => {
   // stripe payment
   const paymentBtn = () => {
     axios
-      .post("https://flux-car-server.vercel.app/api/v1/flux/create-checkout-session", {
-        fluxVillage,
-        userId: user.uid,
-      })
+      .post(
+        "http://localhost:8080/api/v1/village/create-checkout-session",
+        {
+          fluxVillage,
+          userEmail: user.email
+        }
+      )
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
@@ -135,12 +138,12 @@ const CarShop = () => {
           Flux Village
         </span>
         <span className=" text-sm text-white text-center">
-          Est. Delivery: Oct - Dec 2022
+          Est. Delivery: TBA
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
-          <button className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
+          <span className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
             Purchase Price
-          </button>
+          </span>
         </div>
         <div className="flex flex-row items-center justify-between gap-8 pt-5">
           <div className="flex flex-col items-center">
@@ -236,12 +239,12 @@ const CarShop = () => {
               <input
                 onChange={checkHandleWall}
                 type="checkbox"
-                data-amount="5000"
+                data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
               <span className="label-text">Wall Charger</span>
             </label>
-            <span>$5,000.00</span>
+            <span>$600.00</span>
           </div>
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
@@ -249,11 +252,11 @@ const CarShop = () => {
                 onChange={checkHandleRemote}
                 type="checkbox"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
-                data-amount="5000"
+                data-amount="450"
               />
               <span className="label-text">Remote Chrager</span>
             </label>
-            <span>$5,000.00</span>
+            <span>$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -262,7 +265,7 @@ const CarShop = () => {
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
           <span className="text-white font-semibold">
-            Est. Delivery: Dec 2022 - Apr 2023
+            Est. Delivery: TBA
           </span>
           <button
             type="button"

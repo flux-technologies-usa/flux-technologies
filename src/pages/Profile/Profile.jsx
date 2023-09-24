@@ -56,7 +56,7 @@ const Profile = () => {
               name=""
               id=""
               defaultValue={user.displayName}
-              className="bg-white px-5 py-2 rounded"
+              className={`bg-white px-5 py-2 rounded`}
             />
           </div>
 
@@ -96,7 +96,7 @@ const Profile = () => {
             />
           </div> */}
           <div className="flex justify-end w-full">
-            <button className="btn">update profile</button>
+            <button className="btn" type="submit">update profile</button>
           </div>
         </form>
         {/* password */}

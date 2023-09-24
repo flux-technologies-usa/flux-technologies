@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   bridge,
   carBack,
@@ -6,8 +6,10 @@ import {
   office,
   phone,
 } from "../../../assets/Callback";
+import axios from "axios";
 
 const OurStoriesForBigDevice = () => {
+
   return (
     <div className="hidden md:flex overflow-x-scroll customScrollBar select-none">
       {/* start */}
@@ -67,7 +69,7 @@ const OurStoriesForBigDevice = () => {
         </div>
         <div className=" absolute top-[78%]">
           <h1 className="text-[22px]">
-            CompanyFlux Air Grand Touring has arrived.
+            Company Flux Freedom Touring has arrived.
           </h1>
           <h1 className="text-[17px] font-semibold mt-5">
             APRIL 12, 2022 / COMPANY
