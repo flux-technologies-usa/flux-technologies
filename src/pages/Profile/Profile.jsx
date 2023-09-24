@@ -7,7 +7,7 @@ const Profile = () => {
   const [hover, setHover] = useState(false);
   console.log(hover);
   return (
-    <div className=" bg-black ">
+    <div className=" bg-black pt-10">
       <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
         <div className="flex relative">
