@@ -32,6 +32,16 @@ const SignUp = () => {
         handleUpdateUser(name);
         navigate("/");
         toast.success("User sign up successfully");
+
+        fetch(`http://localhost:8080/api/v1/user`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ email: user?.email }),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data));
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -46,6 +56,15 @@ const SignUp = () => {
         console.log(user);
         navigate("/");
         toast.success("User sign up successfully");
+        fetch(`http://localhost:8080/api/v1/user`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ email: user?.email }),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data));
       })
       .catch((error) => {
         const errorMessage = error.message;

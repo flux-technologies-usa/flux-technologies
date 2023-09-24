@@ -121,6 +121,22 @@
   z-index: -1;
 }
 
+
+
+.customScrollBar::-webkit-scrollbar {
+  width: 2em;
+}
+
+.customScrollBar::-webkit-scrollbar-track{
+  background-color: white;
+  cursor: pointer;
+  
+}
+.customScrollBar::-webkit-scrollbar-thumb{
+  background-color: black;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 400px) {
   .videoCustomButton {
     background: white;
@@ -135,10 +151,8 @@
     padding: 7px 20px;
   }
 
-  .customScroll {
-    ::-webkit-scrollbar {
-        display: none;
-      }
-  }
-    
+    .customScrollBar::-webkit-scrollbar {
+      display: none;
+    }
+
 }

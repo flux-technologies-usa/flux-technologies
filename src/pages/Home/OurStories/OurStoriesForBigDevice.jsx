@@ -11,7 +11,7 @@ import axios from "axios";
 const OurStoriesForBigDevice = () => {
 
   return (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex overflow-x-scroll customScrollBar select-none">
       {/* start */}
       <div className="h-[505px] w-[580px] relative pl-[40px] mb-[60px]">
         <div className="flex justify-between">
@@ -21,9 +21,7 @@ const OurStoriesForBigDevice = () => {
           <div className="h-[500px] w-[1px] bg-[#302f2f] ml-[40px]" />
         </div>
         <div className=" absolute top-[78%]">
-          <h1 className="text-[22px]">
-            The pinnacle of electric performance.
-          </h1>
+          <h1 className="text-[22px]">The pinnacle of electric performance.</h1>
           <h1 className="text-[17px] font-semibold mt-5">
             AUGUST 19, 2022 / ENGINEERING
           </h1>
