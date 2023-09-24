@@ -1,16 +1,48 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Profile.scss";
 import { AuthContext } from "../../context api/UserContext";
+import { FaRegEdit } from "react-icons/fa";
 const Profile = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
-
+  const [hover, setHover] = useState(false);
+  console.log(hover);
   return (
-    <div className=" bg-black">
+    <div className=" bg-black ">
       <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
-        <div className="w-48 rounded-full bg-white overflow-hidden">
-          <img src={user.photoURL} alt="default profile" className="w-full" />
+        <div className="flex relative">
+          <div
+            onMouseEnter={() => {
+              setHover(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+            }}
+            className="w-48 rounded-full bg-white overflow-hidden">
+            <img
+              src={`${
+                user?.photoURL
+                  ? user?.photoURL
+                  : "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+              }`}
+              alt="default profile"
+              className="w-full"
+            />
+          </div>
+          <div
+            onMouseEnter={() => {
+              setHover(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+            }}
+            className={`w-48 h-48 rounded-full bg-white opacity-50 border absolute flex justify-center items-center ${
+              hover ? "" : "ml-[1000px]"
+            }`}>
+            <FaRegEdit
+              size={30}
+              className="text-slate-800 cursor-pointer"></FaRegEdit>
+          </div>
         </div>
         {/* profile image */}
 
@@ -35,9 +67,9 @@ const Profile = () => {
               type="text"
               name=""
               id=""
-              placeholder="email"
+              placeholder={user?.email}
               disabled
-              className="bg-white px-5 py-2 rounded"
+              className="bg-white px-5 py-2 rounded cursor-not-allowed"
             />
           </div>
 
@@ -45,7 +77,7 @@ const Profile = () => {
 
           {/* password */}
 
-          <div className="flex flex-col w-full">
+          {/* <div className="flex flex-col w-full">
             <input
               type="password"
               name=""
@@ -62,7 +94,7 @@ const Profile = () => {
               placeholder="new password"
               className="bg-white px-5 py-2 rounded"
             />
-          </div>
+          </div> */}
           <div className="flex justify-end w-full">
             <button className="btn">update profile</button>
           </div>

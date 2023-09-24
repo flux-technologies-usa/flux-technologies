@@ -84,7 +84,7 @@ const Navbar = () => {
                   : "opacity-0 duration-500 ease-in"
               }`}></div>
             <Link
-              className={`py-[30px] font-semibold ${
+              className={`py-[30px]  font-semibold ${
                 hover ? "text-[#ddc861]" : ""
               } duration-500 ease-in`}>
               DESIGN YOURS
@@ -92,13 +92,10 @@ const Navbar = () => {
             {/* hover flux */}
             <div
               className={`${
-                hover ? "h-[92px]" : "h-0 opacity-0"
-              } absolute top-[70%] w-[110px] overflow-scroll manageScrollBar bg-[#161816] p-1 rounded duration-300`}>
+                hover ? "" : "h-0 opacity-0"
+              } absolute top-[70%] w-[160px] overflow-scroll  bg-[#161816] p-1 rounded duration-300 ml-[-20px]`}>
               {/* flux village */}
               <Link
-                onClick={() => {
-                  setRoutePath("village");
-                }}
                 to="/village">
                 <div
                   onMouseEnter={() => {
@@ -107,7 +104,7 @@ const Navbar = () => {
                   onMouseLeave={() => {
                     setButtonHoverVillage(false);
                   }}
-                  className={` px-4 py-3 text-white ${
+                  className={` p-3  text-white ${
                     buttonHoverVillage ? "bg-[#635929]" : "bg-transparent"
                   }`}>
                   <Link to="/village">FLUX VILLAGE</Link>
@@ -126,7 +123,7 @@ const Navbar = () => {
                   onMouseLeave={() => {
                     setButtonHoverFreedom(false);
                   }}
-                  className={`p-4 mt-5 ${
+                  className={`p-3  ${
                     buttonHoverFreedom ? "bg-[#635929]" : "bg-transparent"
                   }`}>
                   <Link to="/freedom">FLUX FREEDOM</Link>
@@ -188,20 +185,25 @@ const Navbar = () => {
               to={"/stayUpdate"}
               value={"STAY UPDATE"}
               left={"ml-[40px]"}
+              hiden={true}
             />
           </div>
 
           {/* user sign up and profile */}
           <div>
             {user?.email ? (
-              <div className="pl-8 mr-[-20px]">
+              <div className="pl-8 mr-[-20px] ">
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                       <img
-                        src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+                        src={`${
+                          user?.photoURL
+                            ? user?.photoURL
+                            : "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+                        }`}
                         alt=""
                       />
                     </div>
@@ -256,7 +258,7 @@ const Navbar = () => {
                   />
                 </label>
               </div>
-              <div className="drawer-side cursor-auto">
+              <div className="drawer-side cursor-auto z-[999]">
                 <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-[340px] min-h-full bg-black text-base-content">
                   <div className="mt-[10%] mx-[2%] ">
@@ -271,17 +273,38 @@ const Navbar = () => {
                       onClick={() => {
                         setRoutePath("home/stay");
                       }}
-                      className="mt-[17%] flex">
+                      className="mt-[17%] flex items-center">
                       <Link>
                         <div className="text-[18px] font-semibold text-[#ddc861] hover:opacity-70 select-none">
                           Home
                         </div>
                       </Link>
-                      <Link to="/stayUpdate">
-                        <div className="text-[18px] ml-[30px] font-semibold text-[#ddc861] hover:opacity-70 select-none">
-                          Stay Update
-                        </div>
-                      </Link>
+                      <div>
+                        {user?.uid ? (
+                          <Link to={"/profile"} className="ml-5">
+                            <label
+                              tabIndex={0}
+                              className="btn btn-ghost btn-circle avatar">
+                              <div className="w-10 rounded-full">
+                                <img
+                                  src={`${
+                                    user?.photoURL
+                                      ? user?.photoURL
+                                      : "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+                                  }`}
+                                  alt=""
+                                />
+                              </div>
+                            </label>
+                          </Link>
+                        ) : (
+                          <Link to={`/signup`}>
+                            <div className="text-[18px] font-semibold text-[#ddc861] hover:opacity-70 select-none ml-5">
+                              Sign Up
+                            </div>
+                          </Link>
+                        )}
+                      </div>
                     </div>
                     <Link
                       onClick={() => {
@@ -395,6 +418,16 @@ const Navbar = () => {
                       className="">
                       <div className="text-[16px] mt-[5%] font-semibold text-white hover:opacity-70 select-none">
                         Terms of Use
+                      </div>
+                    </Link>
+                    <Link
+                      onClick={() => {
+                        setRoutePath("contact");
+                      }}
+                      to="/stayUpdate"
+                      className="">
+                      <div className="text-[16px] mt-[5%] font-semibold text-white hover:opacity-70 select-none">
+                        Stay Update
                       </div>
                     </Link>
                   </div>
