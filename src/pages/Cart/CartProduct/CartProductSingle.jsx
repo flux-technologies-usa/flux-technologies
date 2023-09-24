@@ -63,7 +63,7 @@ const CartProductSingle = ({ product }) => {
     }
   };
   return (
-    <div className="flex md:flex-row flex-col md:justify-between md:items-center md:gap-0 gap-4 md:w-full md:border-none border-b border-[#dbc861] md:p-0 pb-5">
+    <div className="flex md:flex-row flex-col md:justify-between md:items-center md:gap-0 gap-4 md:w-full md:border-none border-b border-[#dbc861] md:p-0 pb-5 mb-5">
       <div className="flex md:flex-row md:gap-28 gap-10">
         <div className="flex flex-row items-start gap-8">
           <img

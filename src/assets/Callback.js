@@ -44,7 +44,7 @@ import blackCarVB from "./images/blackVB.png";
 import blueCarV from "./images/blueV.png";
 import freedomCarNew from "./images/flux_freedom.jpg";
 import businessDeal from "./images/business-deal3.jpg";
-import mounten from "./images/mountain.jpg";
+import mounten from "./primaim/sustainImg.jpg";
 import blackMordenCar from './images/black-modern-car-black.jpg'
 // video
 import carVideo from "./video/car.mp4";

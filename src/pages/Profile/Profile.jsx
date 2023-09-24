@@ -8,7 +8,7 @@ const Profile = () => {
   console.log(hover);
   return (
     <div className=" bg-black pt-10">
-      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
+      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 md:px-0 px-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
         <div className="flex relative">
           <div

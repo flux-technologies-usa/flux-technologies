@@ -19,11 +19,11 @@ const Contact = () => {
               </div>
               <div className="call py-[25px]">
                 <h1>Call Now</h1>
-                <h5>+1-800-306-0540</h5>
+                <h5>800-313-1960</h5>
               </div>
               <div className="email py-[25px]">
                 <h1>E-mail :</h1>
-                <h5>info@fluxtechnologiesafrica.com</h5>
+                <h5>mailto:fluxtechnologies.usa@gmail.com</h5>
               </div>
               <div className="hours py-[25px]">
                 <h1>Operating Hours :</h1>

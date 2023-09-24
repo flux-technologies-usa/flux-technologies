@@ -6,12 +6,12 @@ const TermsAndCondition = () => {
       <div className="py-32">
         <span className=" text-3xl pl-16 text-[#ddc861]">Terms And Conditions</span>
       </div>
-      <div className="flex flex-col text-black px-28 py-10 bg-white gap-5 text-xl">
+      <div className="flex flex-col text-black px-10 md:px-28 py-10 bg-white gap-5 md:text-xl text-base">
         <div className=" flex flex-col items-start gap-5">
           <span className=" text-2xl font-semibold text-[#ddc861]">
           Terms And Conditions
           </span>
-          <span className="text-xl">
+          <span className="md:text-xl text-base">
             Flux Group, Inc., (<span className="font-bold">“Flux”</span>,{" "}
             <span className="font-bold">“we”</span>,{" "}
             <span className="font-bold">“our”</span> or{" "}

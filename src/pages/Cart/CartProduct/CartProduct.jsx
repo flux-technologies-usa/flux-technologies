@@ -9,9 +9,9 @@ const CartProduct = () => {
 
   return (
     <div className="flex flex-col items-center gap-14 w-full px-5">
-      {products.map((product) => (
+      {products.map((product, id) => (
         <CartProductSingle
-          product={product}></CartProductSingle>
+          product={product} key={id}></CartProductSingle>
       ))}
     </div>
   );

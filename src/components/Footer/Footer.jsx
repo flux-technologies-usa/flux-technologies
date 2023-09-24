@@ -155,10 +155,10 @@ const Footer = () => {
             <h1 className=" font-semibold">More</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link to="/village" className=" customFooterLink w-[120px] ">
+              <Link to="/contact" className=" customFooterLink w-[120px] ">
                 Contact Us
               </Link>
-              <Link to="/store" className=" customFooterLink  mt-[10px] ">
+              <Link to="/privacy" className=" customFooterLink  mt-[10px] ">
                 Privacy Policy
               </Link>
             </div>

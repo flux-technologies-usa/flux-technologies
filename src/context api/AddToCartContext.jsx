@@ -14,11 +14,11 @@ const AddToCartContext = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cartLength, setCartLength] = useState(0);
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:8080/api/v1/cart?email=${user?.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data.cartData));
-  // }, [cartLength, user]);
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/v1/cart?email=${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setProducts(data.cartData));
+  }, [cartLength, user]);
 
   const contextValue = { products, setProducts, cartLength, setCartLength };
   return (

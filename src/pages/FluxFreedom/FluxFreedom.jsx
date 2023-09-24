@@ -120,18 +120,18 @@ const FluxFreedom = () => {
   const [active, setActive] = useState(paintDetails.id);
   const [activeWheel, setActiveWheel] = useState(carWheel[0].id);
   return (
-    <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
+    <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
-        className="flex items-center justify-center rounded h-[200px] lg:h-screen mb-16 w-full lg:w-[78%]"
+        className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[78%]"
         style={{ backgroundImage: `url("${darkBg}")` }}>
         <img
           src={wheelDetails.img_wheel}
           alt=""
-          className="w-[180px] lg:w-[600px]"
+          className="w-[180px] md:w-[600px]"
         />
       </div>
-      <div className="flex flex-col gap-3 lg:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[22%]">
-        <span className="text-4xl text-white text-center lg:mt-10">
+      <div className="flex flex-col gap-3 md:px-10 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
+        <span className="text-4xl text-white text-center md:mt-10">
           Flux Freedom
         </span>
         <span className=" text-sm text-white text-center">
