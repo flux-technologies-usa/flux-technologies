@@ -82,7 +82,21 @@ const Footer = () => {
         <div className="px-[10%] py-[45px] bg-[#d9c8af] opacity-80">
           <h1>
             <sup className="pr-1">1</sup>
-            Introducing FLUX, Africa's thrilling foray into the world of fully electric vehicles. Embrace the power of electric with an impressive range of over 800km on just a quick 30-minute recharge. Say goodbye to worrying about gas shortages and long lines, as FLUX ensures that you will always be on the move. While other continents may focus on expensive compact cars for a few select few, FLUX caters to everyone by setting itself apart by specializing in premium, top-of-the-line design and incorporating the latest cutting-edge features. The world deserves nothing but the best, and FLUX is here to showcase how the this company is leading the way towards an electrifying future. For those seeking even more security and exclusivity, we proudly present the optional Armored version of our FLUX Fully Electric Sedan and SUV. We have received early interest from wealthy industrialists and high-ranking politicians, and we are more than happy to cater to their needs. With the Armo
+            Introducing FLUX, Africa's thrilling foray into the world of fully
+            electric vehicles. Embrace the power of electric with an impressive
+            range of over 800 miles on just a quick 30-minute recharge. Say
+            goodbye to worrying about gas shortages and long lines, as FLUX
+            ensures that you will always be on the move. While other continents
+            may focus on expensive compact cars for a few select few, FLUX
+            caters to everyone by setting itself apart by specializing in
+            premium, top-of-the-line design and incorporating the latest
+            cutting-edge features. The world deserves nothing but the best, and
+            FLUX is here to showcase how the this company is leading the way
+            towards an electrifying future. For those seeking even more security
+            and exclusivity, we proudly present the optional Armored version of
+            our FLUX Fully Electric Sedan and SUV. We have received early
+            interest from wealthy industrialists and high-ranking politicians,
+            and we are more than happy to cater to their needs. With the Armo
           </h1>
           <h1 className="mt-7">
             <sup className="pr-1">2</sup>

@@ -158,12 +158,7 @@ const Navbar = () => {
           {/* Shoping cart */}
 
           <div
-            onClick={() => {
-              setRoutePath("cart");
-            }}
-            className={`dropdown dropdown-end ${
-              routePath === "store" ? "" : "hidden"
-            }`}>
+            className={`dropdown dropdown-end ${user?.email ? "" : "hidden"}`}>
             <Link to="/cart">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <div className="indicator">
@@ -198,7 +193,7 @@ const Navbar = () => {
 
           {/* user sign up and profile */}
           <div>
-            {user?.uid ? (
+            {user?.email ? (
               <div className="pl-8 mr-[-20px]">
                 <div className="dropdown dropdown-end">
                   <label
@@ -215,10 +210,12 @@ const Navbar = () => {
                     tabIndex={0}
                     className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                     <li>
-                      <Link to='/profile' className="justify-between">Your Profile</Link>
+                      <Link to="/profile" className="justify-between">
+                        Your Profile
+                      </Link>
                     </li>
                     <li>
-                      <Link to='/orders'>Orders</Link>
+                      <Link to="/orders">Orders</Link>
                     </li>
                     <li
                       onClick={() => {

@@ -20,7 +20,7 @@ const OurStoriesForBigDevice = () => {
         </div>
         <div className=" absolute top-[78%]">
           <h1 className="text-[22px]">
-            Introducing Sapphire. The pinnacle of electric performance.
+            The pinnacle of electric performance.
           </h1>
           <h1 className="text-[17px] font-semibold mt-5">
             AUGUST 19, 2022 / ENGINEERING
