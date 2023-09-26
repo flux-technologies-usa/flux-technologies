@@ -96,7 +96,6 @@ const FluxFreedom = () => {
       price: checkRemoteId[0].price,
     },
   ];
-  console.log(fluxFreedom)
   const { user } = useContext(AuthContext);
   // stripe payment
   const paymentBtn = () => {

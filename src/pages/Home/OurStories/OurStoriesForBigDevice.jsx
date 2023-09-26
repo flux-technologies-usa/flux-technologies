@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  bridge,
   carBack,
   carUp,
   office,
   phone,
 } from "../../../assets/Callback";
-import axios from "axios";
 
 const OurStoriesForBigDevice = () => {
 
