@@ -126,7 +126,7 @@ const FluxFreedom = () => {
         <img
           src={wheelDetails.img_wheel}
           alt=""
-          className="w-[180px] md:w-[600px]"
+          className="w-[180px] md:w-[900px]"
         />
       </div>
       <div className="flex flex-col gap-3 md:px-10 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
