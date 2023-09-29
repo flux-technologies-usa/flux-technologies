@@ -7,7 +7,7 @@ function App() {
   document.querySelector("html").setAttribute("data-theme", "dark");
 
   return (
-    <div className="max-w-[400px] md:max-w-full overflow-hidden mx-auto">
+    <div className=" md:max-w-full overflow-hidden mx-auto">
       <RouterProvider router={routes}></RouterProvider>
       <Toaster position="top-center" reverseOrder={false} />
     </div>

@@ -2,8 +2,8 @@ import React from "react";
 import {
   carBack,
   carUp,
+  mobileCar,
   office,
-  phone,
 } from "../../../assets/Callback";
 
 const OurStoriesForBigDevice = () => {
@@ -67,7 +67,7 @@ const OurStoriesForBigDevice = () => {
         </div>
         <div className=" absolute top-[78%]">
           <h1 className="text-[22px]">
-            Company Flux Freedom Touring has arrived.
+            Company Flux Freedom has arrived.
           </h1>
           <h1 className="text-[17px] font-semibold mt-5">
             APRIL 12, 2022 / COMPANY
@@ -78,7 +78,7 @@ const OurStoriesForBigDevice = () => {
       <div className="h-[505px] w-[580px] relative pl-[40px]">
         <div className="flex justify-between">
           <div className=" w-[500px] h-[340px] overflow-hidden">
-            <img className="customStoryImg scale-[1.2]" src={phone} alt="" />
+            <img className="customStoryImg scale-[1.2]" src={mobileCar} alt="" />
           </div>
           <div className="h-[500px] w-[1px] bg-[#302f2f] ml-[40px]" />
         </div>

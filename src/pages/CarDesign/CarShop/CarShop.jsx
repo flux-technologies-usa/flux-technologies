@@ -86,7 +86,7 @@ const CarShop = () => {
     },
     {
       name: "Black White Int",
-      price: 1000,
+      price: 0,
     },
     {
       name: checkWallId[0].name,
@@ -122,19 +122,19 @@ const CarShop = () => {
   const [active, setActive] = useState(paintDetails.id);
   const [activeWheel, setActiveWheel] = useState(carWheel[0].id);
   return (
-    <div className="mt-28 lg:ml-10 px-2 lg:px-0 lg:flex lg:flex-row">
+    <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
-        className="flex items-center justify-center rounded h-[200px] lg:h-screen mb-16 w-full lg:w-[78%]"
+        className="flex items-center justify-center rounded h-[200px] md:h-[90vh] lg:h-[90vh] mb-16 w-full lg:w-[70%] md:w-[60%]"
         style={{ backgroundImage: `url("${darkBg}")` }}
       >
         <img
           src={wheelDetails.img_wheel}
           alt=""
-          className="w-[180px] lg:w-[600px]"
+          className="w-[180px] lg:w-[600px] md:w-[400px]"
         />
       </div>
-      <div className="flex flex-col gap-3 lg:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[22%]">
-        <span className="text-4xl text-white text-center lg:mt-10">
+      <div className="flex flex-col gap-3 md:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[30%] md:w-[40%]">
+        <span className="text-4xl md:text-3xl text-white text-center md:mt-10">
           Flux Village
         </span>
         <span className=" text-sm text-white text-center">
@@ -145,22 +145,22 @@ const CarShop = () => {
             Purchase Price
           </span>
         </div>
-        <div className="flex flex-row items-center justify-between gap-8 pt-5">
+        <div className="flex flex-row items-center justify-between pt-5">
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
+            <span className="lg:text-xl md:text-lg text-white">
               560<span className="text-base">mi</span>
             </span>
             <span className="text-xs">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
-              1600<span className="text-base">mph</span>
+            <span className="lg:text-xl md:text-lg text-white">
+            0-100<span className="text-base">mph</span>
             </span>
             <span className="text-xs">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
-              6.4<span className="text-base">sec</span>
+            <span className="lg:text-xl md:text-lg text-white">
+              5.8<span className="text-base">sec</span>
             </span>
             <span className="text-xs">Range(est.)</span>
           </div>
@@ -194,8 +194,12 @@ const CarShop = () => {
             ))}
           </div>
           <span className="text-sm flex gap-1">
-            <span className="text-white">{paintDetails.name}</span>$
-            {paintDetails.price}.00
+            <span className="text-white">{paintDetails.name}</span>
+            {paintDetails.price === "00" ? (
+              <span className="text-gray-400">include</span>
+            ) : (
+              <span className="text-gray-400">${paintDetails.price}.00</span>
+            )}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -229,7 +233,7 @@ const CarShop = () => {
             className="rounded-full cursor-pointer w-11 p-[2px] border-2 border-[#ddc861]"
           />
           <span className="text-sm flex gap-1">
-            <span className="text-white">Black White Int</span>$1,000.00
+            <span className="text-white">Black White Int</span>include
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -260,7 +264,7 @@ const CarShop = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="text-2xl text-white">Order Your Flux Village</span>
+          <span className="text-xl text-white">Order Your Flux Village</span>
           <span className="text-white font-semibold">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
@@ -270,7 +274,7 @@ const CarShop = () => {
           <button
             type="button"
             onClick={() => paymentBtn()}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
+            className="border border-[#ddc861] px-9 py-2 w-full rounded text-white  customCarDesignButton"
           >
             Continue to Payment
           </button>

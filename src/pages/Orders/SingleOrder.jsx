@@ -3,11 +3,6 @@ const SingleOrder = ({ order }) => {
   const { img, name, price, quantity } = order;
   return (
     <tr>
-      <th className="md:block hidden">
-        <label>
-          <input type="checkbox" className="checkbox" />
-        </label>
-      </th>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">

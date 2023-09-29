@@ -2,16 +2,45 @@ import React, { useContext, useState } from "react";
 import "./Profile.scss";
 import { AuthContext } from "../../context api/UserContext";
 import { FaRegEdit } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 const Profile = () => {
   const { user } = useContext(AuthContext);
+  console.log(user)
   const [hover, setHover] = useState(false);
   console.log(hover);
 
 
+  const imageHostKey = "982ee9a7802cdcb8f72ba2008a9bad15";
+  const { register, handleSubmit } = useForm();
 
+
+
+  const handleUpdate = (data) => {
+
+
+    const image = data.image[0];
+
+    const formData = new FormData();
+
+    formData.append("image", image);
+
+    const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`;
+    fetch(url, {
+      method:"POST",
+      body:formData
+    })
+    .then(res=>res.json())
+    .then(imgData=>{
+      if(imgData.success){
+        console.log(imgData.data.url)
+      }
+    })
+
+
+  };
   return (
-    <div className=" bg-black pt-10">
-      <div className="flex flex-col items-center justify-center bordermx-auto rounded profile-wrapper gap-5 md:px-0 px-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
+    <form onSubmit={handleSubmit(handleUpdate)} className=" bg-black pt-10">
+      <div className="flex flex-col items-center justify-center rounded profile-wrapper gap-5 md:px-0 px-5 py-24 overflow-hidden md:max-w-[500px] mx-auto">
         {/* profile image */}
         <div className="flex relative">
           <div
@@ -21,7 +50,8 @@ const Profile = () => {
             onMouseLeave={() => {
               setHover(false);
             }}
-            className="w-48 rounded-full bg-white overflow-hidden">
+            className="w-48 rounded-full bg-white overflow-hidden"
+          >
             <img
               src={`${
                 user?.photoURL
@@ -41,17 +71,17 @@ const Profile = () => {
             }}
             className={`w-48 h-48 rounded-full bg-white opacity-50 border absolute flex justify-center items-center ${
               hover ? "" : "ml-[1000px]"
-            }`}>
-            <FaRegEdit
-              size={30}
-              className="text-slate-800 cursor-pointer"></FaRegEdit>
+            }`}
+          >
+            <input type="file" name="" id="" {...register("image")} />
+            <FaRegEdit size={30} className="text-slate-800 cursor-pointer" />
           </div>
         </div>
         {/* profile image */}
 
         <span className="text-lg font-semibold">My Profile</span>
 
-        <form className="flex flex-col w-full items-center gap-5">
+        <div className="flex flex-col w-full items-center gap-5">
           <div className="flex flex-col w-full">
             <span className="text-black">Name</span>
             <input
@@ -99,12 +129,14 @@ const Profile = () => {
             />
           </div> */}
           <div className="flex justify-end w-full">
-            <button className="btn" type="submit">update profile</button>
+            <button className="btn" type="submit">
+              update profile
+            </button>
           </div>
-        </form>
+        </div>
         {/* password */}
       </div>
-    </div>
+    </form>
   );
 };
 

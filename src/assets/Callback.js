@@ -45,7 +45,8 @@ import blueCarV from "./images/blueV.png";
 import freedomCarNew from "./images/flux_freedom.jpg";
 import businessDeal from "./images/business-deal3.jpg";
 import mounten from "./primaim/sustainImg.jpg";
-import blackMordenCar from './images/black-modern-car-black.jpg'
+import blackMordenCar from './images/black-modern-car-black.jpg';
+import mobileCar from '././primaim/mobile.jpg'
 // video
 import carVideo from "./video/car.mp4";
 
@@ -97,5 +98,6 @@ export {
   freedomCarNew,
   businessDeal,
   mounten,
-  blackMordenCar
+  blackMordenCar,
+  mobileCar
 };
