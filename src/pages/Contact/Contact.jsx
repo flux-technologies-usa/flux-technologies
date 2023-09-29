@@ -23,7 +23,7 @@ const Contact = () => {
               </div>
               <div className="email py-[25px]">
                 <h1>E-mail :</h1>
-                <h5>mailto:fluxtechnologies.usa@gmail.com</h5>
+                <h5>fluxtechnologies.usa@gmail.com</h5>
               </div>
               <div className="hours py-[25px]">
                 <h1>Operating Hours :</h1>
