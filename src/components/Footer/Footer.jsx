@@ -7,8 +7,12 @@ import {
   worldIcon,
   ytIcon,
 } from "../../assets/Callback";
+import { ScrollToTop } from "../ScrollTop/ScrollTop";
 
 const Footer = () => {
+  const handleNavScroll = () => {
+    ScrollToTop();
+  };
   return (
     <div>
       {/* footer for big device */}
@@ -18,11 +22,13 @@ const Footer = () => {
             <h1 className="text-[25px]">Flux Technologies</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
+              onClick={handleNavScroll}
                 to="/village"
                 className="text-[19px] customFooterLink w-[120px] ">
                 Design Yours
               </Link>
               <Link
+              onClick={handleNavScroll}
                 to="/store"
                 className="text-[19px] mt-[35px] customFooterLink w-[55px] ">
                 Store
@@ -33,11 +39,13 @@ const Footer = () => {
             <h1 className="text-[25px]">Flux Motors</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
+              onClick={handleNavScroll}
                 to="/about"
                 className="text-[19px] customFooterLink  w-[70px]">
                 About
               </Link>
               <Link
+              onClick={handleNavScroll}
                 to="/stayupdate"
                 className="text-[19px] mt-[35px] customFooterLink  w-[110px]">
                 Stay Update
@@ -48,11 +56,13 @@ const Footer = () => {
             <h1 className="text-[25px]">More</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
+              onClick={handleNavScroll}
                 to="/contact"
                 className="text-[19px] customFooterLink  w-[100px]">
                 Contact Us
               </Link>
               <Link
+              onClick={handleNavScroll}
                 to="/privacy"
                 className="text-[19px] mt-[35px] customFooterLink ">
                 Privacy Policy
@@ -131,10 +141,10 @@ const Footer = () => {
             <h1 className=" font-semibold">Flux Technologies</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link to="/village" className=" customFooterLink w-[120px] ">
+              <Link onClick={handleNavScroll} to="/village" className=" customFooterLink w-[120px] ">
                 Design Yours
               </Link>
-              <Link to="/store" className=" customFooterLink  mt-[10px] ">
+              <Link onClick={handleNavScroll} to="/store" className=" customFooterLink  mt-[10px] ">
                 Store
               </Link>
             </div>
@@ -143,10 +153,10 @@ const Footer = () => {
             <h1 className=" font-semibold">Flux Motors</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link to="/village" className=" customFooterLink w-[120px] ">
+              <Link onClick={handleNavScroll} to="/village" className=" customFooterLink w-[120px] ">
                 About
               </Link>
-              <Link to="/store" className=" customFooterLink  mt-[10px] ">
+              <Link onClick={handleNavScroll} to="/store" className=" customFooterLink  mt-[10px] ">
                 Stay Update
               </Link>
             </div>
@@ -155,10 +165,10 @@ const Footer = () => {
             <h1 className=" font-semibold">More</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link to="/contact" className=" customFooterLink w-[120px] ">
+              <Link onClick={handleNavScroll} to="/contact" className=" customFooterLink w-[120px] ">
                 Contact Us
               </Link>
-              <Link to="/privacy" className=" customFooterLink  mt-[10px] ">
+              <Link onClick={handleNavScroll} to="/privacy" className=" customFooterLink  mt-[10px] ">
                 Privacy Policy
               </Link>
             </div>
