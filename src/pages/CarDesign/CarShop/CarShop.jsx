@@ -86,7 +86,7 @@ const CarShop = () => {
     },
     {
       name: "Black White Int",
-      price: 0,
+      price: 1000,
     },
     {
       name: checkWallId[0].name,
@@ -124,45 +124,45 @@ const CarShop = () => {
   return (
     <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
-        className="flex items-center justify-center rounded h-[200px] md:h-[90vh] lg:h-[90vh] mb-16 w-full lg:w-[70%] md:w-[60%]"
+        className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[78%]"
         style={{ backgroundImage: `url("${darkBg}")` }}
       >
         <img
           src={wheelDetails.img_wheel}
           alt=""
-          className="w-[180px] lg:w-[600px] md:w-[400px]"
+          className="w-[180px] md:w-[600px]"
         />
       </div>
-      <div className="flex flex-col gap-3 md:px-10 overflow-y-scroll max-h-screen mb-16 lg:w-[30%] md:w-[40%]">
-        <span className="text-4xl md:text-3xl text-white text-center md:mt-10">
+      <div className="flex flex-col gap-3 lg:px-10 md:px-3 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
+        <span className="lg:text-4xl md:text-2xl text-white text-center md:mt-10">
           Flux Village
         </span>
-        <span className=" text-sm text-white text-center">
+        <span className=" lg:text-sm md:text-xs text-white text-center">
           Est. Delivery: TBA
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
-          <span className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
+          <span className="bg-[#ddc861] md:text-sm md:px-5 lg:px-8 py-1 rounded text-black font-semibold">
             Purchase Price
           </span>
         </div>
-        <div className="flex flex-row items-center justify-between pt-5">
+        <div className="flex flex-row items-center justify-between lg:gap-8 pt-5">
           <div className="flex flex-col items-center">
-            <span className="lg:text-xl md:text-lg text-white">
+            <span className="lg:text-xl md:text-xs text-white">
               560<span className="text-base">mi</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="lg:text-xl md:text-lg text-white">
+            <span className="lg:text-xl md:text-xs text-white">
             0-100<span className="text-base">mph</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="lg:text-xl md:text-lg text-white">
+            <span className="lg:text-xl md:text-xs text-white">
               5.8<span className="text-base">sec</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
         </div>
         <div className="flex flex-col text-white gap-2 pt-5">
@@ -246,9 +246,9 @@ const CarShop = () => {
                 data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
-              <span className="label-text">Wall Charger</span>
+              <span className="label-text md:text-xs lg:text-base">Wall Charger</span>
             </label>
-            <span>$600.00</span>
+            <span className="md:text-xs lg:text-base">$600.00</span>
           </div>
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
@@ -258,23 +258,23 @@ const CarShop = () => {
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="450"
               />
-              <span className="label-text">Remote Chrager</span>
+              <span className="label-text md:text-xs lg:text-base">Remote Chrager</span>
             </label>
-            <span>$450.00</span>
+            <span className="md:text-xs lg:text-base">$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="text-xl text-white">Order Your Flux Village</span>
-          <span className="text-white font-semibold">
+          <span className="lg:text-2xl md:textlg text-white">Order Your Flux Village</span>
+          <span className="text-white font-semibold md:text-sm lg:text-base">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
-          <span className="text-white font-semibold">
+          <span className="text-white font-semibold md:text-sm lg:text-base">
             Est. Delivery: TBA
           </span>
           <button
             type="button"
             onClick={() => paymentBtn()}
-            className="border border-[#ddc861] px-9 py-2 w-full rounded text-white  customCarDesignButton"
+            className="border border-[#ddc861]  lg:px-9 py-2 rounded text-white  customCarDesignButton"
           >
             Continue to Payment
           </button>

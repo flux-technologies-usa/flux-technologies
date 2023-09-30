@@ -1,0 +1,38 @@
+[debug] [2023-09-29T19:57:06.218Z] ----------------------------------------------------------------------
+[debug] [2023-09-29T19:57:06.219Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-29T19:57:06.220Z] CLI Version:   12.5.2
+[debug] [2023-09-29T19:57:06.220Z] Platform:      win32
+[debug] [2023-09-29T19:57:06.220Z] Node Version:  v18.16.0
+[debug] [2023-09-29T19:57:06.223Z] Time:          Sat Sep 30 2023 01:57:06 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-09-29T19:57:06.223Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-29T19:57:06.225Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-09-29T19:57:06.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-29T19:57:06.312Z] > authorizing via signed-in user (leonali274784@gmail.com)
+[debug] [2023-09-29T19:57:06.313Z] [iam] checking project flux-car-f947c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-29T19:57:06.313Z] > refreshing access token with scopes: []
+[debug] [2023-09-29T19:57:06.314Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-29T19:57:06.314Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-29T19:57:06.633Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-09-29T19:57:06.633Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-29T19:57:06.639Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/flux-car-f947c:testIamPermissions [none]
+[debug] [2023-09-29T19:57:06.639Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/flux-car-f947c:testIamPermissions x-goog-quota-user=projects/flux-car-f947c
+[debug] [2023-09-29T19:57:06.639Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flux-car-f947c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-29T19:57:07.010Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-29T19:57:07.010Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-29T19:57:08.232Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/flux-car-f947c:testIamPermissions 200
+[debug] [2023-09-29T19:57:08.232Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flux-car-f947c:testIamPermissions {}
+[debug] [2023-09-29T19:57:08.232Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project flux-car-f947c:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-09-29T19:57:08.233Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c [none]
+[debug] [2023-09-29T19:57:08.888Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c 403
+[debug] [2023-09-29T19:57:08.888Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-09-29T19:57:08.888Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-09-29T19:57:09.135Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project flux-car-f947c. Please make sure the project exists and your account has permission to access it.
