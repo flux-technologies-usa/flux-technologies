@@ -13,17 +13,17 @@ const Orders = () => {
   const [productOrders, setProductOrders] = useState();
   console.log(productOrders)
 
-  useEffect(() => {
-    axios
-      .get("https://flux-car.onrender.com/api/v1/freedom/freedom-orders", {
-        params: {
-          userEmail: user.email,
-        },
-      })
-      .then(function (response) {
-        setFreedomOrder(response.data.cartData);
-      });
-  }, [user.email]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/api/v1/freedom/freedom-orders", {
+  //       params: {
+  //         userEmail: user.email,
+  //       },
+  //     })
+  //     .then(function (response) {
+  //       setFreedomOrder(response.data.cartData);
+  //     });
+  // }, [user.email]);
 
 
 
@@ -39,7 +39,7 @@ const Orders = () => {
       });
   }, [user.email]);
 
-  
+
 
   useEffect(() => {
     fetch("product.json")

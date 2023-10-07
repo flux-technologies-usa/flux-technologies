@@ -54,7 +54,7 @@ const Profile = () => {
             onMouseLeave={() => {
               setHover(false);
             }}
-            className="w-48 rounded-full bg-white overflow-hidden">
+            className="w-48 rounded-full bg-white overflow-hidden h-48">
             <img
               src={`${
                 user?.photoURL
@@ -62,7 +62,7 @@ const Profile = () => {
                   : "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
               }`}
               alt="default profile"
-              className="w-full"
+              className="w-full h-full"
             />
           </div>
           <div
