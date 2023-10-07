@@ -36,35 +36,5 @@
         "img_wheel": "https://i.postimg.cc/yx4zvJ8T/blueV.png"
       }
     ]
-  },
-  {
-    "id": 557640,
-    "paint": "https://i.postimg.cc/5ysLRTMZ/red.png",
-    "name": "Pearl White Multi-Coatt",
-    "price": "800",
-    "wheels": [
-      {
-        "id": 734129,
-        "name": "18’’ Aero Wheels",
-        "price": "600",
-        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/JzyypCVN/5-B335-A8-E-EAC0-44-D3-8-FE1-8-A16351-DE3-DD.webp"
-      }
-    ]
-  },
-  {
-    "id": 557641,
-    "paint": "https://i.postimg.cc/C5Tj8ksQ/white.png",
-    "name": "Pearl White Multi-Coatt",
-    "price": "800",
-    "wheels": [
-      {
-        "id": 734130,
-        "name": "18’’ Aero Wheels",
-        "price": "600",
-        "img": "https://i.postimg.cc/sX4BcrPK/whitetire.png",
-        "img_wheel": "https://i.postimg.cc/L6sLBRg6/B2-ACF575-5197-4027-8867-56334-F185-D78.webp"
-      }
-    ]
   }
 ]

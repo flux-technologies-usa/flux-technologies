@@ -86,7 +86,7 @@ const CarShop = () => {
     },
     {
       name: "Black White Int",
-      price: 1000,
+      price: 0,
     },
     {
       name: checkWallId[0].name,
@@ -148,19 +148,19 @@ const CarShop = () => {
         <div className="flex flex-row items-center justify-between lg:gap-8 pt-5">
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              560<span className="text-base">mi</span>
+              560<span className="lg:text-base md:text-xs">mi</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-            0-100<span className="text-base">mph</span>
+            0-100<span className="lg:text-base md:text-xs">mph</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              5.8<span className="text-base">sec</span>
+              5.8<span className="lg:text-base md:text-xs">sec</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>

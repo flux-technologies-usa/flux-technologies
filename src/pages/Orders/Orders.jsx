@@ -5,12 +5,13 @@ import SingleOrder from "./SingleOrder";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../context api/UserContext";
-import FreedomOrders from "./FreedomOrders";
+import FreedomOrders from "./FreedomOrders/FreedomOrders";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useContext(AuthContext);
-  const [freedomOrders, setFreedomOrders] = useState();
-  console.log(freedomOrders)
+  const [freedomOrder, setFreedomOrder] = useState();
+  const [productOrders, setProductOrders] = useState();
+  console.log(productOrders)
 
   useEffect(() => {
     axios
@@ -20,9 +21,25 @@ const Orders = () => {
         },
       })
       .then(function (response) {
-        setFreedomOrders(response.data.cartData);
+        setFreedomOrder(response.data.cartData);
       });
   }, [user.email]);
+
+
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/v1/store/freedom-product-orders", {
+        params: {
+          userEmail: user.email,
+        },
+      })
+      .then(function (response) {
+        setProductOrders(response.data.cartData);
+      });
+  }, [user.email]);
+
+  
 
   useEffect(() => {
     fetch("product.json")
@@ -71,7 +88,7 @@ const Orders = () => {
       </div>
       <div className="flex flex-col gap-3 w-[80%]">
 
-        {orderRow === 1 ? (
+        {orderRow === 3 ? (
           <>
           <span className=" text-white font-semibold text-xl">Product Orders</span>
             <div className="overflow-x-auto">
@@ -100,7 +117,7 @@ const Orders = () => {
         )}
         {orderRow === 2 ? <>
           <span className=" text-white font-semibold text-xl">Flux Freedom Orders</span>
-        {freedomOrders.map((data, id)=><FreedomOrders data={data} key={id}/>)}
+        {freedomOrder.map((data, id)=><FreedomOrders data={data} key={id}/>)}
         </> : ""}
       </div>
     </div>

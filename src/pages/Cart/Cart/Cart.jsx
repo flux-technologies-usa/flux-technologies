@@ -9,6 +9,7 @@ import { AuthContext } from "../../../context api/UserContext";
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
+  console.log(products)
 
   const {user} = useContext(AuthContext)
   // calculate total
