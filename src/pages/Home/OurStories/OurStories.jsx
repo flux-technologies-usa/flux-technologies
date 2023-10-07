@@ -11,7 +11,7 @@ const OurStories = () => {
   console.log(ourStorys);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/ourstory/get-story")
+    fetch("https://flux-car.onrender.com/api/v1/ourstory/get-story")
       .then((res) => res.json())
       .then((data) => setOurStorys(data.story));
   }, []);

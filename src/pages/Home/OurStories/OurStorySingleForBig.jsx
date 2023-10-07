@@ -13,19 +13,15 @@ const OurStorySingleForBig = ({ single }) => {
             <div className=" w-[500px] h-[340px] overflow-hidden">
               <img
                 className="customStoryImg scale-[1.2]"
-                src={`http://localhost:8080/api/v1/ourstory/story-photo/${_id}`}
+                src={`https://flux-car.onrender.com/api/v1/ourstory/story-photo/${_id}`}
                 alt=""
               />
             </div>
             <div className="h-[500px] w-[1px] bg-[#302f2f] ml-[40px]" />
           </div>
           <div className=" absolute top-[78%]">
-            <h1 className="text-[22px]">
-              {title}
-            </h1>
-            <h1 className="text-[17px] font-semibold mt-5">
-              {subtitle}
-            </h1>
+            <h1 className="text-[22px]">{title}</h1>
+            <h1 className="text-[17px] font-semibold mt-5">{subtitle}</h1>
           </div>
         </div>
       </div>

@@ -104,10 +104,10 @@ const CarShop = () => {
   const paymentBtn = () => {
     axios
       .post(
-        "http://localhost:8080/api/v1/village/create-checkout-session",
+        "https://flux-car.onrender.com/api/v1/village/create-checkout-session",
         {
           fluxVillage,
-          userEmail: user.email
+          userEmail: user.email,
         }
       )
       .then((res) => {

@@ -15,14 +15,20 @@ const Cart = () => {
   const totalPrice = calculateTotal(products);
 
   const paymentBtn = () =>{
-    axios.post("http://localhost:8080/api/v1/store/create-checkout-session",{
-      products,
-      userEmail:user.userEmail
-    }).then((res)=>{
-      if(res.data.url){
-        window.location.href = res.data.url
-      }
-    }).catch((err)=>console.log(err.message))
+    axios
+      .post(
+        "https://flux-car.onrender.com/api/v1/store/create-checkout-session",
+        {
+          products,
+          userEmail: user.userEmail,
+        }
+      )
+      .then((res) => {
+        if (res.data.url) {
+          window.location.href = res.data.url;
+        }
+      })
+      .catch((err) => console.log(err.message));
   }
  
   return (

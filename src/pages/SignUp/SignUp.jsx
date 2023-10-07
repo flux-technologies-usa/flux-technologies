@@ -33,7 +33,7 @@ const SignUp = () => {
         navigate("/");
         toast.success("User sign up successfully");
 
-        fetch(`http://localhost:8080/api/v1/user`, {
+        fetch(`https://flux-car.onrender.com/api/v1/user`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -56,7 +56,7 @@ const SignUp = () => {
         console.log(user);
         navigate("/");
         toast.success("User sign up successfully");
-        fetch(`http://localhost:8080/api/v1/user`, {
+        fetch(`https://flux-car.onrender.com/api/v1/user`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
