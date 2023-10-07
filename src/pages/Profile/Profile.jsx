@@ -3,21 +3,17 @@ import "./Profile.scss";
 import { AuthContext } from "../../context api/UserContext";
 import { FaRegEdit } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const Profile = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user)
+  const { user, updateUser } = useContext(AuthContext);
   const [hover, setHover] = useState(false);
-  console.log(hover);
-
-
+  const [loading, setLoading] = useState(false);
   const imageHostKey = "982ee9a7802cdcb8f72ba2008a9bad15";
   const { register, handleSubmit } = useForm();
-
-
-
+  const navigate = useNavigate();
   const handleUpdate = (data) => {
-
-
+    setLoading(true);
     const image = data.image[0];
 
     const formData = new FormData();
@@ -26,17 +22,25 @@ const Profile = () => {
 
     const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`;
     fetch(url, {
-      method:"POST",
-      body:formData
+      method: "POST",
+      body: formData,
     })
-    .then(res=>res.json())
-    .then(imgData=>{
-      if(imgData.success){
-        console.log(imgData.data.url)
-      }
-    })
-
-
+      .then((res) => res.json())
+      .then((imgData) => {
+        if (imgData.success) {
+          console.log(imgData.data.url);
+          const profile = {
+            photoURL: imgData.data.url,
+          };
+          updateUser(profile)
+            .then(() => {
+              setLoading(false);
+              navigate("/");
+              toast.success("user image update successfull");
+            })
+            .catch((error) => {});
+        }
+      });
   };
   return (
     <form onSubmit={handleSubmit(handleUpdate)} className=" bg-black pt-10">
@@ -50,8 +54,7 @@ const Profile = () => {
             onMouseLeave={() => {
               setHover(false);
             }}
-            className="w-48 rounded-full bg-white overflow-hidden"
-          >
+            className="w-48 rounded-full bg-white overflow-hidden">
             <img
               src={`${
                 user?.photoURL
@@ -71,8 +74,7 @@ const Profile = () => {
             }}
             className={`w-48 h-48 rounded-full bg-white opacity-50 border absolute flex justify-center items-center ${
               hover ? "" : "ml-[1000px]"
-            }`}
-          >
+            }`}>
             <input type="file" name="" id="" {...register("image")} />
             <FaRegEdit size={30} className="text-slate-800 cursor-pointer" />
           </div>
@@ -129,7 +131,9 @@ const Profile = () => {
             />
           </div> */}
           <div className="flex justify-end w-full">
-            <button className="btn" type="submit">
+            <button
+              className={`${loading ? "loading loading-spinner" : "btn"}`}
+              type="submit">
               update profile
             </button>
           </div>

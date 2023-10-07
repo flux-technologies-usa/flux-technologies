@@ -26,7 +26,7 @@ const SingleProduct = ({ single }) => {
         product: single,
       };
 
-      fetch(`http://localhost:8080/api/v1/cart?email=${email}`, {
+      fetch(`https://flux-car.onrender.com/api/v1/cart?email=${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -59,7 +59,7 @@ const SingleProduct = ({ single }) => {
         <div className="single-product-img h-[200px]">
           <img
             className="w-[200px] h-auto mx-auto pt-[50px]"
-            src={`http://localhost:8080/api/v1/product/product-photo/${_id}`}
+            src={`https://flux-car.onrender.com/api/v1/product/product-photo/${_id}`}
             alt={name}
           />
         </div>

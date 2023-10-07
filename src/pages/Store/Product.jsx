@@ -5,7 +5,7 @@ import SingleProduct from "./SingleProduct";
 const Product = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/product/get-product")
+    fetch("https://flux-car.onrender.com/api/v1/product/get-product")
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
   }, []);

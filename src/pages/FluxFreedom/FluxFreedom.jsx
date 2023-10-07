@@ -101,10 +101,10 @@ const FluxFreedom = () => {
   const paymentBtn = () => {
     axios
       .post(
-        "http://localhost:8080/api/v1/freedom/create-checkout-session",
+        "https://flux-car.onrender.com/api/v1/freedom/create-checkout-session",
         {
           fluxFreedom,
-          userEmail: user.email
+          userEmail: user.email,
         }
       )
       .then((res) => {

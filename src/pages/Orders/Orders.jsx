@@ -15,7 +15,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/v1/freedom/freedom-orders", {
+      .get("https://flux-car.onrender.com/api/v1/freedom/freedom-orders", {
         params: {
           userEmail: user.email,
         },
