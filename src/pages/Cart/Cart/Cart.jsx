@@ -9,7 +9,6 @@ import { AuthContext } from "../../../context api/UserContext";
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
-  console.log(products)
 
   const {user} = useContext(AuthContext)
   // calculate total
@@ -18,7 +17,7 @@ const Cart = () => {
   const paymentBtn = () =>{
     axios
       .post(
-        "https://flux-car.onrender.com/api/v1/store/create-checkout-session",
+        "http://localhost:8080/api/v1/store/create-checkout-session",
         {
           products,
           userEmail: user.userEmail,
