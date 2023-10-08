@@ -6,46 +6,15 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../context api/UserContext";
 import FreedomOrders from "./FreedomOrders/FreedomOrders";
+import VillageOrders from "./VillageOrders/VillageOrders";
+
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useContext(AuthContext);
   const [freedomOrder, setFreedomOrder] = useState();
-  const [productOrders, setProductOrders] = useState();
-  console.log(productOrders)
+  // const [productOrders, setProductOrders] = useState();
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8080/api/v1/freedom/freedom-orders", {
-  //       params: {
-  //         userEmail: user.email,
-  //       },
-  //     })
-  //     .then(function (response) {
-  //       setFreedomOrder(response.data.cartData);
-  //     });
-  // }, [user.email]);
-
-
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/v1/store/freedom-product-orders", {
-        params: {
-          userEmail: user.email,
-        },
-      })
-      .then(function (response) {
-        setProductOrders(response.data.cartData);
-      });
-  }, [user.email]);
-
-
-
-  useEffect(() => {
-    fetch("product.json")
-      .then((res) => res.json())
-      .then((data) => setOrders(data));
-  }, []);
+  // const [villageOrders, setVillageOrders] = useState();
 
   const [orderRow, setOrderRow] = useState(1);
   const handleVillageOrder = (e) => {
@@ -57,6 +26,48 @@ const Orders = () => {
   const handleProductOrder = (e) => {
     setOrderRow(e);
   };
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/api/v1/village/village-orders", {
+  //       params: {
+  //         Email: user.email,
+  //       },
+  //     })
+  //     .then(function (response) {
+  //       setVillageOrders(response.data.cartData);
+  //     });
+  // }, [user.email]);
+
+  useEffect(() => {
+    axios
+      .get("https://flux-car.onrender.com/api/v1/freedom/freedom-orders", {
+        params: {
+          userEmail: user.email,
+        },
+      })
+      .then(function (response) {
+        setFreedomOrder(response.data.cartData);
+      });
+  }, [user.email]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/api/v1/store/product-orders", {
+  //       params: {
+  //         userEmail: user.email,
+  //       },
+  //     })
+  //     .then(function (response) {
+  //       setProductOrders(response.data);
+  //     });
+  // }, [user.email]);
+
+  useEffect(() => {
+    fetch("product.json")
+      .then((res) => res.json())
+      .then((data) => setOrders(data));
+  }, []);
 
   return (
     <div className="flex flex-row md:px-10 mx-auto py-32 gap-3">
@@ -87,10 +98,37 @@ const Orders = () => {
         </button>
       </div>
       <div className="flex flex-col gap-3 w-[80%]">
+        {/* {orderRow === 1 ? (
+          <>
+            <span className=" text-white font-semibold text-xl">
+              Flux Village Orders
+            </span>
+            {villageOrders.map((villagedata, id) => (
+              <VillageOrders villagedata={villagedata} key={id} />
+            ))}
+          </>
+        ) : (
+          ""
+        )} */}
+
+        {orderRow === 2 ? (
+          <>
+            <span className=" text-white font-semibold text-xl">
+              Flux Freedom Orders
+            </span>
+            {freedomOrder.map((data, id) => (
+              <FreedomOrders data={data} key={id} />
+            ))}
+          </>
+        ) : (
+          ""
+        )}
 
         {orderRow === 3 ? (
           <>
-          <span className=" text-white font-semibold text-xl">Product Orders</span>
+            <span className=" text-white font-semibold text-xl">
+              Product Orders
+            </span>
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
@@ -105,7 +143,7 @@ const Orders = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {orders.map((order) => (
+                  {orders?.map((order) => (
                     <SingleOrder key={order.id} order={order} />
                   ))}
                 </tbody>
@@ -115,10 +153,6 @@ const Orders = () => {
         ) : (
           ""
         )}
-        {orderRow === 2 ? <>
-          <span className=" text-white font-semibold text-xl">Flux Freedom Orders</span>
-        {freedomOrder.map((data, id)=><FreedomOrders data={data} key={id}/>)}
-        </> : ""}
       </div>
     </div>
   );

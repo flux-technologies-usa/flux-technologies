@@ -103,7 +103,7 @@ const Navbar = () => {
             <div
               className={`${
                 hover ? "" : "h-0 opacity-0"
-              } absolute top-[70%] w-[160px] overflow-scroll  bg-[#161816] p-1 rounded duration-300 ml-[-20px]`}
+              } absolute top-[70%] w-[160px] bg-[#161816] p-1 rounded duration-300 ml-[-20px]`}
             >
               {/* flux village */}
               <Link to="/village">
