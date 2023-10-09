@@ -70,10 +70,10 @@ const FreedomOrders = ({ data }) => {
         <div className="flex flex-col gap-2">
           <span className="md:block hidden">
             <span className="text-lg  font-medium">Subtotal:</span> $
-            {data.subtotal / 100}
+            {data.subtotal}
           </span>
           <span className="md:block hidden">
-            <span className="text-lg font-medium">Total:</span> ${data.total / 100}
+            <span className="text-lg font-medium">Total:</span> ${data.total}
           </span>
         </div>
         <div className="md:block hidden">

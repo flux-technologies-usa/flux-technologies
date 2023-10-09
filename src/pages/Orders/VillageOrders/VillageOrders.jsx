@@ -64,10 +64,10 @@ const VillageOrders = ({villagedata}) => {
         <div className="flex flex-col gap-2">
           <span>
             <span className="text-lg font-medium">Subtotal:</span> $
-            {villagedata.subtotal / 100}
+            {villagedata.subtotal}
           </span>
           <span>
-            <span className="text-lg font-medium">Total:</span> ${villagedata.total / 100}
+            <span className="text-lg font-medium">Total:</span> ${villagedata.total}
           </span>
         </div>
         <div>
