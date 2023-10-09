@@ -70,11 +70,11 @@ const Orders = () => {
   }, []);
 
   return (
-    <div className="flex flex-row md:px-10 mx-auto py-32 gap-3">
-      <div className="w-[20%] pt-10">
+    <div className="flex md:flex-row flex-col md:px-10 mx-auto py-32 md:gap-3 gap-8">
+      <div className="md:w-[20%] w-full pt-10">
         <button
           onClick={() => handleVillageOrder(1)}
-          className={` w-full py-2 text-white text-start pl-5 border-b border-black font-semibold hover:bg-black ${
+          className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 1 ? "bg-black" : "bg-base"
           }`}
         >
@@ -82,7 +82,7 @@ const Orders = () => {
         </button>
         <button
           onClick={() => handleFreedomOrder(2)}
-          className={` w-full py-2 text-white text-start pl-5 border-b border-black font-semibold hover:bg-black ${
+          className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 2 ? "bg-black" : "bg-base"
           }`}
         >
@@ -90,17 +90,17 @@ const Orders = () => {
         </button>
         <button
           onClick={() => handleProductOrder(3)}
-          className={` w-full py-2 text-white text-start pl-5 border-b border-black font-semibold hover:bg-black ${
+          className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 3 ? "bg-black" : "bg-base"
           }`}
         >
           FluxProduct Orders
         </button>
       </div>
-      <div className="flex flex-col gap-3 w-[80%]">
+      <div className="flex flex-col gap-3 md:w-[80%] w-full">
         {/* {orderRow === 1 ? (
           <>
-            <span className=" text-white font-semibold text-xl">
+            <span className=" text-white md:text-start text-center font-semibold text-xl">
               Flux Village Orders
             </span>
             {villageOrders.map((villagedata, id) => (
@@ -113,7 +113,7 @@ const Orders = () => {
 
         {orderRow === 2 ? (
           <>
-            <span className=" text-white font-semibold text-xl">
+            <span className=" text-white md:text-start text-center font-semibold text-xl">
               Flux Freedom Orders
             </span>
             {freedomOrder.map((data, id) => (
@@ -126,7 +126,7 @@ const Orders = () => {
 
         {orderRow === 3 ? (
           <>
-            <span className=" text-white font-semibold text-xl">
+            <span className=" text-white md:text-start text-center font-semibold text-xl">
               Product Orders
             </span>
             <div className="overflow-x-auto">

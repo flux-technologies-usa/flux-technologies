@@ -52,8 +52,8 @@ const FreedomOrders = ({ data }) => {
   
   return (
     <div className="flex flex-col w-full bg-slate-700 rounded">
-      <div className="flex flex-row justify-between w-full py-10 px-10">
-        <div className="bg-black p-5 rounded">
+      <div className="flex flex-row justify-between w-full py-10 md:px-10 px-5">
+        <div className="bg-black md:p-5 p-5 flex flex-col justify-center rounded">
           <img
             src={data.fluxFreedom[1].img}
             alt=""
@@ -61,22 +61,22 @@ const FreedomOrders = ({ data }) => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <span className="text-xl font-medium">
+          <span className="text-xl md:block hidden font-medium">
             {data.fluxFreedom[0].name}
           </span>
-          <span>{data.fluxFreedom[1].name}</span>
-          <span>{data.fluxFreedom[2].name}</span>
+          <span className="md:block hidden">{data.fluxFreedom[1].name}</span>
+          <span className="md:block hidden">{data.fluxFreedom[2].name}</span>
         </div>
         <div className="flex flex-col gap-2">
-          <span>
-            <span className="text-lg font-medium">Subtotal:</span> $
+          <span className="md:block hidden">
+            <span className="text-lg  font-medium">Subtotal:</span> $
             {data.subtotal / 100}
           </span>
-          <span>
+          <span className="md:block hidden">
             <span className="text-lg font-medium">Total:</span> ${data.total / 100}
           </span>
         </div>
-        <div>
+        <div className="md:block hidden">
           <span>{data.delivery_status}</span>
         </div>
       </div>
