@@ -154,7 +154,7 @@ const CarShop = () => {
           </div>
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-            0-100<span className="lg:text-base md:text-xs">mph</span>
+              0-100<span className="lg:text-base md:text-xs">mph</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
@@ -196,9 +196,9 @@ const CarShop = () => {
           <span className="text-sm flex gap-1">
             <span className="text-white">{paintDetails.name}</span>
             {paintDetails.price === "00" ? (
-              <span className="text-gray-400">include</span>
+              <span className="text-white">included</span>
             ) : (
-              <span className="text-gray-400">${paintDetails.price}.00</span>
+              <span className="text-white">${paintDetails.price}.00</span>
             )}
           </span>
         </div>
@@ -219,9 +219,9 @@ const CarShop = () => {
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
             {wheelDetails.price === "00" ? (
-              <span className="text-gray-400">include</span>
+              <span className="text-white">included</span>
             ) : (
-              <span className="text-gray-400">${wheelDetails.price}.00</span>
+              <span className="text-white">${wheelDetails.price}.00</span>
             )}
           </span>
         </div>
@@ -233,7 +233,8 @@ const CarShop = () => {
             className="rounded-full cursor-pointer w-11 p-[2px] border-2 border-[#ddc861]"
           />
           <span className="text-sm flex gap-1">
-            <span className="text-white">Black White Int</span>include
+            <span className="text-white">Black Int</span>{" "}
+            <span className="text-white">included</span>
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -246,9 +247,11 @@ const CarShop = () => {
                 data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
-              <span className="label-text md:text-xs lg:text-base">Wall Charger</span>
+              <span className="label-text md:text-xs lg:text-base text-white">
+                Wall Charger
+              </span>
             </label>
-            <span className="md:text-xs lg:text-base">$600.00</span>
+            <span className="md:text-xs lg:text-base text-white">$600.00</span>
           </div>
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
@@ -258,13 +261,17 @@ const CarShop = () => {
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="450"
               />
-              <span className="label-text md:text-xs lg:text-base">Remote Chrager</span>
+              <span className="label-text md:text-xs lg:text-base text-white">
+                Remote Chrager
+              </span>
             </label>
-            <span className="md:text-xs lg:text-base">$450.00</span>
+            <span className="md:text-xs lg:text-base text-white">$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="lg:text-2xl md:textlg text-white">Order Your Flux Village</span>
+          <span className="lg:text-2xl md:text-lg text-white">
+            Order Your Flux Village
+          </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>

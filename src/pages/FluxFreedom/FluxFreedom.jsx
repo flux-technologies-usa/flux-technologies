@@ -47,29 +47,29 @@ const FluxFreedom = () => {
     parseFloat(checkboxSum) +
     400;
 
-    const [checkWallId, setCheckWallId] = useState([
-      { name: "Wall Charger(not selected)", price: 0 },
-    ]);
-    const checkHandleWall = (e) => {
-      const checked = e.target.checked;
-      if (checked === true) {
-        setCheckWallId([{ name: "Wall Charger(selected)", price: 600 }]);
-      } else {
-        setCheckWallId([{ name: "Wall Charger(not selected)", price: 0 }]);
-      }
-    };
-  
-    const [checkRemoteId, setCheckRemoteId] = useState([
-      { name: "Mobile Charger(not selected)", price: 0 },
-    ]);
-  
-    const checkHandleRemote = (e) => {
-      if (e.target.checked === true) {
-        setCheckRemoteId([{ name: "Mobile Charger(selected)", price: 450 }]);
-      } else {
-        setCheckRemoteId([{ name: "Mobile Charger(not selected)", price: 0 }]);
-      }
-    };
+  const [checkWallId, setCheckWallId] = useState([
+    { name: "Wall Charger(not selected)", price: 0 },
+  ]);
+  const checkHandleWall = (e) => {
+    const checked = e.target.checked;
+    if (checked === true) {
+      setCheckWallId([{ name: "Wall Charger(selected)", price: 600 }]);
+    } else {
+      setCheckWallId([{ name: "Wall Charger(not selected)", price: 0 }]);
+    }
+  };
+
+  const [checkRemoteId, setCheckRemoteId] = useState([
+    { name: "Mobile Charger(not selected)", price: 0 },
+  ]);
+
+  const checkHandleRemote = (e) => {
+    if (e.target.checked === true) {
+      setCheckRemoteId([{ name: "Mobile Charger(selected)", price: 450 }]);
+    } else {
+      setCheckRemoteId([{ name: "Mobile Charger(not selected)", price: 0 }]);
+    }
+  };
 
   const fluxFreedom = [
     { name: fluxMath.name, price: fluxMath.price },
@@ -122,43 +122,44 @@ const FluxFreedom = () => {
     <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[78%]"
-        style={{ backgroundImage: `url("${darkBg}")` }}>
+        style={{ backgroundImage: `url("${darkBg}")` }}
+      >
         <img
           src={wheelDetails.img_wheel}
           alt=""
-          className="w-[180px] md:w-[900px]"
+          className="w-[180px] md:w-[600px]"
         />
       </div>
-      <div className="flex flex-col gap-3 md:px-10 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
-        <span className="text-4xl text-white text-center md:mt-10">
+      <div className="flex flex-col gap-3 lg:px-10 md:px-3 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
+        <span className="lg:text-4xl md:text-2xl text-white text-center md:mt-10">
           Flux Freedom
         </span>
-        <span className=" text-sm text-white text-center">
+        <span className=" lg:text-sm md:text-xs text-white text-center">
           Est. Delivery: TBA
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
-          <span className="bg-[#ddc861] px-10 py-1 rounded text-black font-semibold">
+          <span className="bg-[#ddc861] md:text-sm md:px-5 lg:px-8 py-1 rounded text-black font-semibold">
             Purchase Price
           </span>
         </div>
-        <div className="flex flex-row items-center justify-between gap-8 pt-5">
+        <div className="flex flex-row items-center justify-between lg:gap-8 pt-5">
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
-              430<span className="text-base">mi</span>
+            <span className="lg:text-xl md:text-xs text-white">
+              400<span className="lg:text-base md:text-xs">mi</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
-              800<span className="text-base">mph</span>
+            <span className="lg:text-xl md:text-xs text-white">
+              0-100<span className="lg:text-base md:text-xs">mph</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-xl text-white">
-              8.5<span className="text-base">sec</span>
+            <span className="lg:text-xl md:text-xs text-white">
+              5.8<span className="lg:text-base md:text-xs">sec</span>
             </span>
-            <span className="text-xs">Range(est.)</span>
+            <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
         </div>
         <div className="flex flex-col text-white gap-2 pt-5">
@@ -190,14 +191,12 @@ const FluxFreedom = () => {
             ))}
           </div>
           <span className="text-sm flex gap-1">
-            <span className="text-white flex gap-1">
-              {paintDetails.name}
-              {paintDetails.price === "00" ? (
-                <span className="text-gray-400">include</span>
-              ) : (
-                <span className="text-gray-400">${paintDetails.price}.00</span>
-              )}
-            </span>
+            <span className="text-white">{paintDetails.name}</span>
+            {paintDetails.price === "00" ? (
+              <span className="text-white">included</span>
+            ) : (
+              <span className="text-white">${paintDetails.price}.00</span>
+            )}
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -217,9 +216,9 @@ const FluxFreedom = () => {
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
             {wheelDetails.price === "00" ? (
-              <span className="text-gray-400">include</span>
+              <span className="text-white">included</span>
             ) : (
-              <span className="text-gray-400">${wheelDetails.price}.00</span>
+              <span className="text-white">${wheelDetails.price}.00</span>
             )}
           </span>
         </div>
@@ -231,7 +230,8 @@ const FluxFreedom = () => {
             className="rounded-full cursor-pointer w-11 p-[2px] border-2 border-[#ddc861]"
           />
           <span className="text-sm flex gap-1">
-            <span className="text-white">Black White Int</span>$400.00
+            <span className="text-white">Black Int</span>{" "}
+            <span className="text-white">$400.00</span>
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
@@ -244,9 +244,9 @@ const FluxFreedom = () => {
                 data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
-              <span className="label-text">Wall Charger</span>
+              <span className="label-text md:text-xs lg:text-base text-white">Wall Charger</span>
             </label>
-            <span>$600.00</span>
+            <span className="md:text-xs lg:text-base text-white">$600.00</span>
           </div>
           <div className="form-control justify-between flex-row items-center w-full">
             <label className="label cursor-pointer gap-2">
@@ -256,23 +256,22 @@ const FluxFreedom = () => {
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="450"
               />
-              <span className="label-text">Mobile Charger</span>
+              <span className="label-text md:text-xs lg:text-base text-white">Mobile Charger</span>
             </label>
-            <span>$450.00</span>
+            <span className="md:text-xs lg:text-base text-white">$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="text-2xl text-white">Order Your Flux freedom</span>
-          <span className="text-white font-semibold">
+          <span className="lg:text-2xl md:text-lg text-white">Order Your Flux freedom</span>
+          <span className="text-white font-semibold md:text-sm lg:text-base">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
-          <span className="text-white font-semibold">
-            Est. Delivery: TBA
-          </span>
+          <span className="text-white font-semibold md:text-sm lg:text-base">Est. Delivery: TBA</span>
           <button
             type="button"
-            onClick={()=>paymentBtn()}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
+            onClick={() => paymentBtn()}
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
+          >
             Continue to Payment
           </button>
         </div>
