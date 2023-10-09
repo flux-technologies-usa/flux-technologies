@@ -12,10 +12,10 @@ import { Link } from "react-router-dom";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useContext(AuthContext);
-  const [freedomOrder, setFreedomOrder] = useState();
+  const [freedomOrder, setFreedomOrder] = useState([]);
   // const [productOrders, setProductOrders] = useState();
 
-  const [villageOrders, setVillageOrders] = useState();
+  const [villageOrders, setVillageOrders] = useState([]);
 
   const [orderRow, setOrderRow] = useState(1);
   const handleVillageOrder = (e) => {
@@ -29,7 +29,6 @@ const Orders = () => {
   };
 
   useEffect(() => {
-    try {
       axios
         .get("https://flux-car.onrender.com/api/v1/village/village-orders", {
           params: {
@@ -39,9 +38,6 @@ const Orders = () => {
         .then(function (response) {
           setVillageOrders(response.data.cartData);
         });
-    } catch (error) {
-      console.log(error.message);
-    }
   }, [user.email]);
 
   useEffect(() => {
@@ -106,25 +102,25 @@ const Orders = () => {
         {/* {orderRow === 1 ? (
           <>
             {villageOrders ? (
-              <>
-                <span className=" text-white md:text-start text-center font-semibold text-xl">
-                  Flux Village Orders
-                </span>
-                {villageOrders.map((villagedata, id) => (
-                  <VillageOrders villagedata={villagedata} key={id} />
-                ))}
-              </>
+              <div className="flex flex-col justify-center gap-3">
+                <span className="">You don't have any order</span>{" "}
+                <button className="btn btn-primary">
+                  <Link to="/village">Order Now</Link>
+                </button>
+              </div>
             ) : (
               ""
             )}
           </>
         ) : (
-          <div className="flex flex-col justify-center gap-3">
-            <span className="">You don't have any order</span>{" "}
-            <button className="btn btn-primary">
-              <Link to="/village">Order Now</Link>
-            </button>
-          </div>
+          <>
+            <span className=" text-white md:text-start text-center font-semibold text-xl">
+              Flux Village Orders
+            </span>
+            {villageOrders.map((villagedata, id) => (
+              <VillageOrders villagedata={villagedata} key={id} />
+            ))}
+          </>
         )} */}
 
         {orderRow === 2 ? (

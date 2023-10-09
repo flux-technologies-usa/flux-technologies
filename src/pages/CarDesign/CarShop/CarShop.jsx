@@ -124,7 +124,7 @@ const CarShop = () => {
   return (
     <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
-        className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[78%]"
+        className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[70%]"
         style={{ backgroundImage: `url("${darkBg}")` }}
       >
         <img
@@ -133,7 +133,7 @@ const CarShop = () => {
           className="w-[180px] md:w-[600px]"
         />
       </div>
-      <div className="flex flex-col gap-3 lg:px-10 md:px-3 overflow-y-scroll max-h-screen mb-16 md:w-[22%]">
+      <div className="flex flex-col gap-3 lg:px-10 md:px-3 overflow-y-scroll max-h-screen mb-16 md:w-[30%]">
         <span className="lg:text-4xl md:text-2xl text-white text-center md:mt-10">
           Flux Village
         </span>
@@ -141,26 +141,26 @@ const CarShop = () => {
           Est. Delivery: TBA
         </span>
         <div className="w-full bg-[#808080] py-2 rounded text-center">
-          <span className="bg-[#ddc861] md:text-sm md:px-5 lg:px-8 py-1 rounded text-black font-semibold">
+          <span className="bg-[#ddc861] md:text-sm md:px-5 lg:px-8 px-10 py-1 rounded text-black font-semibold">
             Purchase Price
           </span>
         </div>
-        <div className="flex flex-row items-center justify-between lg:gap-8 pt-5">
+        <div className="flex flex-row items-center justify-between pt-5">
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              400<span className="lg:text-base md:text-xs">mi</span>
+              400<span className="lg:text-base md:text-xs pl-1">mi</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              0-100<span className="lg:text-base md:text-xs">mph</span>
+              0-100<span className="lg:text-base md:text-xs pl-1">mph</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              5.8<span className="lg:text-base md:text-xs">sec</span>
+              5.8<span className="lg:text-base md:text-xs pl-1">sec</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
@@ -196,7 +196,7 @@ const CarShop = () => {
           <span className="text-sm flex gap-1">
             <span className="text-white">{paintDetails.name}</span>
             {paintDetails.price === "00" ? (
-              <span className="text-white">included</span>
+              <span className="text-white">Included</span>
             ) : (
               <span className="text-white">${paintDetails.price}.00</span>
             )}
@@ -219,7 +219,7 @@ const CarShop = () => {
           <span className="text-sm flex gap-1">
             <span className="text-white">{wheelDetails.name}</span>
             {wheelDetails.price === "00" ? (
-              <span className="text-white">included</span>
+              <span className="text-white">Included</span>
             ) : (
               <span className="text-white">${wheelDetails.price}.00</span>
             )}
@@ -233,8 +233,8 @@ const CarShop = () => {
             className="rounded-full cursor-pointer w-11 p-[2px] border-2 border-[#ddc861]"
           />
           <span className="text-sm flex gap-1">
-            <span className="text-white">Black Int</span>{" "}
-            <span className="text-white">included</span>
+            <span className="text-white">Black</span>{" "}
+            <span className="text-white">Included</span>
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
