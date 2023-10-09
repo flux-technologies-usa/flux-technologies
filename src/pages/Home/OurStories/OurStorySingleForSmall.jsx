@@ -1,12 +1,10 @@
 import React from "react";
-import "../Home.scss";
 
-const OurStorySingleForBig = ({ single }) => {
+const OurStorySingleForSmall = ({ single }) => {
   const { _id, title, subtitle } = single;
-
   return (
     <div>
-      <div className="hidden md:flex   select-none">
+      <div className=" select-none">
         {/* start */}
         <div className="h-[505px] w-[580px] relative pl-[40px] mb-[60px]">
           <div className="flex justify-between">
@@ -29,4 +27,4 @@ const OurStorySingleForBig = ({ single }) => {
   );
 };
 
-export default OurStorySingleForBig;
+export default OurStorySingleForSmall;

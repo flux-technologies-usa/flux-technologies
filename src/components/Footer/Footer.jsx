@@ -22,13 +22,13 @@ const Footer = () => {
             <h1 className="text-[25px]">Flux Technologies</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/village"
                 className="text-[19px] customFooterLink w-[120px] ">
                 Design Yours
               </Link>
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/store"
                 className="text-[19px] mt-[35px] customFooterLink w-[55px] ">
                 Store
@@ -39,13 +39,13 @@ const Footer = () => {
             <h1 className="text-[25px]">Flux Motors</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/about"
                 className="text-[19px] customFooterLink  w-[70px]">
                 About
               </Link>
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/stayupdate"
                 className="text-[19px] mt-[35px] customFooterLink  w-[110px]">
                 Stay Update
@@ -56,16 +56,16 @@ const Footer = () => {
             <h1 className="text-[25px]">More</h1>
             <div className="opacity-80 flex flex-col mt-[35px]">
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/contact"
                 className="text-[19px] customFooterLink  w-[100px]">
                 Contact Us
               </Link>
               <Link
-              onClick={handleNavScroll}
+                onClick={handleNavScroll}
                 to="/privacy"
                 className="text-[19px] mt-[35px] customFooterLink ">
-                Privacy Policy
+                Privacy & Legal
               </Link>
             </div>
           </div>
@@ -82,53 +82,46 @@ const Footer = () => {
             <img className="w-[20px] cursor-pointer" src={ytIcon} alt="" />
             <img className="w-[20px] cursor-pointer" src={fbIcon} alt="" />
           </div>
-          <div>
-            <h1>Legal</h1>
-          </div>
+
           <div>
             <h1>©2022 Flux. All rights reserved</h1>
           </div>
         </div>
         <div className="px-[10%] py-[45px] bg-[#d9c8af] opacity-80">
           <h1>
-            <sup className="pr-1">1</sup>
-            Introducing FLUX, Africa's thrilling foray into the world of fully
-            electric vehicles. Embrace the power of electric with an impressive
-            range of over 800 miles on just a quick 30-minute recharge. Say
+            Introducing FLUX, Flux Technologies thrilling foray into the world
+            of fully electric vehicles. Embrace the power of electric with an
+            impressive range of over 400 miles on just a quick recharge. Say
             goodbye to worrying about gas shortages and long lines, as FLUX
             ensures that you will always be on the move. While other continents
             may focus on expensive compact cars for a few select few, FLUX
             caters to everyone by setting itself apart by specializing in
             premium, top-of-the-line design and incorporating the latest
             cutting-edge features. The world deserves nothing but the best, and
-            FLUX is here to showcase how the this company is leading the way
-            towards an electrifying future. For those seeking even more security
-            and exclusivity, we proudly present the optional Armored version of
-            our FLUX Fully Electric Sedan and SUV. We have received early
-            interest from wealthy industrialists and high-ranking politicians,
-            and we are more than happy to cater to their needs. With the Armo
+            FLUX is here to showcase how this company is leading the way towards
+            an electrifying future. For those seeking even more security and
+            exclusivity, we proudly present the optional Armored version of our
+            FLUX Fully Electric Sedan and SUV. We have received early interest
+            from wealthy, celebrities and high ranking and we are more than
+            happy to cater to their needs.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">2</sup>
-            Optional Armored version - Wealthy industrialists and high placed
-            politicians contacted us early to create a special Armored Version
-            of our FLUX Fully Electric Sedan and SUV. We are happy to oblige.
-            Now ride in complete safety and enhanced security that can stop
-            trouble in its tracks. All while enjoying an elite look that exudes
-            continental style
+            Optional Armored version - Wealthy, celebrities, and high ranking
+            contacted us early to create a special Armored Version of our FLUX
+            Fully Electric Sedan and SUV. We are happy to oblige. Now ride in
+            complete safety and enhanced security that can stop trouble in its
+            tracks. All while enjoying an elite look that exudes continental
+            style.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">3</sup>
             Cutting-edge Self Driving Ability lets you sit back, relax, and let
             the car be your driver.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">4</sup>
             Powerful All Wheel Drive handles even the toughest terrain.
-            potholes? No problem.
+            
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">5</sup>
             Impressive Touch Screen Dashboard with Advanced Parking Sensor to
             keep your FLUX ride scratch free and pristine.
           </h1>
@@ -141,10 +134,16 @@ const Footer = () => {
             <h1 className=" font-semibold">Flux Technologies</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link onClick={handleNavScroll} to="/village" className=" customFooterLink w-[120px] ">
+              <Link
+                onClick={handleNavScroll}
+                to="/village"
+                className=" customFooterLink w-[120px] ">
                 Design Yours
               </Link>
-              <Link onClick={handleNavScroll} to="/store" className=" customFooterLink  mt-[10px] ">
+              <Link
+                onClick={handleNavScroll}
+                to="/store"
+                className=" customFooterLink  mt-[10px] ">
                 Store
               </Link>
             </div>
@@ -153,10 +152,16 @@ const Footer = () => {
             <h1 className=" font-semibold">Flux Motors</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link onClick={handleNavScroll} to="/village" className=" customFooterLink w-[120px] ">
+              <Link
+                onClick={handleNavScroll}
+                to="/village"
+                className=" customFooterLink w-[120px] ">
                 About
               </Link>
-              <Link onClick={handleNavScroll} to="/store" className=" customFooterLink  mt-[10px] ">
+              <Link
+                onClick={handleNavScroll}
+                to="/store"
+                className=" customFooterLink  mt-[10px] ">
                 Stay Update
               </Link>
             </div>
@@ -165,11 +170,17 @@ const Footer = () => {
             <h1 className=" font-semibold">More</h1>
             <div className="w-[125px] h-[1px] bg-[#bebcbc] mt-3"></div>
             <div className="opacity-80 flex flex-col mt-[15px]">
-              <Link onClick={handleNavScroll} to="/contact" className=" customFooterLink w-[120px] ">
+              <Link
+                onClick={handleNavScroll}
+                to="/contact"
+                className=" customFooterLink w-[120px] ">
                 Contact Us
               </Link>
-              <Link onClick={handleNavScroll} to="/privacy" className=" customFooterLink  mt-[10px] ">
-                Privacy Policy
+              <Link
+                onClick={handleNavScroll}
+                to="/privacy"
+                className=" customFooterLink  mt-[10px] ">
+                Privacy & Legal
               </Link>
             </div>
           </div>
@@ -193,9 +204,6 @@ const Footer = () => {
             </div>
             <div className="flex gap-8 my-5 ">
               <div>
-                <h1>Legal</h1>
-              </div>
-              <div>
                 <h1>©2022 Flux. All rights reserved</h1>
               </div>
             </div>
@@ -203,37 +211,39 @@ const Footer = () => {
         </div>
         <div className="px-[10%] py-[45px] bg-[#d9c8af] opacity-80">
           <h1>
-            <sup className="pr-1">1</sup>
-            FLUX is Africa's exciting entry into the fully electric automobile
-            space. Step up to full electric power with a huge range of over
-            800km on a single 30 min recharge. The next time there’s a gas
-            shortage, and all your friends are waiting in line - YOU won't care.
-            Unlike other continents that push pricey compacts for the working
-            person, FLUX specializes in premium elite design and the very latest
-            cutting-edge features. Africa deserves nothing less. Show the world
-            Africa is leading the way to the future.
+            Introducing FLUX, Flux Technologies thrilling foray into the world
+            of fully electric vehicles. Embrace the power of electric with an
+            impressive range of over 400 miles on just a quick recharge. Say
+            goodbye to worrying about gas shortages and long lines, as FLUX
+            ensures that you will always be on the move. While other continents
+            may focus on expensive compact cars for a few select few, FLUX
+            caters to everyone by setting itself apart by specializing in
+            premium, top-of-the-line design and incorporating the latest
+            cutting-edge features. The world deserves nothing but the best, and
+            FLUX is here to showcase how this company is leading the way towards
+            an electrifying future. For those seeking even more security and
+            exclusivity, we proudly present the optional Armored version of our
+            FLUX Fully Electric Sedan and SUV. We have received early interest
+            from wealthy, celebrities and high ranking and we are more than
+            happy to cater to their needs.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">2</sup>
-            Optional Armored version - Wealthy industrialists and high placed
-            politicians contacted us early to create a special Armored Version
-            of our FLUX Fully Electric Sedan and SUV. We are happy to oblige.
-            Now ride in complete safety and enhanced security that can stop
-            trouble in its tracks. All while enjoying an elite look that exudes
-            continental style
+            Optional Armored version - Wealthy, celebrities, and high ranking
+            contacted us early to create a special Armored Version of our FLUX
+            Fully Electric Sedan and SUV. We are happy to oblige. Now ride in
+            complete safety and enhanced security that can stop trouble in its
+            tracks. All while enjoying an elite look that exudes continental
+            style.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">3</sup>
             Cutting-edge Self Driving Ability lets you sit back, relax, and let
             the car be your driver.
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">4</sup>
             Powerful All Wheel Drive handles even the toughest terrain.
-            potholes? No problem.
+            
           </h1>
           <h1 className="mt-7">
-            <sup className="pr-1">5</sup>
             Impressive Touch Screen Dashboard with Advanced Parking Sensor to
             keep your FLUX ride scratch free and pristine.
           </h1>

@@ -8,7 +8,9 @@ const AboutFlux = () => {
       </h1>
       {/* for big device */}
       <div className="text-center text-[32px] text-white mt-[60px] font-semibold hidden md:block md:pb-20">
-        <h1>Africa's First Electric Car Debuts in Nigeria. Revolving </h1>
+        <h1>
+          Pompano Beach, FL's First Electric Car Debuts in Nigeria. Revolving{" "}
+        </h1>
         <h1 className="mt-[27px]">
           technology moves us to think beyond mobility, and design
         </h1>
@@ -29,14 +31,13 @@ const AboutFlux = () => {
       {/* for small device */}
       <div className="text-start text-2xl  text-white  font-semibold mx-5 block md:hidden">
         <h1 className="mt-5 pb-16">
-          Africa's First Electric Car Debuts in Nigeria. Revolving technology
-          moves us to think beyond mobility, and design for a world where life
-          is the most important journey we’ll ever take; to look beyond tomorrow
-          and shape a future where we no longer have to choose between doing
-          great things and doing the right thing; and to explore beyond like to
-          feel truly alive.
+          Pompano Beach, FL's First Electric Car Debuts in Nigeria. Revolving
+          technology moves us to think beyond mobility, and design for a world
+          where life is the most important journey we’ll ever take; to look
+          beyond tomorrow and shape a future where we no longer have to choose
+          between doing great things and doing the right thing; and to explore
+          beyond like to feel truly alive.
         </h1>
-        
       </div>
     </div>
   );

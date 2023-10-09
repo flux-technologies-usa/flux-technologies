@@ -11,10 +11,10 @@ const Contactform = () => {
 
     emailjs
       .sendForm(
-        "service_atxicih",
-        "template_nw7rxwm",
+        "service_o3tqw2e",
+        "template_oa5y50a",
         form.current,
-        "EcU50gpe_2wKn__oJ"
+        "MNjhKguP4HmGKbBjx"
       )
       .then(
         (result) => {
@@ -26,6 +26,7 @@ const Contactform = () => {
         }
       );
   };
+  
   return (
     <div className="contactform w-full">
       <div className="flex gap-10">
@@ -78,7 +79,7 @@ const Contactform = () => {
           <span className="text-white pt-[30px]  md:pb-[70px] text-[14px] font-[#dbd4c5]">
             By submitting this form, you agree to our{" "}
             <a
-              href="http://www.fluxtechnologiesafrica.com/privacy"
+              href="http://www.fluxtechnologiesPompano Beach, FL.com/privacy"
               className="underline">
               Privacy Policy.
             </a>
@@ -136,7 +137,7 @@ export default Contactform;
       <span className="text-white pt-[30px]  md:pb-[70px] text-[14px] font-[#dbd4c5]">
         By submitting this form, you agree to our{" "}
         <a
-          href="http://www.fluxtechnologiesafrica.com/privacy"
+          href="http://www.fluxtechnologiesPompano Beach, FL.com/privacy"
           className="underline">
           Privacy Policy.
         </a>

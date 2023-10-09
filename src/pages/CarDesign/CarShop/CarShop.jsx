@@ -148,7 +148,7 @@ const CarShop = () => {
         <div className="flex flex-row items-center justify-between lg:gap-8 pt-5">
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              560<span className="lg:text-base md:text-xs">mi</span>
+              400<span className="lg:text-base md:text-xs">mi</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
