@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context api/UserContext";
 import FreedomOrders from "./FreedomOrders/FreedomOrders";
 import VillageOrders from "./VillageOrders/VillageOrders";
+import { Link } from "react-router-dom";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -14,7 +15,7 @@ const Orders = () => {
   const [freedomOrder, setFreedomOrder] = useState();
   // const [productOrders, setProductOrders] = useState();
 
-  // const [villageOrders, setVillageOrders] = useState();
+  const [villageOrders, setVillageOrders] = useState();
 
   const [orderRow, setOrderRow] = useState(1);
   const handleVillageOrder = (e) => {
@@ -27,17 +28,21 @@ const Orders = () => {
     setOrderRow(e);
   };
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8080/api/v1/village/village-orders", {
-  //       params: {
-  //         Email: user.email,
-  //       },
-  //     })
-  //     .then(function (response) {
-  //       setVillageOrders(response.data.cartData);
-  //     });
-  // }, [user.email]);
+  useEffect(() => {
+    try {
+      axios
+        .get("https://flux-car.onrender.com/api/v1/village/village-orders", {
+          params: {
+            Email: user.email,
+          },
+        })
+        .then(function (response) {
+          setVillageOrders(response.data.cartData);
+        });
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, [user.email]);
 
   useEffect(() => {
     axios
@@ -100,25 +105,47 @@ const Orders = () => {
       <div className="flex flex-col gap-3 md:w-[80%] w-full">
         {/* {orderRow === 1 ? (
           <>
-            <span className=" text-white md:text-start text-center font-semibold text-xl">
-              Flux Village Orders
-            </span>
-            {villageOrders.map((villagedata, id) => (
-              <VillageOrders villagedata={villagedata} key={id} />
-            ))}
+            {villageOrders ? (
+              <>
+                <span className=" text-white md:text-start text-center font-semibold text-xl">
+                  Flux Village Orders
+                </span>
+                {villageOrders.map((villagedata, id) => (
+                  <VillageOrders villagedata={villagedata} key={id} />
+                ))}
+              </>
+            ) : (
+              ""
+            )}
           </>
         ) : (
-          ""
+          <div className="flex flex-col justify-center gap-3">
+            <span className="">You don't have any order</span>{" "}
+            <button className="btn btn-primary">
+              <Link to="/village">Order Now</Link>
+            </button>
+          </div>
         )} */}
 
         {orderRow === 2 ? (
           <>
-            <span className=" text-white md:text-start text-center font-semibold text-xl">
-              Flux Freedom Orders
-            </span>
-            {freedomOrder.map((data, id) => (
-              <FreedomOrders data={data} key={id} />
-            ))}
+            {freedomOrder === "" ? (
+              <div className="flex flex-col justify-center gap-3">
+                <span>You don't have any order</span>{" "}
+                <button className="btn btn-primary">
+                  <Link to="/freedom">Order Now</Link>
+                </button>
+              </div>
+            ) : (
+              <>
+                <span className=" text-white md:text-start text-center font-semibold text-xl">
+                  Flux Freedom Orders
+                </span>
+                {freedomOrder.map((data, id) => (
+                  <FreedomOrders data={data} key={id} />
+                ))}
+              </>
+            )}
           </>
         ) : (
           ""
