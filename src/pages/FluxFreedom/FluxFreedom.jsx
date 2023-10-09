@@ -104,7 +104,7 @@ const FluxFreedom = () => {
         "https://flux-car.onrender.com/api/v1/freedom/create-checkout-session",
         {
           fluxFreedom,
-          userEmail: user.email,
+          freedomEmail: user.email,
         }
       )
       .then((res) => {

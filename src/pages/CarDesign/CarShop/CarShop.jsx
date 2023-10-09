@@ -107,7 +107,7 @@ const CarShop = () => {
         "https://flux-car.onrender.com/api/v1/village/create-checkout-session",
         {
           fluxVillage,
-          userEmail: user.email,
+          villageEmail: user.email,
         }
       )
       .then((res) => {

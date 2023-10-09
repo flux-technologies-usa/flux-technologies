@@ -77,7 +77,7 @@ const VillageOrders = ({villagedata}) => {
       <div className="flex flex-col">
         <div
           onClick={() => handleActive()}
-          className="p-3 flex flex-row justify-between"
+          className="p-3 flex flex-row justify-between cursor-pointer"
         >
           <span>Details</span>
           {active === false ? <AiFillCaretUp /> : <AiFillCaretDown />}
@@ -99,7 +99,7 @@ const VillageOrders = ({villagedata}) => {
           {/* car details */}
           <div
             onClick={() => handleToggle()}
-            className="flex flex-row items-center gap-1"
+            className="flex flex-row items-center gap-1 cursor-pointer"
           >
             {toggle === true ? <AiFillCaretRight /> : <AiFillCaretDown />}
             <span>Car Details</span>
@@ -117,7 +117,7 @@ const VillageOrders = ({villagedata}) => {
 
           <div
             onClick={() => handleShippingToggle()}
-            className="flex flex-row items-center gap-1"
+            className="flex flex-row items-center gap-1 cursor-pointer"
           >
             {shippingToggle === true ? (
               <AiFillCaretRight />
@@ -133,7 +133,7 @@ const VillageOrders = ({villagedata}) => {
           >
             <div
               onClick={() => handleAddressToggle()}
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 cursor-pointer"
             >
               {addressToggle === true ? (
                 <AiFillCaretRight />

@@ -1,6 +1,7 @@
 import React from "react";
+import SingleDetails from "./singleDetails";
 const SingleOrder = ({ order }) => {
-  const { img, name, price, quantity } = order;
+  const { img, } = order;
   return (
     <tr>
       <td>
@@ -12,15 +13,13 @@ const SingleOrder = ({ order }) => {
           </div>
         </div>
       </td>
-      <td>
-        <span>{name}</span>
-      </td>
-      <td>
-        <span>{quantity}</span>
-      </td>
-      <td>${price}</td>
-      <th>Approved</th>
-      <th><button className="btn">Cancel</button></th>
+      {order.products.map((data, id) => (
+        <SingleDetails data={data} key={id} />
+      ))}
+      <th>{order.delivery_status}</th>
+      <th>
+        <button className="btn">Cancel</button>
+      </th>
     </tr>
   );
 };
