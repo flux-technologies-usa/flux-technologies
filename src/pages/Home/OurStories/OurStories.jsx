@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import OurStorySingleForBig from "./OurStorySingleForBig";
 import ClipLoader from "react-spinners/ClipLoader";
+import OurStorySingleForSmall from "./OurStorySingleForSmall";
 
 const OurStories = () => {
   const [ourStorys, setOurStorys] = useState([]);
@@ -27,7 +28,8 @@ const OurStories = () => {
         </span>
         <button className="customStoryButton ">View All</button>
       </div>
-      <div className="flex overflow-auto customScroll">
+      {/* for bog divice */}
+      <div className=" overflow-auto customScroll hidden md:flex">
         <div className="w-full">
           {loading ? (
             <div className="overflow-hidden w-full  flex justify-center">
@@ -41,6 +43,22 @@ const OurStories = () => {
             </div>
           )}
         </div>
+      </div>
+      {/* for small divice */}
+      <div className=" overflow-auto  flex md:hidden">
+        {loading ? (
+          <div>
+            <div className="overflow-hidden w-full flex justify-center">
+              <ClipLoader color="#36d7b7" size={60} />
+            </div>
+          </div>
+        ) : (
+          <div className="flex">
+            {ourStorys.map((single) => (
+              <OurStorySingleForSmall single={single}></OurStorySingleForSmall>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
