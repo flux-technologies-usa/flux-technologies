@@ -26,13 +26,16 @@ const SingleProduct = ({ single }) => {
         product: single,
       };
 
-      fetch(`https://flux-car.onrender.com/api/v1/cart?email=${email}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(product),
-      })
+      fetch(
+        `https://flux-server-lu38.onrender.com/api/v1/cart?email=${email}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(product),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           setCartLength(cartLength + 1);
@@ -59,7 +62,7 @@ const SingleProduct = ({ single }) => {
         <div className="single-product-img h-[200px]">
           <img
             className="w-[200px] h-auto mx-auto pt-[50px]"
-            src={`https://flux-car.onrender.com/api/v1/product/product-photo/${_id}`}
+            src={`https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${_id}`}
             alt={name}
           />
         </div>

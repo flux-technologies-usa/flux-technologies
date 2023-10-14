@@ -77,10 +77,27 @@ const Footer = () => {
             <h1>United States – English</h1>
           </div>
           <div className="flex gap-[30px]">
-            <img className="w-[20px] cursor-pointer" src={instaIcon} alt="" />
-            <img className="w-[20px] cursor-pointer" src={twitterIcon} alt="" />
-            <img className="w-[20px] cursor-pointer" src={ytIcon} alt="" />
-            <img className="w-[20px] cursor-pointer" src={fbIcon} alt="" />
+            <a href="https://www.instagram.com/fluxtechev/?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr">
+              <img
+                className="w-[30px] cursor-pointer"
+                src={`https://img.freepik.com/premium-vector/modern-badge-logo-instagram-icon_578229-124.jpg`}
+                alt=""
+              />
+            </a>
+            <a href="https://www.tiktok.com/@fluxtechev?_t=8gU3Q18S3q6&_r=1">
+              <img
+                className="w-[30px] cursor-pointer"
+                src={`https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg`}
+                alt=""
+              />
+            </a>
+            <a href="https://www.snapchat.com/add/fluxtechev?invite_id=DBORnuU2&locale=en_US&share_id=z0F1MoxxQSOF8dD8rL2W-A&sid=a6c3f93e8fb54cbaa364cc00222daf77">
+              <img
+                className="w-[34px] cursor-pointer"
+                src={`https://static.vecteezy.com/system/resources/previews/023/741/177/original/snapchat-logo-icon-social-media-icon-free-png.png`}
+                alt=""
+              />
+            </a>
           </div>
 
           <div>
@@ -119,7 +136,6 @@ const Footer = () => {
           </h1>
           <h1 className="mt-7">
             Powerful All Wheel Drive handles even the toughest terrain.
-            
           </h1>
           <h1 className="mt-7">
             Impressive Touch Screen Dashboard with Advanced Parking Sensor to
@@ -241,7 +257,6 @@ const Footer = () => {
           </h1>
           <h1 className="mt-7">
             Powerful All Wheel Drive handles even the toughest terrain.
-            
           </h1>
           <h1 className="mt-7">
             Impressive Touch Screen Dashboard with Advanced Parking Sensor to

@@ -13,7 +13,7 @@ const CartProductSingle = ({ product }) => {
   const { products, setCartLength, cartLength } = useContext(CartContext);
   // functions
   const handleRemoveButton = () => {
-    fetch(`https://flux-car.onrender.com/api/v1/cart/${product._id}`, {
+    fetch(`https://flux-server-lu38.onrender.com/api/v1/cart/${product._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -26,13 +26,16 @@ const CartProductSingle = ({ product }) => {
     const updateQuentity = {
       quentity: quentity,
     };
-    fetch(`https://flux-car.onrender.com/api/v1/cart/quentity/${product._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateQuentity),
-    })
+    fetch(
+      `https://flux-server-lu38.onrender.com/api/v1/cart/quentity/${product._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateQuentity),
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
     setCartLength(cartLength + 1);
@@ -40,9 +43,12 @@ const CartProductSingle = ({ product }) => {
   const handleQuantityDecreaseButton = () => {
     const quentity = product.quentity - 1;
     if (quentity === 0) {
-      fetch(`https://flux-car.onrender.com/api/v1/cart/${product._id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://flux-server-lu38.onrender.com/api/v1/cart/${product._id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => console.log(data));
       setCartLength(cartLength - 1);
@@ -51,7 +57,7 @@ const CartProductSingle = ({ product }) => {
         quentity: quentity,
       };
       fetch(
-        `https://flux-car.onrender.com/api/v1/cart/quentity/${product._id}`,
+        `https://flux-server-lu38.onrender.com/api/v1/cart/quentity/${product._id}`,
         {
           method: "PUT",
           headers: {
@@ -70,7 +76,7 @@ const CartProductSingle = ({ product }) => {
       <div className="flex md:flex-row md:gap-28 gap-10">
         <div className="flex flex-row items-start gap-8">
           <img
-            src={`https://flux-car.onrender.com/api/v1/product/product-photo/${_id}`}
+            src={`https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${_id}`}
             alt=""
             className="md:max-w-[110px] max-w-[70px]"
           />

@@ -13,7 +13,7 @@ const OurStories = () => {
 
   useEffect(() => {
     setloading(true);
-    fetch("https://flux-car.onrender.com/api/v1/ourstory/get-story")
+    fetch("https://flux-server-lu38.onrender.com/api/v1/ourstory/get-story")
       .then((res) => res.json())
       .then((data) => {
         setOurStorys(data.story);
