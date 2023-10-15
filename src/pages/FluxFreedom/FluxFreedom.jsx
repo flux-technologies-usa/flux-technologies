@@ -101,7 +101,7 @@ const FluxFreedom = () => {
   const paymentBtn = () => {
     axios
       .post(
-        "https://flux-car.onrender.com/api/v1/freedom/create-checkout-session",
+        "https://flux-server-lu38.onrender.com/api/v1/freedom/create-checkout-session",
         {
           fluxFreedom,
           freedomEmail: user.email,
@@ -122,8 +122,7 @@ const FluxFreedom = () => {
     <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[70%]"
-        style={{ backgroundImage: `url("${darkBg}")` }}
-      >
+        style={{ backgroundImage: `url("${darkBg}")` }}>
         <img
           src={wheelDetails.img_wheel}
           alt=""
@@ -145,7 +144,7 @@ const FluxFreedom = () => {
         <div className="flex flex-row items-center justify-between pt-5">
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              400<span className="lg:text-base md:text-xs pl-1">mi</span>
+              400+<span className="lg:text-base md:text-xs pl-1">mi</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
@@ -244,7 +243,9 @@ const FluxFreedom = () => {
                 data-amount="600"
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
               />
-              <span className="label-text md:text-xs lg:text-base text-white">Wall Charger</span>
+              <span className="label-text md:text-xs lg:text-base text-white">
+                Wall Charger
+              </span>
             </label>
             <span className="md:text-xs lg:text-base text-white">$600.00</span>
           </div>
@@ -256,22 +257,27 @@ const FluxFreedom = () => {
                 className="checkbox checkbox-primary border-[#ddc861] rounded"
                 data-amount="450"
               />
-              <span className="label-text md:text-xs lg:text-base text-white">Mobile Charger</span>
+              <span className="label-text md:text-xs lg:text-base text-white">
+                Mobile Charger
+              </span>
             </label>
             <span className="md:text-xs lg:text-base text-white">$450.00</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">
-          <span className="lg:text-2xl md:text-lg text-white">Order Your Flux freedom</span>
+          <span className="lg:text-2xl md:text-lg text-white">
+            Order Your Flux freedom
+          </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
             Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
           </span>
-          <span className="text-white font-semibold md:text-sm lg:text-base">Est. Delivery: TBA</span>
+          <span className="text-white font-semibold md:text-sm lg:text-base">
+            Est. Delivery: TBA
+          </span>
           <button
             type="button"
             onClick={() => paymentBtn()}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
-          >
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
             Continue to Payment
           </button>
         </div>

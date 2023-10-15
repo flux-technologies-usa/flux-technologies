@@ -11,7 +11,7 @@ const OurStorySingleForSmall = ({ single }) => {
             <div className=" w-[500px] h-[340px] overflow-hidden">
               <img
                 className="customStoryImg scale-[1.2]"
-                src={`https://flux-car.onrender.com/api/v1/ourstory/story-photo/${_id}`}
+                src={`https://flux-server-lu38.onrender.com/api/v1/ourstory/story-photo/${_id}`}
                 alt=""
               />
             </div>

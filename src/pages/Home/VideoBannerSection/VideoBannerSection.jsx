@@ -58,7 +58,7 @@ const VideoBannerSection = () => {
           <div className="text-center  select-none">
             <h1>
               <span className="md:text-xl">
-                Official EPA range to <sup>1</sup>{" "}
+                Official EPA range to{" "}
               </span>
             </h1>
             <h1 className="text-2xl md:text-[40px] font-semibold">520 mi</h1>
@@ -66,7 +66,7 @@ const VideoBannerSection = () => {
           <div className="text-center select-none">
             <h1>
               <span className="md:text-xl">
-                starting from <sup>2</sup>{" "}
+                starting from {" "}
               </span>
             </h1>
             <h1 className="text-2xl md:text-[40px] font-semibold">$85,500</h1>
@@ -74,10 +74,10 @@ const VideoBannerSection = () => {
           <div className="text-center select-none">
             <h1>
               <span className="md:text-xl">
-                Max Power <sup>3</sup>{" "}
+                Max Power {" "}
               </span>
             </h1>
-            <h1 className="text-2xl md:text-[40px] font-semibold">1200+ hp</h1>
+            <h1 className="text-2xl md:text-[40px] font-semibold">600+ hp</h1>
           </div>
         </div>
       </div>

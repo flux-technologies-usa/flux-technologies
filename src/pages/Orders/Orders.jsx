@@ -33,11 +33,14 @@ const Orders = () => {
   useEffect(() => {
     setvillageLoading(true);
     axios
-      .get("https://flux-car.onrender.com/api/v1/village/village-orders", {
-        params: {
-          Email: user.email,
-        },
-      })
+      .get(
+        "https://flux-server-lu38.onrender.com/api/v1/village/village-orders",
+        {
+          params: {
+            Email: user.email,
+          },
+        }
+      )
       .then(function (response) {
         setVillageOrders(response.data.cartData);
         setvillageLoading(false);
@@ -48,11 +51,14 @@ const Orders = () => {
   useEffect(() => {
     setfreedomLoading(true);
     axios
-      .get("https://flux-car.onrender.com/api/v1/freedom/freedom-orders", {
-        params: {
-          freedomEmail: user.email,
-        },
-      })
+      .get(
+        "https://flux-server-lu38.onrender.com/api/v1/freedom/freedom-orders",
+        {
+          params: {
+            freedomEmail: user.email,
+          },
+        }
+      )
       .then(function (response) {
         setFreedomOrder(response.data.cartData);
         setfreedomLoading(false);
@@ -62,11 +68,14 @@ const Orders = () => {
   useEffect(() => {
     setproductLoading(true);
     axios
-      .get("https://flux-car.onrender.com/api/v1/store/product-orders", {
-        params: {
-          productEmail: user.email,
-        },
-      })
+      .get(
+        "https://flux-server-lu38.onrender.com/api/v1/store/product-orders",
+        {
+          params: {
+            productEmail: user.email,
+          },
+        }
+      )
       .then(function (response) {
         setProductOrders(response.data.cartData);
         setproductLoading(false);
@@ -77,16 +86,14 @@ const Orders = () => {
   const loading = (
     <div
       role="status"
-      class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center"
-    >
+      class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center">
       <div class="flex items-center justify-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700">
         <svg
           class="w-10 h-10 text-gray-200 dark:text-gray-600"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
-          viewBox="0 0 20 18"
-        >
+          viewBox="0 0 20 18">
           <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
         </svg>
       </div>
@@ -109,24 +116,21 @@ const Orders = () => {
           onClick={() => handleVillageOrder(1)}
           className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 1 ? "bg-black" : "bg-base"
-          }`}
-        >
+          }`}>
           FluxVillage Orders
         </button>
         <button
           onClick={() => handleFreedomOrder(2)}
           className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 2 ? "bg-black" : "bg-base"
-          }`}
-        >
+          }`}>
           FluxFreedom Orders
         </button>
         <button
           onClick={() => handleProductOrder(3)}
           className={` w-full py-2 text-white md:text-start text-center pl-5 border-b border-black font-semibold hover:bg-black ${
             orderRow === 3 ? "bg-black" : "bg-base"
-          }`}
-        >
+          }`}>
           FluxProduct Orders
         </button>
       </div>

@@ -10,14 +10,14 @@ const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
 
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   // calculate total
   const totalPrice = calculateTotal(products);
 
-  const paymentBtn = () =>{
+  const paymentBtn = () => {
     axios
       .post(
-        "https://flux-car.onrender.com/api/v1/store/create-checkout-session",
+        "https://flux-server-lu38.onrender.com/api/v1/store/create-checkout-session",
         {
           products,
           productEmail: user.email,
@@ -29,8 +29,8 @@ const Cart = () => {
         }
       })
       .catch((err) => console.log(err.message));
-  }
- 
+  };
+
   return (
     <div className=" md:mx-20 mx-6 md:mt-0 mt-20 h-full">
       <h1 className="text-2xl ">Summary</h1>
@@ -49,9 +49,8 @@ const Cart = () => {
         <div className="w-full h-[1px] bg-black mt-1" />
       </div>
       <div
-        className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in" 
-        onClick={()=>paymentBtn()}        
-      >
+        className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in"
+        onClick={() => paymentBtn()}>
         Checkout
       </div>
     </div>

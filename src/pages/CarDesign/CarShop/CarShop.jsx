@@ -104,7 +104,7 @@ const CarShop = () => {
   const paymentBtn = () => {
     axios
       .post(
-        "https://flux-car.onrender.com/api/v1/village/create-checkout-session",
+        "https://flux-server-lu38.onrender.com/api/v1/village/create-checkout-session",
         {
           fluxVillage,
           villageEmail: user.email,
@@ -148,7 +148,7 @@ const CarShop = () => {
         <div className="flex flex-row items-center justify-between pt-5">
           <div className="flex flex-col items-center">
             <span className="lg:text-xl md:text-xs text-white">
-              400<span className="lg:text-base md:text-xs pl-1">mi</span>
+              400+<span className="lg:text-base md:text-xs pl-1">mi</span>
             </span>
             <span className="lg:text-xs md:text-[0.5rem]">Range(est.)</span>
           </div>
