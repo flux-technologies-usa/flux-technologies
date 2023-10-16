@@ -9,7 +9,7 @@ const AboutFlux = () => {
       {/* for big device */}
       <div className="text-center text-[32px] text-white mt-[60px] font-semibold hidden md:block md:pb-20">
         <h1>
-          Pompano Beach, FL's First Electric Car Debuts in Nigeria. Revolving{" "}
+        First Black owned Electric Car to debuts in Africa.. Revolving{" "}
         </h1>
         <h1 className="mt-[27px]">
           technology moves us to think beyond mobility, and design
@@ -24,7 +24,7 @@ const AboutFlux = () => {
           where we no longer have to choose between doing great
         </h1>
         <h1 className="mt-[27px]">
-          things and doing the right thing; and to explore beyond
+          things and doing the right things Flux Freedom has arrived,
         </h1>
         <h1 className="mt-[27px]">like to feel truly alive.</h1>
       </div>
