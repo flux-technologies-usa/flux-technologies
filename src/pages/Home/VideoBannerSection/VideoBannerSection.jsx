@@ -61,7 +61,7 @@ const VideoBannerSection = () => {
                 Official EPA range to{" "}
               </span>
             </h1>
-            <h1 className="text-2xl md:text-[40px] font-semibold">520 mi</h1>
+            <h1 className="text-2xl md:text-[40px] font-semibold">400+ mi</h1>
           </div>
           <div className="text-center select-none">
             <h1>
