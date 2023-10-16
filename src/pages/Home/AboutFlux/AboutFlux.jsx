@@ -24,9 +24,8 @@ const AboutFlux = () => {
           where we no longer have to choose between doing great
         </h1>
         <h1 className="mt-[27px]">
-          things and doing the right things Flux Freedom has arrived,
+          things and doing the right things Flux Freedom has arrived.
         </h1>
-        <h1 className="mt-[27px]">like to feel truly alive.</h1>
       </div>
       {/* for small device */}
       <div className="text-start text-2xl  text-white  font-semibold mx-5 block md:hidden">
@@ -35,8 +34,7 @@ const AboutFlux = () => {
           technology moves us to think beyond mobility, and design for a world
           where life is the most important journey we’ll ever take; to look
           beyond tomorrow and shape a future where we no longer have to choose
-          between doing great things and doing the right thing; and to explore
-          beyond like to feel truly alive.
+          between doing great things and doing the right thing Flux Freedom has arrived.
         </h1>
       </div>
     </div>
