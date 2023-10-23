@@ -26,7 +26,6 @@ const OurStories = () => {
         <span className="text-[2.125rem] text-white md:text-[45px]">
           Our stories
         </span>
-        <button className="customStoryButton ">View All</button>
       </div>
       {/* for bog divice */}
       <div className=" overflow-auto customScroll hidden md:flex">

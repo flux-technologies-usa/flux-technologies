@@ -118,7 +118,9 @@ const CarShop = () => {
       .catch((err) => console.log(err.message));
   };
   // stripe payment
-
+  function currencyFormat(num) {
+    return '$' + parseFloat(num).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+ }
   const [active, setActive] = useState(paintDetails.id);
   const [activeWheel, setActiveWheel] = useState(carWheel[0].id);
   return (
@@ -198,7 +200,7 @@ const CarShop = () => {
             {paintDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">${paintDetails.price}.00</span>
+              <span className="text-white">${currencyFormat(paintDetails.price)}</span>
             )}
           </span>
         </div>
@@ -221,7 +223,7 @@ const CarShop = () => {
             {wheelDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">${wheelDetails.price}.00</span>
+              <span className="text-white">{currencyFormat(wheelDetails.price)}</span>
             )}
           </span>
         </div>
@@ -273,7 +275,7 @@ const CarShop = () => {
             Order Your Flux Village
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
-            Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
+            Total Price :<span className="text-[#ddc861]"> {currencyFormat(total)}</span>
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
             Est. Delivery: TBA

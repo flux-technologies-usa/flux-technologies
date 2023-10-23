@@ -1,5 +1,5 @@
 import React from "react";
-import { carVideo } from "../../../assets/Callback";
+import { homeV } from "../../../assets/Callback";
 import "./../Home.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const VideoBannerSection = () => {
       <div className="customOverlay"></div>
       <div className="-z-10">
         <video
-          src={carVideo}
+          src={homeV}
           className="customVideo"
           autoPlay
           loop

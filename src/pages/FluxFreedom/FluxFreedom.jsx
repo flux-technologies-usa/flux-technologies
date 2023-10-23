@@ -116,13 +116,22 @@ const FluxFreedom = () => {
   };
   // stripe payment
 
+  function currencyFormat(num) {
+    return (
+      "$" +
+      parseFloat(num)
+        .toFixed(2)
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    );
+  }
   const [active, setActive] = useState(paintDetails.id);
   const [activeWheel, setActiveWheel] = useState(carWheel[0].id);
   return (
     <div className="mt-28 md:ml-10 px-2 md:px-0 md:flex md:flex-row">
       <div
         className="flex items-center justify-center rounded h-[200px] md:h-screen mb-16 w-full md:w-[70%]"
-        style={{ backgroundImage: `url("${darkBg}")` }}>
+        style={{ backgroundImage: `url("${darkBg}")` }}
+      >
         <img
           src={wheelDetails.img_wheel}
           alt=""
@@ -194,7 +203,9 @@ const FluxFreedom = () => {
             {paintDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">${paintDetails.price}.00</span>
+              <span className="text-white">
+                {currencyFormat(paintDetails.price)}
+              </span>
             )}
           </span>
         </div>
@@ -217,7 +228,9 @@ const FluxFreedom = () => {
             {wheelDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">${wheelDetails.price}.00</span>
+              <span className="text-white">
+                {currencyFormat(wheelDetails.price)}
+              </span>
             )}
           </span>
         </div>
@@ -269,7 +282,8 @@ const FluxFreedom = () => {
             Order Your Flux freedom
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
-            Total Price :<span className="text-[#ddc861]"> ${total}.00</span>
+            Total Price :
+            <span className="text-[#ddc861]">{currencyFormat(total)}</span>
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
             Est. Delivery: TBA
@@ -277,7 +291,8 @@ const FluxFreedom = () => {
           <button
             type="button"
             onClick={() => paymentBtn()}
-            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton">
+            className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
+          >
             Continue to Payment
           </button>
         </div>

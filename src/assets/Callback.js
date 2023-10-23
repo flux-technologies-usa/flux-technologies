@@ -49,6 +49,7 @@ import blackMordenCar from './images/black-modern-car-black.jpg';
 import mobileCar from '././primaim/mobile.jpg'
 // video
 import carVideo from "./video/car.mp4";
+import homeV from './video/homeV.mp4'
 
 export {
   logo,
@@ -99,5 +100,6 @@ export {
   businessDeal,
   mounten,
   blackMordenCar,
-  mobileCar
+  mobileCar,
+  homeV
 };

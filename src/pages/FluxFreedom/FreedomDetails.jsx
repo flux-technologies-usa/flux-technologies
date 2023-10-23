@@ -5,6 +5,9 @@ const FreedomDetails = ({data,setFluxMath,freedomActive,setfreedomActive}) => {
         setFluxMath(event)
         setfreedomActive(event.id)
     }
+    function currencyFormat(num) {
+      return '$' + parseFloat(num).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+   }
   return (
     <div className="flex flex-col w-full gap-1">
       <span className="md:text-sm lg:text-base">{data.name}</span>
@@ -15,7 +18,7 @@ const FreedomDetails = ({data,setFluxMath,freedomActive,setfreedomActive}) => {
         }`}
       >
         <span className="md:text-xs lg:text-base">{data.power_name}</span>
-        <span className="md:text-xs lg:text-base">${data.price}</span>
+        <span className="md:text-xs lg:text-base">{currencyFormat(data.price)}</span>
       </button>
     </div>
   );

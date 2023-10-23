@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {AiFillFacebook} from 'react-icons/ai'
 import "./../components.scss";
 import {
   fbIcon,
@@ -98,10 +99,11 @@ const Footer = () => {
                 alt=""
               />
             </a>
+            <a href="https://www.facebook.com/fluxtechev"><AiFillFacebook size={33} color="#0000FF"/></a>
           </div>
 
           <div>
-            <h1>©2022 Flux. All rights reserved</h1>
+            <h1>©2024 Flux. All rights reserved</h1>
           </div>
         </div>
         <div className="px-[10%] py-[45px] bg-[#d9c8af] opacity-80">
@@ -111,7 +113,7 @@ const Footer = () => {
             impressive range of over 400 miles on just a quick recharge. Say
             goodbye to worrying about gas shortages and long lines, as FLUX
             ensures that you will always be on the move. While other continents
-            may focus on expensive compact cars for a few select few, FLUX
+            may focus on expensive compact cars for a select few, FLUX
             caters to everyone by setting itself apart by specializing in
             premium, top-of-the-line design and incorporating the latest
             cutting-edge features. The world deserves nothing but the best, and
@@ -208,19 +210,33 @@ const Footer = () => {
               <img className="w-5" src={worldIcon} alt="" />
               <h1>United States – English</h1>
             </div>
-            <div className="flex items-center mt-5  gap-8 ">
-              <img className="w-[20px] cursor-pointer" src={instaIcon} alt="" />
+            <div className="flex gap-[30px] mt-5">
+            <a href="https://www.instagram.com/fluxtechev/?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr">
               <img
                 className="w-[20px] cursor-pointer"
-                src={twitterIcon}
+                src={`https://img.freepik.com/premium-vector/modern-badge-logo-instagram-icon_578229-124.jpg`}
                 alt=""
               />
-              <img className="w-[20px] cursor-pointer" src={ytIcon} alt="" />
-              <img className="w-[20px] cursor-pointer" src={fbIcon} alt="" />
-            </div>
+            </a>
+            <a href="https://www.tiktok.com/@fluxtechev?_t=8gU3Q18S3q6&_r=1">
+              <img
+                className="w-[20px] cursor-pointer"
+                src={`https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg`}
+                alt=""
+              />
+            </a>
+            <a href="https://www.snapchat.com/add/fluxtechev?invite_id=DBORnuU2&locale=en_US&share_id=z0F1MoxxQSOF8dD8rL2W-A&sid=a6c3f93e8fb54cbaa364cc00222daf77">
+              <img
+                className="w-[24px] cursor-pointer"
+                src={`https://static.vecteezy.com/system/resources/previews/023/741/177/original/snapchat-logo-icon-social-media-icon-free-png.png`}
+                alt=""
+              />
+            </a>
+            <a href="https://www.facebook.com/fluxtechev"><AiFillFacebook size={24} color="#0000FF"/></a>
+          </div>
             <div className="flex gap-8 my-5 ">
               <div>
-                <h1>©2022 Flux. All rights reserved</h1>
+                <h1>©2024 Flux. All rights reserved</h1>
               </div>
             </div>
           </div>
@@ -232,7 +248,7 @@ const Footer = () => {
             impressive range of over 400 miles on just a quick recharge. Say
             goodbye to worrying about gas shortages and long lines, as FLUX
             ensures that you will always be on the move. While other continents
-            may focus on expensive compact cars for a few select few, FLUX
+            may focus on expensive compact cars for a select few, FLUX
             caters to everyone by setting itself apart by specializing in
             premium, top-of-the-line design and incorporating the latest
             cutting-edge features. The world deserves nothing but the best, and

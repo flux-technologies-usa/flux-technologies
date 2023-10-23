@@ -48,7 +48,7 @@ const Contactform = () => {
             <p className="text-white">email</p>
             <input
               type="email"
-              placeholder="jsmith@gmail.com"
+              placeholder="johndoe@gmail.com"
               className=" py-4 px-6 "
               name="user_email"
             />
@@ -102,14 +102,14 @@ export default Contactform;
 
       <label className="flex flex-col mb-3">
         <p className="text-white"> last name</p>
-        <input type="text" placeholder="Smith" className=" py-4 px-6" />
+        <input type="text" placeholder="doe" className=" py-4 px-6" />
       </label>
 
       <label className="flex flex-col mb-3">
         <p className="text-white">email</p>
         <input
           type="email"
-          placeholder="jsmith@gmail.com"
+          placeholder="johndoe@gmail.com"
           className=" py-4 px-6 "
         />
       </label>

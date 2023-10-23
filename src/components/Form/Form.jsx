@@ -26,7 +26,7 @@ const Form = () => {
             }}
             className="w-full p-5 bg-white text-[#40423f]  placeholder:text-[18px] placeholder:text-[#40423f] placeholder:opacity-80 rounded-none"
             type="email"
-            placeholder="jsmith@example.com"
+            placeholder="Johndoe@example.com"
             required
           />
         </div>
@@ -47,7 +47,7 @@ const Form = () => {
               className="w-full p-5 bg-white text-[#40423f]  placeholder:text-[18px] placeholder:text-[#40423f] rounded-none placeholder:opacity-80"
               type="text"
               name="last"
-              placeholder="Smith"
+              placeholder="Doe"
               required
             />
           </div>

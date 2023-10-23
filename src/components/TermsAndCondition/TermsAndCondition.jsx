@@ -23,14 +23,6 @@ const TermsAndCondition = () => {
             <span className="font-bold">“Personal Information”</span>).
           </span>          
         </div>        
-        <span>This Privacy Policy includes the following sections:</span>
-        <div className="flex flex-col gap-2">
-          <span>1. Information We Collect</span>
-          <span>2. Unsubscribing From Email</span>
-          <span>3. How We Use Personal Information</span>
-          <span>4. How We Disclose Personal Information</span>
-          <span>5. Your Access to and Control Over Information</span>
-        </div>
         <span className='text-[#ddc861]'>1. Trademarks</span>
         <span>We collect Personal Information both directly from you, and from third parties. Where applicable, we indicate whether and why you must provide us with your Personal Information, as well as the consequences of failing to do so. If you do not provide Personal Information when requested, you may not be able to benefit from our service if that information is necessary to provide you with the service or if we are legally required to collect it.</span>  
         <span className='text-[#ddc861]'>2. Other Intellectual Property Rights</span>    
