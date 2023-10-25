@@ -1,14 +1,13 @@
 import React from "react";
 import { solarCar } from "../../../assets/Callback";
 import "./../Home.scss";
-import Form from "../../../components/Form/Form";
 import { Link } from "react-router-dom";
 
 const Accessoiries = () => {
   return (
     <div className="bg-black">
       <h1 className="text-2xl font-semibold text-center text-[#ddc862] pt-[50px]">
-        Accessoiries
+        Accessories
       </h1>
       <div className="pt-[90px] w-[65%] mx-auto md:w-[20%]">
         <img src={solarCar} alt="" />
