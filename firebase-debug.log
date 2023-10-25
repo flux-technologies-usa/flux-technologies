@@ -1,0 +1,117 @@
+[debug] [2023-10-25T19:56:28.980Z] ----------------------------------------------------------------------
+[debug] [2023-10-25T19:56:28.982Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-25T19:56:28.982Z] CLI Version:   12.5.2
+[debug] [2023-10-25T19:56:28.983Z] Platform:      win32
+[debug] [2023-10-25T19:56:28.983Z] Node Version:  v18.16.0
+[debug] [2023-10-25T19:56:28.984Z] Time:          Thu Oct 26 2023 01:56:28 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-10-25T19:56:28.984Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-25T19:56:28.991Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-25T19:56:28.991Z] > authorizing via signed-in user (leonali274784@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\projects\flux_car-service
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-10-25T19:56:35.858Z] Using project from CLI flag: flux-car-f947c
+[debug] [2023-10-25T19:56:35.860Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c [none]
+[debug] [2023-10-25T19:56:36.431Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c 403
+[debug] [2023-10-25T19:56:36.431Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-10-25T19:56:36.432Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-10-25T19:56:36.697Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project flux-car-f947c. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-10-25T19:56:43.096Z] ----------------------------------------------------------------------
+[debug] [2023-10-25T19:56:43.098Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-25T19:56:43.099Z] CLI Version:   12.5.2
+[debug] [2023-10-25T19:56:43.099Z] Platform:      win32
+[debug] [2023-10-25T19:56:43.099Z] Node Version:  v18.16.0
+[debug] [2023-10-25T19:56:43.100Z] Time:          Thu Oct 26 2023 01:56:43 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-10-25T19:56:43.100Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-25T19:56:43.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-25T19:56:43.109Z] > authorizing via signed-in user (leonali274784@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\projects\flux_car-service
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-10-25T19:57:06.945Z] Using project from CLI flag: flux-car-f947c
+[debug] [2023-10-25T19:57:06.947Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c [none]
+[debug] [2023-10-25T19:57:07.536Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c 403
+[debug] [2023-10-25T19:57:07.536Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-10-25T19:57:07.536Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-10-25T19:57:07.818Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project flux-car-f947c. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-10-25T19:58:02.842Z] ----------------------------------------------------------------------
+[debug] [2023-10-25T19:58:02.844Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-25T19:58:02.844Z] CLI Version:   12.5.2
+[debug] [2023-10-25T19:58:02.844Z] Platform:      win32
+[debug] [2023-10-25T19:58:02.845Z] Node Version:  v18.16.0
+[debug] [2023-10-25T19:58:02.845Z] Time:          Thu Oct 26 2023 01:58:02 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-10-25T19:58:02.846Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-25T19:58:02.852Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-25T19:58:02.853Z] > authorizing via signed-in user (leonali274784@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\projects\flux_car-service
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-10-25T19:58:06.346Z] Using project from CLI flag: flux-car-f947c
+[debug] [2023-10-25T19:58:06.348Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c [none]
+[debug] [2023-10-25T19:58:07.133Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c 403
+[debug] [2023-10-25T19:58:07.133Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flux-car-f947c {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-10-25T19:58:07.134Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-10-25T19:58:07.370Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project flux-car-f947c. Please make sure the project exists and your account has permission to access it.
