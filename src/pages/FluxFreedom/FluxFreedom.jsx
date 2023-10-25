@@ -44,8 +44,7 @@ const FluxFreedom = () => {
     parseFloat(fluxMath.price) +
     parseFloat(selectedCarCost) +
     parseFloat(selectedTireCost) +
-    parseFloat(checkboxSum) +
-    400;
+    parseFloat(checkboxSum);
 
   const [checkWallId, setCheckWallId] = useState([
     { name: "Wall Charger(not selected)", price: 0 },
@@ -85,7 +84,7 @@ const FluxFreedom = () => {
     },
     {
       name: "Black White Int",
-      price: 400,
+      price: 0,
     },
     {
       name: checkWallId[0].name,
@@ -243,7 +242,7 @@ const FluxFreedom = () => {
           />
           <span className="text-sm flex gap-1">
             <span className="text-white">Black</span>{" "}
-            <span className="text-white">$400.00</span>
+            <span className="text-white">Included</span>
           </span>
         </div>
         <div className="flex flex-col items-center gap-3 pt-16">

@@ -45,8 +45,7 @@ const CarShop = () => {
     parseFloat(fluxMath.price) +
     parseFloat(selectedCarCost) +
     parseFloat(selectedTireCost) +
-    parseFloat(checkboxSum) +
-    1000;
+    parseFloat(checkboxSum);
 
   const [checkWallId, setCheckWallId] = useState([
     { name: "Wall Charger(not selected)", price: 0 },
@@ -264,7 +263,7 @@ const CarShop = () => {
                 data-amount="450"
               />
               <span className="label-text md:text-xs lg:text-base text-white">
-                Remote Chrager
+                Remote Charger
               </span>
             </label>
             <span className="md:text-xs lg:text-base text-white">$450.00</span>
