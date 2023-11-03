@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import Main from "../../layout/Main";
 import Contact from "../Contact/Contact";
 import About from "../About/About";
+import PrivateRoutes from "./PrivateRoutes";
 
 import Subscribe from "../Subscribe/Subscribe";
 // import Privacy from "../Privacy/Privacy";
@@ -64,11 +65,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/village",
-        element: <CarShop />,
+        element: <CarShop/>
       },
       {
         path: "/freedom",
-        element: <FluxFreedom />,
+        element:<FluxFreedom/>,
       },
       {
         path: "/cart",

@@ -9,6 +9,8 @@ import FluxDetails from "./FluxDetails";
 import "../CarDesign.scss";
 import axios from "axios";
 import { AuthContext } from "../../../context api/UserContext";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import PrivateRoutes from "../../Routes/PrivateRoutes";
 
 const CarShop = () => {
   const [carDetails, setCarDetails] = useState(data);
@@ -27,6 +29,8 @@ const CarShop = () => {
   const [checkboxSum, setCheckboxSum] = useState("0");
 
   const checkboxes = document.querySelectorAll("input[type=checkbox]");
+
+  const navigate = useNavigate();
 
   checkboxes.forEach(function (checkbox) {
     checkbox.addEventListener("change", function () {
@@ -101,25 +105,34 @@ const CarShop = () => {
   const { user } = useContext(AuthContext);
   // stripe payment
   const paymentBtn = () => {
-    axios
-      .post(
-        "https://flux-server-lu38.onrender.com/api/v1/village/create-checkout-session",
-        {
-          fluxVillage,
-          villageEmail: user.email,
-        }
-      )
-      .then((res) => {
-        if (res.data.url) {
-          window.location.href = res.data.url;
-        }
-      })
-      .catch((err) => console.log(err.message));
+    if (!user?.email) {
+      return navigate("/login");
+    } else {
+      axios
+        .post(
+          "https://flux-server-lu38.onrender.com/api/v1/village/create-checkout-session",
+          {
+            fluxVillage,
+            villageEmail: user.email,
+          }
+        )
+        .then((res) => {
+          if (res.data.url) {
+            window.location.href = res.data.url;
+          }
+        })
+        .catch((err) => console.log(err.message));
+    }
   };
   // stripe payment
   function currencyFormat(num) {
-    return '$' + parseFloat(num).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
- }
+    return (
+      "$" +
+      parseFloat(num)
+        .toFixed(2)
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    );
+  }
   const [active, setActive] = useState(paintDetails.id);
   const [activeWheel, setActiveWheel] = useState(carWheel[0].id);
   return (
@@ -199,7 +212,9 @@ const CarShop = () => {
             {paintDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">${currencyFormat(paintDetails.price)}</span>
+              <span className="text-white">
+                ${currencyFormat(paintDetails.price)}
+              </span>
             )}
           </span>
         </div>
@@ -222,7 +237,9 @@ const CarShop = () => {
             {wheelDetails.price === "00" ? (
               <span className="text-white">Included</span>
             ) : (
-              <span className="text-white">{currencyFormat(wheelDetails.price)}</span>
+              <span className="text-white">
+                {currencyFormat(wheelDetails.price)}
+              </span>
             )}
           </span>
         </div>
@@ -274,18 +291,19 @@ const CarShop = () => {
             Order Your Flux Village
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
-            Total Price :<span className="text-[#ddc861]"> {currencyFormat(total)}</span>
+            Total Price :
+            <span className="text-[#ddc861]"> {currencyFormat(total)}</span>
           </span>
           <span className="text-white font-semibold md:text-sm lg:text-base">
             Est. Delivery: TBA
           </span>
-          <button
-            type="button"
-            onClick={() => paymentBtn()}
-            className="border border-[#ddc861]  lg:px-9 py-2 rounded text-white  customCarDesignButton"
-          >
-            Continue to Payment
-          </button>
+            <button
+              type="button"
+              onClick={() => paymentBtn()}
+              className="border border-[#ddc861]  lg:px-9 py-2 rounded text-white  customCarDesignButton"
+            >
+              Continue to Payment
+            </button>
         </div>
       </div>
     </div>

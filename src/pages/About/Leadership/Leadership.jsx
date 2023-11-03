@@ -19,7 +19,7 @@ const Leadership = () => {
             Leadership
           </h1>
           <p className="mt-[10%] text-[18px] ">
-            Flux’s leadership team brings to our  Valley headquarters an
+            Flux’s leadership team brings to our  Valley headquarter an
             extraordinary depth of knowledge and experience from the automotive
             and technology industries. They’re leading us forward to a more
             sustainable future as we use proprietary electric vehicle technology
@@ -34,7 +34,7 @@ const Leadership = () => {
             Leadership
           </h1>
           <p className="mt-[10%] text-[18px] ">
-            Flux’s leadership team brings to our Silicon Valley headquarters an
+            Flux’s leadership team brings to our Silicon Valley headquarter an
             extraordinary depth of knowledge and experience from the automotive
             and technology industries. They’re leading us forward to a more
             sustainable future as we use proprietary electric vehicle technology

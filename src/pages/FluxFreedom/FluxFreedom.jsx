@@ -8,6 +8,7 @@ import FreedomPaint from "./FreedomPaint";
 import FreedomWheel from "./FreedomWheel";
 import axios from "axios";
 import { AuthContext } from "../../context api/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const FluxFreedom = () => {
   const [carDetails, setCarDetails] = useState(freedomPaintData);
@@ -96,22 +97,27 @@ const FluxFreedom = () => {
     },
   ];
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   // stripe payment
   const paymentBtn = () => {
-    axios
-      .post(
-        "https://flux-server-lu38.onrender.com/api/v1/freedom/create-checkout-session",
-        {
-          fluxFreedom,
-          freedomEmail: user.email,
-        }
-      )
-      .then((res) => {
-        if (res.data.url) {
-          window.location.href = res.data.url;
-        }
-      })
-      .catch((err) => console.log(err.message));
+    if (!user?.email) {
+      return navigate("/login");
+    } else {
+      axios
+        .post(
+          "https://flux-server-lu38.onrender.com/api/v1/freedom/create-checkout-session",
+          {
+            fluxFreedom,
+            freedomEmail: user.email,
+          }
+        )
+        .then((res) => {
+          if (res.data.url) {
+            window.location.href = res.data.url;
+          }
+        })
+        .catch((err) => console.log(err.message));
+    }
   };
   // stripe payment
 
