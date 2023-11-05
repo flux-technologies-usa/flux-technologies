@@ -5,28 +5,38 @@ import { CartContext } from "../../../context api/AddToCartContext";
 import { calculateTotal } from "../../../components/CalculateTotal/CalculateTotal";
 import axios from "axios";
 import { AuthContext } from "../../../context api/UserContext";
+import { useState } from "react";
 
 const Cart = () => {
   // conntext api
   const { products } = useContext(CartContext);
+  console.log(products)
 
   const { user } = useContext(AuthContext);
   // calculate total
   const totalPrice = calculateTotal(products);
 
+  const product = products.map((items) => ({
+    name: items.product.name,
+    price: items.product.price,
+    quantity: items.quentity,
+    image: `https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${items.product._id}`,
+  }));
+
+  const [storeLoader, setStoreLoader] = useState(false);
+
   const paymentBtn = () => {
+    setStoreLoader(false);
     axios
-      .post(
-        "https://flux-server-lu38.onrender.com/api/v1/store/create-checkout-session",
-        {
-          products,
-          productEmail: user.email,
-        }
-      )
+      .post("https://flux-server-lu38.onrender.com/api/v1/store/create-checkout-session", {
+        product,
+        productEmail: user.email,
+      })
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
         }
+        setStoreLoader(true);
       })
       .catch((err) => console.log(err.message));
   };
@@ -50,8 +60,13 @@ const Cart = () => {
       </div>
       <div
         className="mt-4 bg-[#dbc861] text-center text-white p-[8px] text-[17px] font-semibold cursor-pointer chackoutborder hover:text-black hover:bg-white duration-[.4s] ease-in"
-        onClick={() => paymentBtn()}>
-        Checkout
+        onClick={() => paymentBtn()}
+      >
+        {storeLoader === false ? (
+          <span>Checkout</span>
+        ) : (
+          <span className="loading loading-spinner text-warning"></span>
+        )}
       </div>
     </div>
   );

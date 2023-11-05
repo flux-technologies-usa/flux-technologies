@@ -8,7 +8,8 @@ const Sustainability = () => {
       <div className="md:w-1/2">
         <img
           className="w-full h-[520px]  bg-cover md:h-[100vh]"
-          src={mounten}
+          // src={mounten}
+          src="https://i.postimg.cc/nrqp2H3d/sustain-Img.jpg"
           alt=""
         />
       </div>
@@ -22,7 +23,7 @@ const Sustainability = () => {
             We aim to create sustainable mobility without compromise in cars
             that are intuitive, liberating, and designed for all the ways people
             get around. At Flux, we place an exceptionally high priority on
-            efficiency — our cars must make the best possible use of the world’s
+            efficiency our cars must make the best possible use of the world’s
             resources. So, every Flux delivers exceptional range without
             sacrificing high performance or sublime comfort.
           </p>
@@ -38,7 +39,7 @@ const Sustainability = () => {
             We aim to create sustainable mobility without compromise in cars
             that are intuitive, liberating, and designed for all the ways people
             get around. At Flux, we place an exceptionally high priority on
-            efficiency — our cars must make the best possible use of the world’s
+            efficiency our cars must make the best possible use of the world’s
             resources. So, every Flux delivers exceptional range without
             sacrificing high performance or sublime comfort.
           </p>

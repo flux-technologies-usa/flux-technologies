@@ -121,12 +121,11 @@ const Footer = () => {
             an electrifying future. For those seeking even more security and
             exclusivity, we proudly present the optional Armored version of our
             FLUX Fully Electric Sedan and SUV. We have received early interest
-            from wealthy, celebrities and high ranking and we are more than
+            from wealthy industrialists, celebrities, high placed politicians and we are more than
             happy to cater to their needs.
           </h1>
           <h1 className="mt-7">
-            Optional Armored version - Wealthy, celebrities, and high ranking
-            contacted us early to create a special Armored Version of our FLUX
+            Optional Armored version - wealthy industrialists, celebrities, high placed politicians early to create a special Armored Version of our FLUX
             Fully Electric Sedan and SUV. We are happy to oblige. Now ride in
             complete safety and enhanced security that can stop trouble in its
             tracks. All while enjoying an elite look that exudes continental
@@ -256,12 +255,11 @@ const Footer = () => {
             an electrifying future. For those seeking even more security and
             exclusivity, we proudly present the optional Armored version of our
             FLUX Fully Electric Sedan and SUV. We have received early interest
-            from wealthy, celebrities and high ranking and we are more than
+            from wealthy industrialists, celebrities, high placed politicians and we are more than
             happy to cater to their needs.
           </h1>
           <h1 className="mt-7">
-            Optional Armored version - Wealthy, celebrities, and high ranking
-            contacted us early to create a special Armored Version of our FLUX
+            Optional Armored version - wealthy industrialists, celebrities, high placed politicians early to create a special Armored Version of our FLUX
             Fully Electric Sedan and SUV. We are happy to oblige. Now ride in
             complete safety and enhanced security that can stop trouble in its
             tracks. All while enjoying an elite look that exudes continental

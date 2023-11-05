@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Contactform = () => {
   const form = useRef();
@@ -78,11 +79,12 @@ const Contactform = () => {
           </button>
           <span className="text-white pt-[30px]  md:pb-[70px] text-[14px] font-[#dbd4c5]">
             By submitting this form, you agree to our{" "}
-            <a
+            {/* <a
               href="http://www.fluxtechnologiesPompano Beach, FL.com/privacy"
               className="underline">
               Privacy Policy.
-            </a>
+            </a> */}
+            <Link to='/privacy'>Privacy Policy.</Link>
           </span>
         </form>
       </div>

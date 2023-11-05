@@ -9,6 +9,7 @@ import FreedomWheel from "./FreedomWheel";
 import axios from "axios";
 import { AuthContext } from "../../context api/UserContext";
 import { useNavigate } from "react-router-dom";
+import { ScrollToTop } from "../../components/ScrollTop/ScrollTop";
 
 const FluxFreedom = () => {
   const [carDetails, setCarDetails] = useState(freedomPaintData);
@@ -96,13 +97,20 @@ const FluxFreedom = () => {
       price: checkRemoteId[0].price,
     },
   ];
+
+
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const [freedomLoader, setFreedomLoader] = useState(false)
+
   // stripe payment
   const paymentBtn = () => {
+    
     if (!user?.email) {
       return navigate("/login");
     } else {
+      setFreedomLoader(true)
       axios
         .post(
           "https://flux-server-lu38.onrender.com/api/v1/freedom/create-checkout-session",
@@ -110,14 +118,19 @@ const FluxFreedom = () => {
             fluxFreedom,
             freedomEmail: user.email,
           }
+          
         )
+        
         .then((res) => {
           if (res.data.url) {
             window.location.href = res.data.url;
           }
+          setFreedomLoader(false)
         })
         .catch((err) => console.log(err.message));
+        
     }
+
   };
   // stripe payment
 
@@ -298,7 +311,7 @@ const FluxFreedom = () => {
             onClick={() => paymentBtn()}
             className="border border-[#ddc861] px-9 py-2 rounded text-white  customCarDesignButton"
           >
-            Continue to Payment
+          {freedomLoader === false ? <span>Continue to Payment</span> : <span className="loading loading-spinner text-warning"></span>}
           </button>
         </div>
       </div>

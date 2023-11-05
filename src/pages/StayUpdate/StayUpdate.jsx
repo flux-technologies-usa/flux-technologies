@@ -15,7 +15,7 @@ const StayUpdate = () => {
             <input
               className=" p-5 bg-white text-[#40423f] w-[50%] rounded-none  placeholder:text-[18px] placeholder:text-[#40423f] placeholder:opacity-80 "
               type="email"
-              placeholder="jsmith@example.com"
+              placeholder="johnDoe@example.com"
               required
             />
           </div>

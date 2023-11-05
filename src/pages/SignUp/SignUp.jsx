@@ -97,7 +97,7 @@ const SignUp = () => {
           <input
             type="text"
             name="firstname"
-            placeholder="Jhon"
+            placeholder="John"
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
             required
           />
@@ -107,7 +107,7 @@ const SignUp = () => {
           <input
             type="text"
             name="lastname"
-            placeholder="Wick"
+            placeholder="Doe"
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
             required
           />
@@ -117,7 +117,7 @@ const SignUp = () => {
           <input
             type="email"
             name="email"
-            placeholder="JhonWick@gmail.com"
+            placeholder="JohnDoe@gmail.com"
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
             required
           />

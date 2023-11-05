@@ -12,6 +12,7 @@ const SingleProduct = ({ single }) => {
   const { user } = useContext(AuthContext);
   const { setCartLength, cartLength } = useContext(CartContext);
   const { name, price, _id } = single;
+  console.log(single);
 
   // all function
   const top = () => {
@@ -72,8 +73,9 @@ const SingleProduct = ({ single }) => {
         </div>
       </div>
       <button
-        onClick={handleAddToCart}
-        className="btn absolute border-none top-[40%] right-[30%] rounded-none button">
+        onClick={()=>handleAddToCart()}
+        className="btn absolute border-none top-[40%] right-[30%] rounded-none button"
+      >
         Add to cart
       </button>
     </div>

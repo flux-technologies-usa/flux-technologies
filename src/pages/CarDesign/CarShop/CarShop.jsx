@@ -9,8 +9,7 @@ import FluxDetails from "./FluxDetails";
 import "../CarDesign.scss";
 import axios from "axios";
 import { AuthContext } from "../../../context api/UserContext";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import PrivateRoutes from "../../Routes/PrivateRoutes";
+import { useNavigate } from "react-router-dom";
 
 const CarShop = () => {
   const [carDetails, setCarDetails] = useState(data);
@@ -103,11 +102,14 @@ const CarShop = () => {
 
   // user uid
   const { user } = useContext(AuthContext);
+
+  const [villageLoader, setVillageLoader] = useState(false)
   // stripe payment
   const paymentBtn = () => {
     if (!user?.email) {
       return navigate("/login");
     } else {
+      setVillageLoader(true)
       axios
         .post(
           "https://flux-server-lu38.onrender.com/api/v1/village/create-checkout-session",
@@ -120,6 +122,7 @@ const CarShop = () => {
           if (res.data.url) {
             window.location.href = res.data.url;
           }
+          setVillageLoader(false)
         })
         .catch((err) => console.log(err.message));
     }
@@ -302,7 +305,7 @@ const CarShop = () => {
               onClick={() => paymentBtn()}
               className="border border-[#ddc861]  lg:px-9 py-2 rounded text-white  customCarDesignButton"
             >
-              Continue to Payment
+              {villageLoader === false ? <span>Continue to Payment</span> : <span className="loading loading-spinner text-warning"></span>}
             </button>
         </div>
       </div>
