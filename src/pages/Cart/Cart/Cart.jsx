@@ -20,17 +20,16 @@ const Cart = () => {
     name: items.product.name,
     price: items.product.price,
     quantity: items.quentity,
-    image: `https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${items.product._id}`,
+    image: `https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${items.product._id}`
   }));
-
   const [storeLoader, setStoreLoader] = useState(false);
 
   const paymentBtn = () => {
     setStoreLoader(false);
     axios
-      .post("https://flux-server-lu38.onrender.com/api/v1/store/create-checkout-session", {
-        product,
-        productEmail: user.email,
+      .post("https://flux-server-lu38.onrender.com/stripe/create-checkout-session", {
+        'FluxData': product,
+        Email: user.email,
       })
       .then((res) => {
         if (res.data.url) {

@@ -112,9 +112,9 @@ const CarShop = () => {
       setVillageLoader(true)
       axios
         .post(
-          "https://flux-server-lu38.onrender.com/api/v1/village/create-checkout-session",
+          "https://flux-server-lu38.onrender.com/stripe/create-checkout-session",
           {
-            fluxVillage,
+            'FluxData':fluxVillage,
             villageEmail: user.email,
           }
         )

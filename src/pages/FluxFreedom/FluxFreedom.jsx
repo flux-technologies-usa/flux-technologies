@@ -113,9 +113,9 @@ const FluxFreedom = () => {
       setFreedomLoader(true)
       axios
         .post(
-          "https://flux-server-lu38.onrender.com/api/v1/freedom/create-checkout-session",
+          "https://flux-server-lu38.onrender.com/stripe/create-checkout-session",
           {
-            fluxFreedom,
+            'FluxData': fluxFreedom,
             freedomEmail: user.email,
           }
           
