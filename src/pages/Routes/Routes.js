@@ -21,6 +21,7 @@ import Profile from "../Profile/Profile";
 import Success from "../../components/Success/Success";
 import Cancel from "../../components/Cancel/Cancel";
 import Orders from "../Orders/Orders";
+import ForgotPassword from "../Login/ForgotPassword/ForgotPassword";
 
 const routes = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const routes = createBrowserRouter([
         path: "/orders",
         element: <Orders />,
       },
+      {
+        path:'/forgotpassword',
+        element:<ForgotPassword/>
+      }
     ],
   },
   {

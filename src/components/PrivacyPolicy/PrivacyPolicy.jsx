@@ -46,11 +46,84 @@ const PrivacyPolicy = () => {
         </ul>
 
         <span className="text-xl font-bold pl-5">2. How We Utilize Personal Data</span>
-        <span>
+        <ul className="flex flex-col gap-2">
+        <span className="font-medium pb-2">
           At our company, we make use of the personal data we gather for various
           business and commercial purposes. These purposes include:
         </span>
-        <span>
+        <li>1. Enhancing and improving our website, sales, and service operations
+          to provide a seamless user experience for our customers.</li>
+        <li>2. Customizing your interaction with us by offering tailored content
+          and recommendations on our website and other online platforms that
+          align with your interests.</li>
+        <li>3. Analyzing how you utilize our services, conducting internal
+          research, and utilizing the findings to develop innovative products,
+          services, features, and functionalities.</li>
+        <li>4. Providing a wide range of products, services, and programs to cater
+          to your needs.</li>
+        <li>5. Establishing effective communication channels by delivering updates,
+          relevant information, and addressing your inquiries or concerns to
+          ensure exceptional customer support and maintain strong customer
+          relationships.</li>
+        <li>6. Developing and sharing promotional and advertising materials that we
+          believe are valuable, relevant, and of interest to you, including
+          targeted advertising.</li>
+        <li>7. Harnessing the power of analytics and marketing strategies to
+          enhance our offerings and improve customer satisfaction.</li>
+        <li>8. Facilitating seamless and secure transactions, including making
+          deposits, payments, or purchases for future transactions.</li>
+        <li>9. Assisting you in scheduling test drives.</li>
+        <li>10. Processing payments for products or services purchased based on our
+          contractual agreement with you.</li>
+        <li>11. Providing assistance with credit applications and financing for
+          vehicle purchases or leases.</li>
+        <li>12. Assessing and engaging in certain business transactions that may
+          involve the transfer of our assets or the assets of another business.</li>
+        <li>13. Managing product recalls efficiently.</li>
+        <li>14. Administering warranties, validating them, and performing service
+          and repairs on your vehicle.</li>
+        <li>15. Administering warranties, validating them, and performing service
+          and repairs on your vehicle.</li>
+        <li>16. Addressing trust and safety concerns, including accident
+          investigations.</li>
+        <li>17. Safeguarding the safety, property, and rights of our company,
+          owners, registered users, drivers, passengers, and other stakeholders.</li>
+        <li>18. Investigating, preparing for, exercising, or defending legal claims.</li>
+        <li>19. Protecting our rights and preventing, detecting, or responding to
+          security incidents, identity theft, fraud, harassment, malicious
+          activities, or any illegal actions. This includes ensuring the
+          integrity and security of our systems and taking appropriate actions
+          against those responsible.</li>
+        <li>20. Fulfilling compliance obligations, such as enforcing our Terms of
+          Use and other legal rights, as well as abiding by applicable laws,
+          regulations, judicial processes, or governmental agency requests.</li>
+        <li>21. Utilizing personal information for any other purposes for
+          which we provide specific notice at the time of data collection.</li>
+
+        <span className="pt-5 font-medium">
+          For individuals located in the European Economic Area or the United
+          Kingdom, we process your personal data only when we have a valid legal
+          ground, which may include the following scenarios:
+        </span>
+
+
+        <li>1. Your explicit consent to the use of your personal data.</li>
+        <li>2. The necessity of your personal data for performing a contract or
+          providing our services, including responding to your inquiries.</li>
+        <li>3. Compliance with a legal obligation requiring the use of your
+          personal data.</li>
+        <li>4. The presence of a legitimate interest, either from our company
+          or a third party, in utilizing your personal data. This legitimate
+          interest may extend to conducting business analytics and enhancing the
+          safety, security, and performance of our services. However, we ensure
+          that our legitimate interests do not infringe upon your rights and
+          interests.</li>
+        </ul>
+        {/* <span>
+          At our company, we make use of the personal data we gather for various
+          business and commercial purposes. These purposes include:
+        </span>
+        <span className="gap-3">
           - Enhancing and improving our website, sales, and service operations
           to provide a seamless user experience for our customers.
           <br />
@@ -126,7 +199,7 @@ const PrivacyPolicy = () => {
           safety, security, and performance of our services. However, we ensure
           that our legitimate interests do not infringe upon your rights and
           interests.
-        </span>
+        </span> */}
         <span className="text-xl font-bold pl-5">
           3. Data Preservation, Storage, and Accessibility
         </span>

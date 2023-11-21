@@ -78,7 +78,7 @@ const VideoBannerSection = () => {
                 Max Power {" "}
               </span>
             </h1>
-            <h1 className="text-2xl md:text-[40px] font-semibold">600+ hp</h1>
+            <h1 className="text-2xl md:text-[40px] font-semibold">1000+ hp</h1>
           </div>
         </div>
       </div>

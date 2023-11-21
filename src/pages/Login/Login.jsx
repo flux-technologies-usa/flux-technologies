@@ -31,6 +31,11 @@ const Login = () => {
       });
   };
 
+  // password reset email 
+  const handleResetPasswordWithEmail = (event) =>{
+
+  }
+
   return (
     <div className="py-56 bg-black">
       <form onSubmit={handleSignIn} className="flex flex-col items-center justify-center border md:max-w-[500px] mx-auto rounded bg-black py-10 px-12 gap-5 l-wrapper">
@@ -52,6 +57,9 @@ const Login = () => {
             placeholder="password"
             className="bg-white py-2 px-3 text-black focus:bg-black rounded focus:text-white input-sec"
           />
+        </div>
+        <div className="w-full">
+          <Link to='/forgotpassword' className="text-start hover:text-blue-500">forgot password?</Link>
         </div>
         <h1 className="text-red-600 my-2 text-start">{error}</h1>
         <button
