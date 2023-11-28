@@ -28,7 +28,7 @@ const SingleProduct = ({ single }) => {
       };
 
       fetch(
-        `https://flux-server-lu38.onrender.com/api/v1/cart?email=${email}`,
+        `https://flux-technologies.onrender.com/api/v1/cart?email=${email}`,
         {
           method: "PUT",
           headers: {
@@ -63,7 +63,7 @@ const SingleProduct = ({ single }) => {
         <div className="single-product-img h-[200px]">
           <img
             className="w-[200px] h-auto mx-auto pt-[50px]"
-            src={`https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${_id}`}
+            src={`https://flux-technologies.onrender.com/api/v1/product/product-photo/${_id}`}
             alt={name}
           />
         </div>

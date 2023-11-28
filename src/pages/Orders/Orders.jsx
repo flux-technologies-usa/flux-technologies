@@ -17,7 +17,7 @@ const Orders = () => {
     setvillageLoading(true);
     axios
       .get(
-        "https://flux-server-lu38.onrender.com/stripe/orders",
+        "https://flux-technologies.onrender.com/stripe/orders",
         {
           params: {
             Email: user.email,

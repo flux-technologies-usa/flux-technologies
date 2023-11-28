@@ -16,7 +16,7 @@ const AddToCartContext = ({ children }) => {
 
   useEffect(() => {
     fetch(
-      `https://flux-server-lu38.onrender.com/api/v1/cart?email=${user?.email}`
+      `https://flux-technologies.onrender.com/api/v1/cart?email=${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data.cartData));

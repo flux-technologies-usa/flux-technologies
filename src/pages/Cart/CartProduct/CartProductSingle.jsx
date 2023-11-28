@@ -13,7 +13,7 @@ const CartProductSingle = ({ product }) => {
   const { products, setCartLength, cartLength } = useContext(CartContext);
   // functions
   const handleRemoveButton = () => {
-    fetch(`https://flux-server-lu38.onrender.com/api/v1/cart/${product._id}`, {
+    fetch(`https://flux-technologies.onrender.com/api/v1/cart/${product._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -27,7 +27,7 @@ const CartProductSingle = ({ product }) => {
       quentity: quentity,
     };
     fetch(
-      `https://flux-server-lu38.onrender.com/api/v1/cart/quentity/${product._id}`,
+      `https://flux-technologies.onrender.com/api/v1/cart/quentity/${product._id}`,
       {
         method: "PUT",
         headers: {
@@ -44,7 +44,7 @@ const CartProductSingle = ({ product }) => {
     const quentity = product.quentity - 1;
     if (quentity === 0) {
       fetch(
-        `https://flux-server-lu38.onrender.com/api/v1/cart/${product._id}`,
+        `https://flux-technologies.onrender.com/api/v1/cart/${product._id}`,
         {
           method: "DELETE",
         }
@@ -57,7 +57,7 @@ const CartProductSingle = ({ product }) => {
         quentity: quentity,
       };
       fetch(
-        `https://flux-server-lu38.onrender.com/api/v1/cart/quentity/${product._id}`,
+        `https://flux-technologies.onrender.com/api/v1/cart/quentity/${product._id}`,
         {
           method: "PUT",
           headers: {
@@ -76,7 +76,7 @@ const CartProductSingle = ({ product }) => {
       <div className="flex md:flex-row md:gap-28 gap-10">
         <div className="flex flex-row items-start gap-8">
           <img
-            src={`https://flux-server-lu38.onrender.com/api/v1/product/product-photo/${_id}`}
+            src={`https://flux-technologies.onrender.com/api/v1/product/product-photo/${_id}`}
             alt=""
             className="md:max-w-[110px] max-w-[70px]"
           />
