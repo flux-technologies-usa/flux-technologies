@@ -6,6 +6,7 @@ import { calculateTotal } from "../../../components/CalculateTotal/CalculateTota
 import axios from "axios";
 import { AuthContext } from "../../../context api/UserContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   // conntext api
@@ -23,9 +24,12 @@ const Cart = () => {
     image: `https://flux-technologies.onrender.com/api/v1/product/product-photo/${items.product._id}`
   }));
   const [storeLoader, setStoreLoader] = useState(false);
-
+  const navigate = useNavigate();
   const paymentBtn = () => {
     setStoreLoader(false);
+    if (!user?.email) {
+      return navigate("/login");
+    } else {
     axios
       .post("https://flux-technologies.onrender.com/stripe/create-checkout-session", {
         'FluxData': product,
@@ -38,6 +42,7 @@ const Cart = () => {
         setStoreLoader(true);
       })
       .catch((err) => console.log(err.message));
+    }
   };
 
   return (
